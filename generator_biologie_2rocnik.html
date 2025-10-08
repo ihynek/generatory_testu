@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generátor testů - BIOLOGIE 2. ročník</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: Arial, sans-serif; 
+      background-color: #bfdbfe;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232563eb' fill-opacity='0.4'%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3Ccircle cx='15' cy='15' r='4'/%3E%3Ccircle cx='65' cy='65' r='4'/%3E%3Ccircle cx='15' cy='65' r='3'/%3E%3Ccircle cx='65' cy='15' r='3'/%3E%3C/g%3E%3Cg stroke='%232563eb' stroke-width='2.5' fill='none' stroke-opacity='0.35'%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Cpath d='M40 20 Q50 30 40 40 Q30 50 40 60'/%3E%3C/g%3E%3C/svg%3E"),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(37, 99, 235, 0.08) 40px, rgba(37, 99, 235, 0.08) 41px),
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(37, 99, 235, 0.08) 40px, rgba(37, 99, 235, 0.08) 41px),
+        linear-gradient(135deg, #bfdbfe 0%, #c7d2fe 50%, #ddd6fe 100%);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .card { 
+      background-color: white;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2393c5fd' fill-opacity='0.15'%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Ccircle cx='25' cy='25' r='8'/%3E%3Ccircle cx='95' cy='95' r='8'/%3E%3Ccircle cx='25' cy='95' r='6'/%3E%3Ccircle cx='95' cy='25' r='6'/%3E%3C/g%3E%3Cg stroke='%2393c5fd' stroke-width='2' fill='none' stroke-opacity='0.12'%3E%3Cpath d='M35 60 Q47 40 60 60 T85 60'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3C/g%3E%3C/svg%3E");
+      border-radius: 16px; 
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+      padding: 32px; 
+      margin-bottom: 24px; 
+    }
+    h1 { 
+      font-size: 28px; 
+      font-weight: bold; 
+      color: #1f2937; 
+      margin-bottom: 24px; 
+      text-align: center; 
+    }
+    .info-box { 
+      background: #eff6ff; 
+      border-radius: 8px; 
+      padding: 16px; 
+      margin-bottom: 24px; 
+    }
+    .info-box p { font-size: 14px; color: #374151; line-height: 1.6; }
+    .form-group { margin-bottom: 16px; }
+    label { 
+      display: block; 
+      font-size: 14px; 
+      font-weight: 500; 
+      color: #374151; 
+      margin-bottom: 8px; 
+    }
+    input[type="text"], input[type="date"], input[type="number"], select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #d1d5db;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+    }
+    select {
+      cursor: pointer;
+      background: white;
+    }
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .btn {
+      padding: 14px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      font-size: 16px;
+      width: 100%;
+      margin-top: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      color: white;
+    }
+    .btn:disabled {
+      background: #d1d5db;
+      cursor: not-allowed;
+    }
+    .back-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      transition: all 0.2s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .back-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .warning {
+      background: #fef3c7;
+      border: 2px solid #fbbf24;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 16px;
+    }
+    .warning p { color: #92400e; font-size: 14px; text-align: center; }
+    .success {
+      background: #d1fae5;
+      border: 2px solid #10b981;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    .success p { color: #065f46; font-size: 14px; }
+    .instruction-box {
+      background: #dbeafe;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .instruction-box p {
+      font-size: 14px;
+      color: #1e40af;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-button">← Zpět na výběr</a>
+    
+    <div class="card">
+      <h1>🧬 Generátor testů z BIOLOGIE - 2. ročník</h1>
+      
+      <div class="info-box" id="infoBox">
+        <p><strong>Jak to funguje:</strong><br>
+        1. Vyber třídu<br>
+        2. Klikni "Vygenerovat všechny testy"<br>
+        3. Stáhne se JEDEN soubor se VŠEMI testy (každý student jiné otázky)<br>
+        4. Vytiskni a rozdej studentům</p>
+      </div>
+
+      <div class="form-group">
+        <label>Třída:</label>
+        <select id="className">
+          <option value="">-- Vyber třídu --</option>
+          <option value="2.A">2.A</option>
+          <option value="2.B">2.B</option>
+          <option value="6SA">6SA</option>
+        </select>
+      </div>
+
+      <div class="input-row">
+        <div class="form-group">
+          <label>Počet studentů:</label>
+          <input type="number" id="studentCount" value="30" min="1" max="50">
+        </div>
+        
+        <div class="form-group">
+          <label>Datum testu:</label>
+          <input type="date" id="testDate">
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div class="form-group">
+          <label>Otázek na test:</label>
+          <input type="number" id="questionsPerTest" value="30" min="1" max="50">
+        </div>
+        
+        <div class="form-group">
+          <label>Bodů za otázku:</label>
+          <input type="number" id="pointsPerQuestion" value="1" min="1" max="10">
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="generateAllTests()">
+        Vygenerovat všechny testy najednou
+      </button>
+
+      <div id="warningSection" style="display: none;">
+        <div class="warning">
+          <p id="warningText">Vyplň všechny údaje</p>
+        </div>
+      </div>
+
+      <div id="successSection" style="display: none;">
+        <div class="success">
+          <p><strong>✅ Testy vygenerovány!</strong><br>
+          Soubor obsahuje <span id="testInfo"></span> testů připravených k tisku.</p>
+        </div>
+      </div>
+
+      <div class="instruction-box" style="margin-top: 24px;">
+        <p><strong>💡 Tip:</strong> Každý student dostane jiné otázky (náhodně vybrané z databáze). 
+        Testy jsou v jednom souboru, každý test na samostatném listu. Stačí vytisknout a rozdat studentům.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const questionsDatabase = {
+      "Houby": [
+        { q: "Jaká látka tvoří buněčnou stěnu hub?", a: "chitin" },
+        { q: "Jak se nazývá vlákno tvořící tělo houby?", a: "hyfa" },
+        { q: "Jak se nazývá soubor hyf?", a: "mycelium" },
+        { q: "Jak se nazývá rozmnožovací forma vyšších hub?", a: "plodnice" },
+        { q: "Jak se nazývá nepohlavní rozmnožovací útvar hub?", a: "výtrus" },
+        { q: "Jaký je rozdíl mezi pohlavním a nepohlavním rozmnožováním hub?", a: "pohlavní -- splývání gamet, nepohlavní -- tvorba výtrusů nebo pučení" },
+        { q: "Jaké houby se používají při výrobě piva a vína?", a: "kvasinky (kvasinka pivní/vinná)" },
+        { q: "Jak se nazývá skupina hub zahrnující kvasinky a smrže?", a: "vřeckovýtrusné" },
+        { q: "Jak se nazývá skupina hub zahrnující hřiby a muchomůrky?", a: "stopkovýtrusné" },
+        { q: "Jak se nazývá soužití hyf hub s kořeny rostlin?", a: "mykorhiza" },
+        { q: "Jak se nazývá tělo lišejníku?", a: "stélka" },
+        { q: "Jaký typ stélky má lišejník korovitý?", a: "přisedlá, povlaková" },
+        { q: "Proč jsou lišejníky indikátory čistoty ovzduší?", a: "citlivé na znečištění" },
+        { q: "Jaký typ výživy mají houby rozkládající mrtvou organickou hmotu?", a: "saprofytismus" },
+        { q: "Jaký typ výživy mají houby žijící na úkor hostitele?", a: "parazitismus" },
+        { q: "Jak se nazývá symbióza houby s řasou nebo sinicí?", a: "lišejník" },
+        { q: "Uveď příklad jedlé houby.", a: "hřib smrkový" },
+        { q: "Uveď příklad jedovaté houby.", a: "muchomůrka zelená" },
+        { q: "Jaké jsou typické příznaky otravy muchomůrkou zelenou?", a: "zvracení, průjem, poškození jater" },
+        { q: "Jaký je základní postup první pomoci při podezření na otravu houbami?", a: "vyhledat lékaře, uchovat vzorek, nevyvolávat zvracení" },
+        { q: "Které houby tvoří mykorhizu s jehličnany (např. se smrkem)?", a: "hřiby smrkové" },
+        { q: "Jak se nazývají možné houby způsobující plíseň na chlebu?", a: "plíseň chlebová, aspergilus, mucor, penicilium" },
+        { q: "Jaký má význam mykorhiza pro rostliny?", a: "zlepšuje příjem živin a vody" },
+        { q: "Jaká je hlavní funkce plodnice u hub?", a: "rozmnožování - tvorba a šíření výtrusů" },
+        { q: "Kde se tvoří výtrusy u stopkovýtrusných hub?", a: "na lupínkách nebo rourkách plodnice" },
+        { q: "Jaký pigment dává některým houbám schopnost fotosyntézy v symbióze s řasami?", a: "chlorofyl (v řasové složce lišejníku)" },
+        { q: "Jak se nazývá způsob rozmnožování kvasinek?", a: "pučení" },
+        { q: "Které houby způsobují onemocnění rostlin jako padlí nebo rez?", a: "parazitické houby (vřeckovýtrusné a stopkovýtrusné)" },
+        { q: "Z čeho se skládá lišejník?", a: "houby a řasy (nebo sinice)" },
+        { q: "Jaká je funkce spor u hub?", a: "rozmnožování a přežití v nepříznivých podmínkách" },
+        { q: "Kde rostou saprofytické houby?", a: "na mrtvé organické hmotě (dřevo, listí, humus)" },
+        { q: "Jaký je rozdíl mezi edální a epifytickou formou lišejníků?", a: "edální rostou na zemi/půdě, epifytické na stromech" },
+        { q: "Které houby se používají k výrobě antibiotik?", a: "penicilium (Penicillium)" },
+        { q: "Co jsou to hyfy septované a neseptované?", a: "septované mají přehrádky mezi buňkami, neseptované jsou souvislé" },
+        { q: "Jak se rozmnožují lišejníky?", a: "fragmentací nebo speciálními útvary (sorédia, isídia)" },
+        { q: "Jaké barvy může mít plodnice hub?", a: "různé - hnědá, červená, žlutá, bílá, zelená atd." },
+        { q: "Co je to mykorhiza ektotrofní a endotrofní?", a: "ektotrofní obaluje kořen zvenčí, endotrofní proniká do buněk" },
+        { q: "Jaký význam mají houby v přírodě?", a: "rozkladači, symbionti, zdroj potravy, tvorba půdy" }
+      ],
+      "Buňka a primitivní mnohobuněční": [
+        { q: "Jaké struktury chybí v živočišné buňce oproti rostlinné?", a: "plastidy, buněčná stěna, vakuola" },
+        { q: "Jaké jsou čtyři základní typy živočišných tkání?", a: "epitelová, svalová, nervová, pojivová" },
+        { q: "Který zárodečný list chybí u diblastik?", a: "mezoderm" },
+        { q: "Kolik zárodečných listů mají triblastika?", a: "tři" },
+        { q: "Jak se nazývá skupina triblastik, u nichž prvoústa u zárodku dávají vznik ústnímu otvoru u dospělce?", a: "prvoústí" },
+        { q: "Jak se nazývá skupina triblastik, u nichž prvoústa u zárodku dávají vznik řitnímu otvoru u dospělce?", a: "druhoústí" },
+        { q: "Který nejjednodušší mnohobuněčný živočich ještě nemá pravé tkáně?", a: "vločkovec" },
+        { q: "Jak se nazývají buňky, které zajišťují proudění vody u hubovců (porifer)?", a: "choanocyty" },
+        { q: "Jak se nazývají žahavé buňky žahavců?", a: "knidocyty" },
+        { q: "Které stádium žahavců je přisedlé?", a: "polyp" },
+        { q: "Které stádium žahavců je volně plovoucí?", a: "medúza" },
+        { q: "Jak se pohybují žebernatky?", a: "pomocí brv" },
+        { q: "Jaký je rozdíl mezi diblastikami a triblastikami?", a: "diblastika mají 2 zárodečné listy, triblastika 3" },
+        { q: "Jaké tři zárodečné listy má triblastikum?", a: "ektoderm, mezoderm, endoderm" },
+        { q: "Z jakého zárodečného listu vzniká nervová soustava?", a: "ektoderm" },
+        { q: "Jak se nazývá centrální dutina u žahavců?", a: "gastrovaskulární dutina" },
+        { q: "Jaký typ symetrie mají žahavci?", a: "radiální (paprsčitá)" },
+        { q: "Co znamená pojem 'cefalizace'?", a: "koncentrace nervových buněk v hlavové části těla" },
+        { q: "Jaké jsou hlavní funkce pojivové tkáně?", a: "vyplňování prostorů, podpora, zásobení, obrana" },
+        { q: "Jaký typ tkáně tvoří kůži a sliznice?", a: "epitelová tkáň" }
+      ],
+      "Bezobratlí": [
+        { q: "Jaký tvar těla mají ploštěnci?", a: "zploštělý dorzoventrálně" },
+        { q: "Jak se nazývá parazitický ploštěnec s článkovaným tělem?", a: "tasemnice" },
+        { q: "Jak se nazývá parazitický ploštěnec, jehož larvy se vyvíjejí v plžích?", a: "motolice" },
+        { q: "Jaký tvar těla mají hlístice?", a: "válcovitý" },
+        { q: "Který hlíst parazituje v tenkém střevě člověka?", a: "škrkavka" },
+        { q: "Jak se nazývá častý dětský parazit, který klade vajíčka v okolí konečníku?", a: "roup dětský" },
+        { q: "Jak se nazývá kroužkovec žijící v půdě, který zlepšuje úrodnost?", a: "žížala obecná" },
+        { q: "Jaký kroužkovec saje krev obratlovců?", a: "pijavka lékařská" },
+        { q: "Jak se nazývá tělní dutina u kroužkovců?", a: "coelom" },
+        { q: "Jak se nazývá měkkýš se stočenou ulitou?", a: "plž" },
+        { q: "Jak se nazývá měkkýš s dvouchlopňovou lasturou?", a: "mlž" },
+        { q: "Jaký měkkýš má chapadla a vysoce vyvinutý nervový systém?", a: "hlavonožec" },
+        { q: "Kolik párů končetin má hmyz?", a: "3" },
+        { q: "Jak se nazývá vývoj hmyzu, kde existuje stadium kukly?", a: "proměna dokonalá" },
+        { q: "Jak se nazývá vývoj hmyzu bez kukly?", a: "proměna nedokonalá" },
+        { q: "Kolik párů končetin mají pavoukovci?", a: "4" },
+        { q: "Jaký korýš žije ve sladkých vodách ČR a má krunýř?", a: "rak říční" },
+        { q: "Jak se nazývá soustava, kterou ostnokožci pohybují panožkami?", a: "ambulakrální" },
+        { q: "Který ostnokožec má schopnost regenerace a paprsčitou souměrnost?", a: "hvězdice" },
+        { q: "Jaký ostnokožec má kulovité tělo s ostny?", a: "ježovka" },
+        { q: "Jaký druh trávicí soustavy mají ploštěnci?", a: "slepě zakončená (bez konečníku)" },
+        { q: "Mají hlístice pravou tělní dutinu?", a: "ne, mají pseudocoelom" },
+        { q: "Jak se dostávají tasemnice do lidského těla?", a: "požitím nedostatečně tepelně upraveného masa s larvami" },
+        { q: "Jaký je mezihotel motolic?", a: "plž" },
+        { q: "Čím se živí volně žijící ploštěnci?", a: "drobnou kořistí (červy, larvy, odumřelá hmota)" },
+        { q: "Jaký typ oběhové soustavy mají kroužkovci?", a: "uzavřená" },
+        { q: "Čím dýchají žížaly?", a: "pokožkou" },
+        { q: "Co je to opasek (clitellum) u žížal?", a: "ztluštělá část těla produkující kokon pro vajíčka" },
+        { q: "Z čeho se skládá tělo měkkýšů?", a: "hlava, noha, vnitřnostní vak, plášť" },
+        { q: "Co vylučuje plášť měkkýšů?", a: "lasturu nebo ulitu" },
+        { q: "Jakou funkcí má radula u měkkýšů?", a: "rašple pro příjem potravy" },
+        { q: "Mají mlži hlavu?", a: "ne" },
+        { q: "Co je to metamorfóza u hmyzu?", a: "přeměna z larvy v dospělce" },
+        { q: "Jaká je funkce trachejí u hmyzu?", a: "dýchání - rozvod vzduchu do těla" },
+        { q: "Co jsou to fasetové oči?", a: "složené oči tvořené mnoha omatidii" },
+        { q: "Jak se nazývá vnější kostra členovců?", a: "kutikula / exoskelet" },
+        { q: "Co je to svlékání (ecdyse) u členovců?", a: "odhazování staré kutikuly při růstu" },
+        { q: "Mají ostnokožci pravou bilaterální symetrii?", a: "ne, mají paprsčitou (radiální) symetrii" },
+        { q: "Z čeho je tvořen skelet ostnokožců?", a: "z vápenatých destiček" },
+        { q: "Jak se ostnokožci pohybují?", a: "pomocí panožek (ambulakrální soustava)" }
+      ],
+      "Strunatci": [
+        { q: "Jaký mořský živočich má chordu jen v larválním stadiu a dospělec je vakovitý?", a: "pláštěnec" },
+        { q: "Jaký drobný mořský strunatec je považován za blízkého příbuzného obratlovců?", a: "kopinatec plžovitý" },
+        { q: "Jak se nazývá bezčelistnatý parazitický obratlovec sající krev ryb?", a: "mihule" },
+        { q: "Jak dýchá většina ryb?", a: "žábrami" },
+        { q: "Jaký orgán ryb umožňuje rybám plout v různých hloubkách?", a: "plynový měchýř" },
+        { q: "Čím je tvořena kostra, typická pro žraloky a rejnoky?", a: "chrupavčitá" },
+        { q: "K čemu slouží postranní čára u ryb?", a: "vnímání tlakových změn a proudění vody" },
+        { q: "Jak se nazývá larva obojživelníků?", a: "pulec" },
+        { q: "Který obojživelník má na břiše varovné zbarvení?", a: "kuňka" },
+        { q: "Např. který obojživelník má ocas i v dospělosti?", a: "čolek, mlok" },
+        { q: "Jaký typ vajec kladou plazi?", a: "kožovitá" },
+        { q: "Která skupina plazů je bez končetin?", a: "hadi" },
+        { q: "Která skupina plazů má dobře vyvinuté končetiny a ocasy?", a: "ještěři" },
+        { q: "Jaký typ kostí mají ptáci pro usnadnění letu?", a: "duté" },
+        { q: "Jaký orgán ptáků pomáhá při mechanickém drcení potravy?", a: "žaludek svalnatý" },
+        { q: "Jaký znak odlišuje ptáky od všech ostatních obratlovců?", a: "peří" },
+        { q: "Jak se nazývají žlázy, kterými samice savců krmí mláďata?", a: "mléčné" },
+        { q: "Která skupina savců rodí nedovyvinutá mláďata do vaku?", a: "vačnatci" },
+        { q: "Jak se nazývají savci s trvale rostoucími řezáky?", a: "hlodavci" },
+        { q: "Která skupina savců má špičáky a trháky přizpůsobené k lovu?", a: "šelmy" },
+        { q: "Jaká skupina savců má prsty ukončené kopytem?", a: "kopytníci" },
+        { q: "Jaký řád savců má pohyblivé prsty a vysoce vyvinutý mozek?", a: "primáti" },
+        { q: "Jaký je základní znak člověka ve stavbě kostry?", a: "vzpřímená páteř" },
+        { q: "Jak se nazývá typ lidské chůze po dvou končetinách?", a: "bipedie" },
+        { q: "Co je to chorda dorsalis?", a: "podpůrná tyč v embryonálním vývoji strunatců" },
+        { q: "Jaké tři základní znaky mají strunatci?", a: "chorda, nervová trubice, žaberní štěrbiny" },
+        { q: "Jak dýchají dospělí obojživelníci?", a: "plícemi a pokožkou" },
+        { q: "Jaký typ oplození mají obojživelníci?", a: "vnější (u většiny druhů)" },
+        { q: "Co je to ektotermie?", a: "teplota těla závislá na okolí (studenokrevnost)" },
+        { q: "Mají plazi suchou nebo vlhkou kůži?", a: "suchou, pokrytou šupinami" },
+        { q: "Jaký typ oplození mají plazi?", a: "vnitřní" },
+        { q: "Co je to homoiotermie?", a: "stálá tělesná teplota (teplokrevnost)" },
+        { q: "Jak se nazývá zobák ptáků bez zubů?", a: "rohovitý zobák / rampfoteka" },
+        { q: "Co je to peří obrysové a prachové?", a: "obrysové - vnější ochranné, prachové - izolační" },
+        { q: "Jaké tři skupiny savců rozlišujeme podle způsobu rozmnožování?", a: "vejcorodí, vačnatci, placentálové" },
+        { q: "Co je to placenta?", a: "orgán spojující plod s matkou, zajišťuje výživu" }
+      ],
+      "Fyziologie a chování": [
+        { q: "Jak se nazývá typ rozmnožování, kdy se z neoplozených vajíček vyvíjí nový jedinec?", a: "partenogeneze" },
+        { q: "Jaký typ rozmnožování je u živočichů nejběžnější?", a: "pohlavní" },
+        { q: "Jak se nazývá vrozené, geneticky dané chování živočichů?", a: "instinkt" },
+        { q: "Jak se nazývá chování získané učením a zkušeností?", a: "naučené" },
+        { q: "Jakým způsobem včely sdělují směr a vzdálenost potravy?", a: "včelí tanec" },
+        { q: "Jak se nazývá oboustranně výhodné soužití dvou druhů?", a: "mutualismus" },
+        { q: "Jak se nazývá schopnost živočichů orientovat se v prostoru pomocí zvuku?", a: "echolokace" },
+        { q: "Jaký typ symetrie má lidské tělo?", a: "bilaterální" },
+        { q: "Jak se nazývá přizpůsobení tvaru těla prostředí?", a: "adaptace" },
+        { q: "Jaký orgán umožňuje ptákům letět ve vysokých nadmořských výškách?", a: "vzdušné vaky" },
+        { q: "Co je to teritorialita?", a: "obhajování území proti jiným jedincům" },
+        { q: "Jak se nazývá proces učení mláďat rozpoznat rodiče?", a: "imprinting (vtiskování)" },
+        { q: "Co je to migrace u živočichů?", a: "pravidelné přesuny mezi oblastmi (např. tah ptáků)" },
+        { q: "Jaký je rozdíl mezi predací a parazitismem?", a: "predátor zabíjí kořist, parazit žije na úkor hostitele bez zabití" },
+        { q: "Co znamená pojem 'sociální hmyz'?", a: "hmyz žijící v organizovaných společenstvech (včely, mravenci, termiti)" },
+        { q: "Jak se nazývá zimní spánek u živočichů?", a: "hibernace" }
+      ]
+    };
+
+    // Spočítat celkový počet otázek
+    const totalQuestions = Object.values(questionsDatabase).reduce((sum, section) => sum + section.length, 0);
+    
+    // Nastavit dnešní datum
+    document.getElementById('testDate').value = new Date().toISOString().split('T')[0];
+    
+    // Aktualizovat info box s počtem otázek
+    document.getElementById('infoBox').innerHTML = `<p><strong>Jak to funguje:</strong><br>
+      1. Vyber třídu<br>
+      2. Klikni "Vygenerovat všechny testy"<br>
+      3. Stáhne se JEDEN soubor se VŠEMI testy (každý student jiné otázky)<br>
+      4. Vytiskni a rozdej studentům<br><br>
+      <strong>✨ V databázi je ${totalQuestions} otázek z biologie pro 2. ročník</strong></p>`;
+
+    function generateOneTest(numberOfQuestions) {
+      const sections = Object.keys(questionsDatabase);
+      const totalSections = sections.length;
+      const questionsPerSection = Math.floor(numberOfQuestions / totalSections);
+      const remainder = numberOfQuestions % totalSections;
+
+      let selected = [];
+
+      sections.forEach((section, index) => {
+        const sectionQuestions = [...questionsDatabase[section]];
+        const count = questionsPerSection + (index < remainder ? 1 : 0);
+        
+        for (let i = sectionQuestions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [sectionQuestions[i], sectionQuestions[j]] = [sectionQuestions[j], sectionQuestions[i]];
+        }
+        
+        const selectedFromSection = sectionQuestions.slice(0, Math.min(count, sectionQuestions.length));
+        selectedFromSection.forEach(q => {
+          selected.push({ ...q, section });
+        });
+      });
+
+      for (let i = selected.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [selected[i], selected[j]] = [selected[j], selected[i]];
+      }
+
+      return selected;
+    }
+
+    function generateAllTests() {
+      const className = document.getElementById('className').value;
+      const studentCount = parseInt(document.getElementById('studentCount').value) || 30;
+      const testDate = document.getElementById('testDate').value;
+      const questionsPerTest = parseInt(document.getElementById('questionsPerTest').value) || 30;
+      const pointsPerQuestion = parseInt(document.getElementById('pointsPerQuestion').value) || 1;
+
+      if (!className) {
+        document.getElementById('warningText').textContent = 'Vyber třídu';
+        document.getElementById('warningSection').style.display = 'block';
+        return;
+      }
+
+      document.getElementById('warningSection').style.display = 'none';
+
+      const maxPoints = questionsPerTest * pointsPerQuestion;
+
+      let content = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @media print {
+      .test-page { page-break-after: always; break-after: page; }
+      .test-page:last-child { page-break-after: auto; }
+    }
+    @media screen {
+      .test-page { border-bottom: 3px solid #999; margin-bottom: 30px; padding-bottom: 20px; }
+      .test-page:last-child { border-bottom: none; }
+    }
+    body { font-family: Arial; font-size: 9pt; line-height: 1.15; margin: 0.5cm; }
+    h1 { text-align: center; font-size: 14pt; margin: 4px 0; }
+    .header { border-top: 1.5px solid black; border-bottom: 1.5px solid black; padding: 3px 0; margin: 5px 0 8px 0; }
+    .header p { margin: 1.5px 0; font-size: 9pt; }
+    .question { border-bottom: 1px solid #ddd; padding: 1px 0; margin: 0; page-break-inside: avoid; break-inside: avoid; }
+    .question-text { font-weight: bold; margin: 0 0 1px 0; font-size: 9pt; }
+    .answer-field { min-height: 3.2em; border: none; padding: 2px 3px; background: transparent; margin: 0 0 1px 0; }
+    .points { text-align: right; font-weight: bold; color: #c00; font-size: 8pt; margin: 0; }
+    .summary { border: 1.5px solid black; padding: 8px; margin: 8px 0 8px 0; page-break-inside: avoid; break-inside: avoid; }
+    .summary h2 { font-size: 11pt; margin: 0 0 5px 0; }
+    .summary p { margin: 3px 0; font-size: 9pt; }
+  </style>
+</head>
+<body>`;
+
+      for (let studentNum = 1; studentNum <= studentCount; studentNum++) {
+        if (studentNum > 1) {
+          content += '<br clear=all style="page-break-before:always">';
+        }
+
+        const questions = generateOneTest(questionsPerTest);
+
+        content += `
+  <h1>TEST Z BIOLOGIE - 2. ROČNÍK</h1>
+  <div class="header">
+    <p><strong>Jméno a příjmení:</strong></p>
+    <p><strong>Třída:</strong> ${className}</p>
+    <p><strong>Datum:</strong> ${testDate}</p>
+    <p><strong>Varianta:</strong> ${studentNum}</p>
+  </div>`;
+
+        questions.forEach((item, index) => {
+          content += `
+  <table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
+    <tr>
+      <td>
+        <div class="question">
+          <p class="question-text">${index + 1}. ${item.q}</p>
+          <div class="answer-field">&nbsp;</div>
+          <p class="points">Bodů: _____</p>
+        </div>
+      </td>
+    </tr>
+  </table>`;
+        });
+
+        content += `
+  <div class="summary">
+    <h2>HODNOCENÍ</h2>
+    <p><strong>Celkem bodů:</strong> __________ / ${maxPoints}</p>
+    <p><strong>Známka:</strong> __________</p>
+    <p><strong>Komentář učitele:</strong></p>
+    <div style="border: 1px solid #ccc; min-height: 50px; margin-top: 6px; background: #fafafa;"></div>
+  </div>`;
+      }
+
+      content += `
+</body>
+</html>`;
+
+      const blob = new Blob([content], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'testy_biologie_2rocnik_' + className.replace(/\s+/g, '_') + '_' + testDate + '.doc';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+
+      document.getElementById('testInfo').textContent = studentCount + ' (BIOLOGIE 2. ročník)';
+      document.getElementById('successSection').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
