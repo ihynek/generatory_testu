@@ -2,205 +2,171 @@ BIOLOGIE - 2. ROČNÍK
 Otázky pro přípravu na test
 =====================================
 
-=== GEOLOGIE A MINERALOGIE ===
+=== HOUBY ===
 
-1. Co je geologie?
-2. Jaké jsou hlavní typy hornin?
-3. Jak se nazývá proces, při kterém se hornina mění vlivem tlaku a teploty?
-4. Co je to minerál?
-5. Které dva základní typy zemské kůry rozlišujeme?
-6. Jak vznikají usazené horniny?
-7. Jaký je rozdíl mezi vnitřními a vnějšími geologickými procesy?
-8. Jak vznikají sopečné horniny?
-9. Co je to fosilie a jaký je její význam?
-10. Jaké jsou hlavní části Země podle vnitřní stavby?
-11. Jak se liší zemská kůra oceánská od pevninské?
-12. Co je to litosféra?
-13. Jaký je rozdíl mezi minerálem a horninou?
-14. Jaká jsou základní kritéria pro rozpoznání minerálů?
-15. Jaké známe základní krystalové soustavy?
-16. Co vyjadřuje Mohsova stupnice?
-17. Jaké hlavní třídy minerálů podle chemismu známe?
-18. Která skupina minerálů je nejrozšířenější v zemské kůře?
-19. Který minerál je hlavní rudou železa?
-20. Jaký minerál je hlavním zdrojem hliníku?
-21. Který minerál je nejtvrdší a který nejměkčí?
-22. Co je petrologie a jaký je její hlavní cíl?
-23. Na jaké tři hlavní skupiny se horniny dělí?
-24. Jak vznikají magmatické horniny?
-25. Jaký je rozdíl mezi žulou (granit) a čedičem (basalt)?
-26. Co znamená pojem 'metamorfóza' hornin?
+1. Jaká látka tvoří buněčnou stěnu hub?
+2. Jak se nazývá vlákno tvořící tělo houby?
+3. Jak se nazývá soubor hyf?
+4. Jak se nazývá rozmnožovací forma vyšších hub?
+5. Jak se nazývá nepohlavní rozmnožovací útvar hub?
+6. Jaký je rozdíl mezi pohlavním a nepohlavním rozmnožováním hub?
+7. Jaké houby se používají při výrobě piva a vína?
+8. Jak se nazývá skupina hub zahrnující kvasinky a smrže?
+9. Jak se nazývá skupina hub zahrnující hříby a muchomůrky?
+10. Jak se nazývá soužití hyf hub s kořeny rostlin?
+11. Jak se nazývá tělo lišejníku?
+12. Jaký typ stélky má lišejník korovitý?
+13. Proč jsou lišejníky indikátory čistoty ovzduší?
+14. Jaký typ výživy mají houby rozkládající mrtvou organickou hmotu?
+15. Jaký typ výživy mají houby žijící na úkor hostitele?
+16. Jak se nazývá symbióza houby s řasou nebo sinicí?
+17. Uveď příklad jedlé houby.
+18. Uveď příklad jedovaté houby.
+19. Jaké jsou typické příznaky otravy muchomůrkou zelenou?
+20. Jaký je základní postup první pomoci při podezření na otravu houbami?
+21. Které houby tvoří mykorhizu s jehličnany (např. se smrkem)?
+22. Jak se nazývají možné houby způsobující plíseň na chlebu?
+23. Jaký má význam mykorhiza pro rostliny?
+24. Jaká je hlavní funkce plodnice u hub?
+25. Kde se tvoří výtrusy u stopkovýtrusných hub?
+26. Jaký pigment dává některým houbám schopnost fotosyntézy v symbióze s řasami?
+27. Jak se nazývá způsob rozmnožování kvasinek?
+28. Které houby způsobují onemocnění rostlin jako padlí nebo rez?
+29. Z čeho se skládá lišejník?
+30. Jaká je funkce spor u hub?
+31. Kde rostou saprofytické houby?
+32. Jaký je rozdíl mezi edální a epifytickou formou lišejníků?
+33. Které houby se používají k výrobě antibiotik?
+34. Co jsou to hyfy septované a neseptované?
+35. Jak se rozmnožují lišejníky?
+36. Jaké barvy může mít plodnice hub?
+37. Co je to mykorhiza ektotrofní a endotrofní?
+38. Jaký význam mají houby v přírodě?
 
-=== BUNĚČNÉ DÝCHÁNÍ A FOTOSYNTÉZA ===
+=== BUŇKA A PRIMITIVNÍ MNOHOBUNĚNÍ ===
 
-1. Co je buněčné dýchání a jaký je jeho hlavní význam?
-2. Jaký je obecný vzorec buněčného dýchání?
-3. Jaké fáze buněčného dýchání rozlišujeme?
-4. Jaký je rozdíl mezi aerobním a anaerobním dýcháním?
-5. Proč jsou mitochondrie nazývány 'elektrárny buňky'?
-6. Co je fotosyntéza a proč je důležitá?
-7. Jaký je obecný vzorec fotosyntézy?
-8. Kde probíhá fotosyntéza?
-9. Jaké dvě hlavní fáze fotosyntézy rozlišujeme?
-10. Jaký je význam chlorofylu?
+1. Jaké struktury chybí v živočišné buňce oproti rostlinné?
+2. Jaké jsou čtyři základní typy živočišných tkání?
+3. Který zárodečný list chybí u diblastik?
+4. Kolik zárodečných listů mají triblastika?
+5. Jak se nazývá skupina triblastik, u nichž prvoústa u zárodku dávají vznik ústnímu otvoru u dospělce?
+6. Jak se nazývá skupina triblastik, u nichž prvoústa u zárodku dávají vznik řitnímu otvoru u dospělce?
+7. Který nejjednodušší mnohobunění živočich ještě nemá pravé tkáně?
+8. Jak se nazývají buňky, které zajišťují proudění vody u hubovců (porifer)?
+9. Jak se nazývají žahavé buňky žahavců?
+10. Které stádium žahavců je přisedlé?
+11. Které stádium žahavců je volně plovoucí?
+12. Jak se pohybují žebernatky?
+13. Jaký je rozdíl mezi diblastikami a triblastikami?
+14. Jaké tři zárodečné listy má triblastikum?
+15. Z jakého zárodečného listu vzniká nervová soustava?
+16. Jak se nazývá centrální dutina u žahavců?
+17. Jaký typ symetrie mají žahavci?
+18. Co znamená pojem 'cefalizace'?
+19. Jaké jsou hlavní funkce pojivové tkáně?
+20. Jaký typ tkáně tvoří kůži a sliznice?
 
-=== DNA, RNA A SYNTÉZA BÍLKOVIN ===
+=== BEZOBRATLÍ ===
 
-1. Co je transkripce a kde probíhá?
-2. Co je translace a kde probíhá?
-3. Jakou úlohu má tRNA?
+1. Jaký tvar těla mají ploštěnci?
+2. Jak se nazývá parazitický ploštěnec s článkovaným tělem?
+3. Jak se nazývá parazitický ploštěnec, jehož larvy se vyvíjejí v plžích?
+4. Jaký tvar těla mají hlístice?
+5. Který hlíst parazituje v tenkém střevě člověka?
+6. Jak se nazývá častý dětský parazit, který klade vajíčka v okolí konečníku?
+7. Jak se nazývá kroužkovec žijící v půdě, který zlepšuje úrodnost?
+8. Jaký kroužkovec saje krev obratlovců?
+9. Jak se nazývá tělní dutina u kroužkovců?
+10. Jak se nazývá měkkýš se stočenou ulitou?
+11. Jak se nazývá měkkýš s dvouchlopňovou lasturou?
+12. Jaký měkkýš má chapadla a vysoce vyvinutý nervový systém?
+13. Kolik párů končetin má hmyz?
+14. Jak se nazývá vývoj hmyzu, kde existuje stadium kukly?
+15. Jak se nazývá vývoj hmyzu bez kukly?
+16. Kolik párů končetin mají pavoukovci?
+17. Jaký korýš žije ve sladkých vodách ČR a má krunýř?
+18. Jak se nazývá soustava, kterou ostnokoži pohybují panožkami?
+19. Který ostnokožec má schopnost regenerace a paprscitou souměrnost?
+20. Jaký ostnokožec má kulovité tělo s ostny?
+21. Jaký druh trávicí soustavy mají ploštěnci?
+22. Mají hlístice pravou tělní dutinu?
+23. Jak se dostávají tasemnice do lidského těla?
+24. Jaký je mezihotel motolic?
+25. Čím se živí volně žijící ploštěnci?
+26. Jaký typ oběhové soustavy mají kroužkovci?
+27. Čím dýchají žížaly?
+28. Co je to opasek (clitellum) u žížal?
+29. Z čeho se skládá tělo měkkýšů?
+30. Co vylučuje plášť měkkýšů?
+31. Jakou funkcí má radula u měkkýšů?
+32. Mají mlži hlavu?
+33. Co je to metamorfóza u hmyzu?
+34. Jaká je funkce trachejí u hmyzu?
+35. Co jsou to fasetové oči?
+36. Jak se nazývá vnější kostra členovců?
+37. Co je to svlékání (ecdyse) u členovců?
+38. Mají ostnokoži pravou bilaterální symetrii?
+39. Z čeho je tvořen skelet ostnokoží?
+40. Jak se ostnokoži pohybují?
 
-=== PROKARYOTICKÉ BUŇKY ===
+=== STRUNATCI ===
 
-1. Co je prokaryotická buňka?
-2. Jaké organismy patří mezi prokaryota?
-3. Jaké struktury obsahuje prokaryotická buňka?
-4. Jak probíhá rozmnožování prokaryot?
-5. Jakou funkci mají plazmidy?
+1. Jaký mořský živočich má chordu jen v larvální stadium a dospělec je vakovitý?
+2. Jaký drobný mořský strunatec je považován za blízkého příbuzného obratlovců?
+3. Jak se nazývá bezčelistnatý parazitický obratlovec sající krev ryb?
+4. Jak dýchá většina ryb?
+5. Jaký orgán ryb umožňuje rybám plout v různých hloubkách?
+6. Čím je tvořena kostra, typická pro žraloky a rejnoky?
+7. K čemu slouží postranní čára u ryb?
+8. Jak se nazývá larva obojživelníků?
+9. Který obojživelník má na břiše varovné zbarvení?
+10. Např. který obojživelník má ocas i v dospělosti?
+11. Jaký typ vajec kladou plazi?
+12. Která skupina plazů je bez končetin?
+13. Která skupina plazů má dobře vyvinuté končetiny a ocasy?
+14. Jaký typ kostí mají ptáci pro usnadnění letu?
+15. Jaký orgán ptáků pomáhá při mechanickém drcení potravy?
+16. Jaký znak odlišuje ptáky od všech ostatních obratlovců?
+17. Jak se nazývají žlázy, kterými samice savců krmí mláďata?
+18. Která skupina savců rodí nedovinutá mláďata do vaku?
+19. Jak se nazývají savci s trvale rostoucími řezáky?
+20. Která skupina savců má špičáky a trhá ky přizpůsobené k lovu?
+21. Jaká skupina savců má prsty ukončené kopytem?
+22. Jaký řád savců má pohyblivé prsty a vysoce vyvinutý mozek?
+23. Jaký je základní znak člověka ve stavbě kostry?
+24. Jak se nazývá typ lidské chůze po dvou končetinách?
+25. Co je to chorda dorsalis?
+26. Jaké tři základní znaky mají strunatci?
+27. Jak dýchají dospělí obojživelníci?
+28. Jaký typ oplození mají obojživelníci?
+29. Co je to ektotermie?
+30. Mají plazi suchou nebo vlhkou kůži?
+31. Jaký typ oplození mají plazi?
+32. Co je to homoiotermie?
+33. Jak se nazývá zobák ptáků bez zubů?
+34. Co je to peří obrysové a prachové?
+35. Jaké tři skupiny savců rozlišujeme podle způsobu rozmnožování?
+36. Co je to placenta?
 
-=== EUKARYOTICKÉ BUŇKY ===
+=== FYZIOLOGIE A CHOVÁNÍ ===
 
-1. Co je eukaryotická buňka?
-2. Které organismy mají eukaryotické buňky?
-3. Jaké organely obsahuje eukaryotická buňka?
-4. Jaká je funkce mitochondrií?
-
-=== ROSTLINNÁ BUŇKA A PLETIVA ===
-
-1. Co je základní jednotkou rostlinného těla?
-2. Který organel umožňuje fotosyntézu?
-3. Co chrání buňku a dává jí pevnost?
-4. Kde je genetická informace?
-5. Kde se ukládá voda, živiny a odpadní látky?
-6. Co jsou rostlinná pletiva?
-7. Jaké jsou hlavní typy pletiv podle funkce?
-8. Co je meristém?
-9. Kde se nachází vrcholový meristém?
-10. Jaká je funkce krycího pletiva?
-11. Co tvoří vodivá pletiva?
-
-=== BAKTERIE A SINICE ===
-
-1. Co jsou bakterie?
-2. Jaké jsou hlavní tvary bakterií?
-3. Jak se bakterie rozmnožují?
-4. Jaký je význam bakterií pro člověka a přírodu?
-5. Co jsou sinice?
-6. Jak se liší sinice od bakterií?
-7. Jaký je význam sinic v přírodě?
-8. Jak se sinice rozmnožují?
-9. Kde sinice žijí?
-
-=== ŘASY ===
-
-1. Co jsou řasy?
-2. Jaké hlavní skupiny řas známe podle barvy?
-3. Jak se řasy rozmnožují?
-4. Kde žijí řasy?
-5. Jaký je význam řas?
-
-=== MECHOROSTY ===
-
-1. Co jsou mechorosty?
-2. Jaké hlavní části má tělo mechorostů?
-3. Jak se mechorosty rozmnožují?
-4. Jaký je životní cyklus mechorostů?
-5. Jaký je význam mechorostů?
-
-=== KAPRAĎOROSTY ===
-
-1. Co jsou kapraďorosty?
-2. Jaký je životní cyklus kapraďorostů?
-3. Jak se kapraďorosty rozmnožují?
-4. Jaké hlavní skupiny kapraďorostů známe?
-5. Jaký je význam kapraďorostů?
-
-=== NAHOSEMENNÉ ROSTLINY ===
-
-1. Co jsou nahosemenné rostliny?
-2. Jak se nahosemenné rostliny rozmnožují?
-3. Jaké hlavní části mají nahosemenné rostliny?
-4. Jaké hlavní skupiny nahosemenných rostlin známe?
-5. Jaký je význam nahosemenných rostlin?
-
-=== KRYTOSEMENNÉ ROSTLINY ===
-
-1. Co jsou krytosemenné rostliny?
-2. Jak se krytosemenné rostliny rozmnožují?
-3. Jaké hlavní části má květ krytosemenných rostlin?
-4. Jaké hlavní skupiny krytosemenných rostlin známe?
-5. Jaký je význam krytosemenných rostlin?
-
-=== KOŘEN, STONEK, LIST ===
-
-1. Co je kořen a jaká je jeho hlavní funkce?
-2. Jaké základní typy kořenů známe?
-3. Jaké jsou hlavní části kořene?
-4. Jak se kořen podílí na výměně látek?
-5. Jaké specializované funkce mohou mít kořeny?
-6. Co je stonek a jaká je jeho hlavní funkce?
-7. Jaké základní typy stonků známe?
-8. Jaké hlavní části má stonek?
-9. Jaké specializované stonky existují?
-10. Jaký je význam stonku pro rostlinu?
-11. Co je list a jaká je jeho hlavní funkce?
-12. Jaké základní části má list?
-13. Jaké typy žilnatiny rozlišujeme u listů?
-14. Jaký je význam průduchů na listech?
-15. Jaké speciální typy listů existují?
-
-=== KVĚT, OPYLENÍ, OPLOZENÍ ===
-
-1. Co je květ a jaká je jeho hlavní funkce?
-2. Jaké části tvoří květ?
-3. Jak se květ podílí na rozmnožování rostlin?
-4. Jaké typy květů známe podle pohlaví?
-5. Jaký je význam květů pro rostliny a člověka?
-6. Co je opylení?
-7. Jaké hlavní způsoby opylení známe?
-8. Co je oplození?
-9. Jak probíhá oplození u krytosemenných rostlin?
-10. Jaký je význam opylení a oplození?
-
-=== VÝZNAMNÉ ČELEDI ROSTLIN ===
-
-1. Co znamená pojem 'čeleď' u rostlin?
-2. Jaká je významná čeleď jednoděložných rostlin s hospodářským významem?
-3. Jaká čeleď zahrnuje obiloviny?
-4. Která čeleď zahrnuje luštěniny?
-5. Jaká čeleď je významná pro okrasné a ovocné rostliny?
-6. Která čeleď zahrnuje citrusy?
-7. Jaká čeleď zahrnuje slunečnice a další olejniny?
-8. Která čeleď zahrnuje rajčata, brambory a papriky?
-9. Která čeleď je významná pro tropické koření?
-10. Jaký je celkový význam významných čeledí krytosemenných rostlin?
-
-=== EKOLOGIE ===
-
-1. Co je ekologie?
-2. Co znamená pojem 'ekosystém'?
-3. Co je biotop a biocenóza?
-4. Co jsou producenti, konzumenti a rozkladači?
-5. Co je potravní pyramida?
-6. Co je ekologická nika?
-7. Co je biodiverzita?
-8. Co je suchozemský a vodní ekosystém?
-9. Co je ekologická sukcese?
-10. Jaký je význam ekologie pro člověka?
-
-=== VIRY ===
-
-1. Co jsou viry?
-2. Jaké složky má virová částice (virion)?
-3. Jak se viry rozmnožují?
-4. Jaký je rozdíl mezi DNA a RNA viry?
-5. Co je lytický cyklus?
-6. Co je lyzogenní cyklus?
-7. Jaké choroby způsobují viry u člověka?
-8. Proč antibiotika nepůsobí na viry?
-9. Jakou roli hraje očkování proti virům?
-10. Co jsou bakteriofágy?
+1. Jak se nazývá typ rozmnožování, kdy se z neoplozených vajíček vyvíjí nový jedinec?
+2. Jaký typ rozmnožování je u živočichů nejběžnější?
+3. Jak se nazývá vrozené, geneticky dané chování živočichů?
+4. Jak se nazývá chování získané učením a zkušeností?
+5. Jakým způsobem včely sdělují směr a vzdálenost potravy?
+6. Jak se nazývá oboustranně výhodné soužití dvou druhů?
+7. Jak se nazývá schopnost živočichů orientovat se v prostoru pomocí zvuku?
+8. Jaký typ symetrie má lidské tělo?
+9. Jak se nazývá přizpůsobení tvaru těla prostředí?
+10. Jaký orgán umožňuje ptákům létat ve vysokých nadmořských výškách?
+11. Co je to teritorialita?
+12. Jak se nazývá proces učení mláďat rozpoznat rodiče?
+13. Co je to migrace u živočichů?
+14. Jaký je rozdíl mezi predací a parazitismem?
+15. Co znamená pojem 'sociální hmyz'?
+16. Jak se nazývá zimní spánek u živočichů?
 
 =====================================
-CELKEM: 152 otázek
+CELKEM: 150 otázek
 =====================================
