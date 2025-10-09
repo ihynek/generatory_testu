@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stažení otázek - Biologie a Chemie</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 50px;
+    }
+    
+    .header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+    
+    .back-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .back-button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .year-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .year-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .year-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .year-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+    
+    .year-card.selected {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .year-card.selected .subject-label {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .subject-label {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .icon {
+      font-size: 4em;
+      margin: 20px 0;
+    }
+    
+    .year-card h2 {
+      font-size: 1.8em;
+      color: #333;
+    }
+    
+    .year-card.selected h2 {
+      color: white;
+    }
+    
+    .class-selector {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .class-selector.active {
+      max-height: 500px;
+      opacity: 1;
+      margin-top: 30px;
+    }
+    
+    .class-selector h3 {
+      color: #333;
+      font-size: 1.8em;
+      margin-bottom: 25px;
+    }
+    
+    .class-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .class-btn {
+      padding: 15px 40px;
+      font-size: 1.3em;
+      border: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      font-weight: 600;
+    }
+    
+    .class-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    
+    .class-btn:active {
+      transform: translateY(0);
+    }
+    
+    .footer {
+      text-align: center;
+      color: white;
+      margin-top: 50px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="index.html" class="back-button">← Zpět na generátory</a>
+      <h1>📥 Stažení otázek</h1>
+      <p>Vyberte předmět a ročník pro stažení databáze otázek</p>
+    </div>
+
+    <div class="subjects-grid">
+      <div class="year-card" onclick="selectYear('biologie', 1)">
+        <p class="subject-label">🧬 BIOLOGIE</p>
+        <div class="icon">🦠</div>
+        <h2>1. ročník</h2>
+      </div>
+      
+      <div class="year-card" onclick="selectYear('biologie', 2)">
+        <p class="subject-label">🧬 BIOLOGIE</p>
+        <div class="icon">🧬</div>
+        <h2>2. ročník</h2>
+      </div>
+      
+      <div class="year-card" onclick="selectYear('biologie', 3)">
+        <p class="subject-label">🧬 BIOLOGIE</p>
+        <div class="icon">🔬</div>
+        <h2>3. ročník</h2>
+      </div>
+      
+      <div class="year-card" onclick="selectYear('chemie', 1)">
+        <p class="subject-label">🧪 CHEMIE</p>
+        <div class="icon">⚗️</div>
+        <h2>1. ročník</h2>
+      </div>
+      
+      <div class="year-card" onclick="selectYear('chemie', 2)">
+        <p class="subject-label">🧪 CHEMIE</p>
+        <div class="icon">🧪</div>
+        <h2>2. ročník</h2>
+      </div>
+      
+      <div class="year-card" onclick="selectYear('chemie', 3)">
+        <p class="subject-label">🧪 CHEMIE</p>
+        <div class="icon">⚛️</div>
+        <h2>3. ročník</h2>
+      </div>
+    </div>
+
+    <div class="class-selector" id="classSelector">
+      <h3>Vyberte formát ke stažení:</h3>
+      <div class="class-buttons" id="downloadButtons">
+        <!-- Tlačítka se vygenerují JavaScriptem -->
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Databáze otázek pro přípravu testů</p>
+    </div>
+  </div>
+
+  <script>
+    let selectedSubject = null;
+    let selectedYear = null;
+
+    function selectYear(subject, year) {
+      selectedSubject = subject;
+      selectedYear = year;
+      
+      // Zvýraznění vybraného ročníku
+      const cards = document.querySelectorAll('.year-card');
+      cards.forEach(card => card.classList.remove('selected'));
+      event.target.closest('.year-card').classList.add('selected');
+      
+      // Zobrazení voleb stahování
+      showDownloadOptions(subject, year);
+    }
+
+    function showDownloadOptions(subject, year) {
+      const selector = document.getElementById('classSelector');
+      const buttonsContainer = document.getElementById('downloadButtons');
+      
+      // Formáty ke stažení - pouze TXT
+      const formats = [
+        { label: '📄 Stáhnout TXT', extension: 'txt' }
+      ];
+      
+      // Vymazání předchozích tlačítek
+      buttonsContainer.innerHTML = '';
+      
+      // Vytvoření tlačítek pro formáty
+      formats.forEach(format => {
+        const button = document.createElement('button');
+        button.className = 'class-btn';
+        button.textContent = format.label;
+        button.onclick = () => downloadFile(subject, year, format.extension);
+        buttonsContainer.appendChild(button);
+      });
+      
+      // Zobrazení sekce
+      selector.classList.add('active');
+      
+      // Plynulé scrollování k volbám stahování
+      selector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function downloadFile(subject, year, extension) {
+      // Vytvoření URL pro stažení souboru (relativní cesta)
+      const filename = `otazky_${year}r_bio_download.${extension}`;
+      const url = filename;  // Soubory jsou přímo v kořenové složce
+      
+      // Stažení souboru
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
