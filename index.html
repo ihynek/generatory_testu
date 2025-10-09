@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generátor testů - Biologie a Chemie</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      max-width: 900px;
+      width: 100%;
+      padding: 40px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      color: #667eea;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #666;
+      font-size: 1.1em;
+    }
+
+    .subject-section {
+      margin-bottom: 40px;
+    }
+
+    .subject-label {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #667eea;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .subject-section:last-of-type .subject-label {
+      color: #f093fb;
+    }
+
+    .year-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .year-card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 15px;
+      padding: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 3px solid transparent;
+      text-align: center;
+    }
+
+    .year-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      border-color: #667eea;
+    }
+
+    .subject-section:last-of-type .year-card:hover {
+      border-color: #f093fb;
+    }
+
+    .year-card.selected {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-color: #667eea;
+    }
+
+    .subject-section:last-of-type .year-card.selected {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      border-color: #f093fb;
+    }
+
+    .year-card.selected .subject-label {
+      color: white;
+    }
+
+    .year-card h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .year-card p {
+      font-size: 0.95em;
+      opacity: 0.8;
+    }
+
+    .year-card.selected p {
+      opacity: 1;
+    }
+
+    .class-selector {
+      display: none;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 2px solid #e0e0e0;
+    }
+
+    .class-selector.active {
+      display: block;
+    }
+
+    .class-selector h3 {
+      color: #667eea;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .class-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .class-btn {
+      background: white;
+      border: 2px solid #667eea;
+      color: #667eea;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.3em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .class-btn:hover {
+      background: #667eea;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #e0e0e0;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 1.8em;
+      }
+      
+      .year-card h2 {
+        font-size: 1.5em;
+      }
+
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🧬 Ověřovací testy z biologie a chemie</h1>
+      <p>Generátor testů pro Gymnázium Joachima Barranda Beroun</p>
+    </div>
+
+    <div class="subject-section">
+      <div class="year-selector">
+        <div class="year-card" onclick="selectYear('biologie', 1)">
+          <p class="subject-label">🧬 Biologie</p>
+          <div class="icon">🔬</div>
+          <h2>1. ročník</h2>
+        </div>
+        
+        <div class="year-card" onclick="selectYear('biologie', 2)">
+          <p class="subject-label">🧬 Biologie</p>
+          <div class="icon">🦠</div>
+          <h2>2. ročník</h2>
+        </div>
+        
+        <div class="year-card" onclick="selectYear('biologie', 3)">
+          <p class="subject-label">🧬 Biologie</p>
+          <div class="icon">🧬</div>
+          <h2>3. ročník</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-section">
+      <div class="year-selector">
+        <div class="year-card" onclick="selectYear('chemie', 1)">
+          <p class="subject-label">🧪 Chemie</p>
+          <div class="icon">⚗️</div>
+          <h2>1. ročník</h2>
+        </div>
+        
+        <div class="year-card" onclick="selectYear('chemie', 2)">
+          <p class="subject-label">🧪 Chemie</p>
+          <div class="icon">🧪</div>
+          <h2>2. ročník</h2>
+        </div>
+        
+        <div class="year-card" onclick="selectYear('chemie', 3)">
+          <p class="subject-label">🧪 Chemie</p>
+          <div class="icon">⚛️</div>
+          <h2>3. ročník</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="class-selector" id="classSelector">
+      <h3>Vyberte třídu:</h3>
+      <div class="class-buttons" id="classButtons">
+        <!-- Třídy se vygenerují JavaScriptem -->
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Vytvořeno pro efektivní přípravu testů</p>
+    </div>
+  </div>
+
+  <script>
+    let selectedSubject = null;
+    let selectedYear = null;
+
+    function selectYear(subject, year) {
+      selectedSubject = subject;
+      selectedYear = year;
+      
+      // Zvýraznění vybraného ročníku
+      const cards = document.querySelectorAll('.year-card');
+      cards.forEach(card => card.classList.remove('selected'));
+      event.target.closest('.year-card').classList.add('selected');
+      
+      // Zobrazení výběru tříd
+      showClassSelector(subject, year);
+    }
+
+    function showClassSelector(subject, year) {
+      const selector = document.getElementById('classSelector');
+      const buttonsContainer = document.getElementById('classButtons');
+      
+      // Třídy podle ročníku
+      const classes = [`${year}.A`, `${year}.B`, '5KA'];
+      
+      // Vymazání předchozích tlačítek
+      buttonsContainer.innerHTML = '';
+      
+      // Vytvoření tlačítek pro třídy
+      classes.forEach(className => {
+        const button = document.createElement('button');
+        button.className = 'class-btn';
+        button.textContent = className;
+        button.onclick = () => openGenerator(subject, year, className);
+        buttonsContainer.appendChild(button);
+      });
+      
+      // Zobrazení sekce
+      selector.classList.add('active');
+      
+      // Plynulé scrollování k výběru tříd
+      selector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function openGenerator(subject, year, className) {
+      // Vytvoření URL pro generátor
+      const url = `generator_${subject}_${year}rocnik.html`;
+      
+      // Přesměrování na generátor
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>

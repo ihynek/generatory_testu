@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generátor testů - BIOLOGIE 3. ročník</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: Arial, sans-serif; 
+      background-color: #bfdbfe;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232563eb' fill-opacity='0.4'%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3Ccircle cx='15' cy='15' r='4'/%3E%3Ccircle cx='65' cy='65' r='4'/%3E%3Ccircle cx='15' cy='65' r='3'/%3E%3Ccircle cx='65' cy='15' r='3'/%3E%3C/g%3E%3Cg stroke='%232563eb' stroke-width='2.5' fill='none' stroke-opacity='0.35'%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Cpath d='M40 20 Q50 30 40 40 Q30 50 40 60'/%3E%3C/g%3E%3C/svg%3E"),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(37, 99, 235, 0.08) 40px, rgba(37, 99, 235, 0.08) 41px),
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(37, 99, 235, 0.08) 40px, rgba(37, 99, 235, 0.08) 41px),
+        linear-gradient(135deg, #bfdbfe 0%, #c7d2fe 50%, #ddd6fe 100%);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .card { 
+      background-color: white;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2393c5fd' fill-opacity='0.15'%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Ccircle cx='25' cy='25' r='8'/%3E%3Ccircle cx='95' cy='95' r='8'/%3E%3Ccircle cx='25' cy='95' r='6'/%3E%3Ccircle cx='95' cy='25' r='6'/%3E%3C/g%3E%3Cg stroke='%2393c5fd' stroke-width='2' fill='none' stroke-opacity='0.12'%3E%3Cpath d='M35 60 Q47 40 60 60 T85 60'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3C/g%3E%3C/svg%3E");
+      border-radius: 16px; 
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+      padding: 32px; 
+      margin-bottom: 24px; 
+    }
+    h1 { 
+      font-size: 28px; 
+      font-weight: bold; 
+      color: #1f2937; 
+      margin-bottom: 24px; 
+      text-align: center; 
+    }
+    .info-box { 
+      background: #eff6ff; 
+      border-radius: 8px; 
+      padding: 16px; 
+      margin-bottom: 24px; 
+    }
+    .info-box p { font-size: 14px; color: #374151; line-height: 1.6; }
+    .form-group { margin-bottom: 16px; }
+    label { 
+      display: block; 
+      font-size: 14px; 
+      font-weight: 500; 
+      color: #374151; 
+      margin-bottom: 8px; 
+    }
+    input[type="text"], input[type="date"], input[type="number"], select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #d1d5db;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+    }
+    select {
+      cursor: pointer;
+      background: white;
+    }
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .btn {
+      padding: 14px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      font-size: 16px;
+      width: 100%;
+      margin-top: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      color: white;
+    }
+    .btn:disabled {
+      background: #d1d5db;
+      cursor: not-allowed;
+    }
+    .back-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      transition: all 0.2s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .back-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .warning {
+      background: #fef3c7;
+      border: 2px solid #fbbf24;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 16px;
+    }
+    .warning p { color: #92400e; font-size: 14px; text-align: center; }
+    .success {
+      background: #d1fae5;
+      border: 2px solid #10b981;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    .success p { color: #065f46; font-size: 14px; }
+    .instruction-box {
+      background: #dbeafe;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .instruction-box p {
+      font-size: 14px;
+      color: #1e40af;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-button">← Zpět na rozcestník</a>
+    
+    <div class="card">
+      <h1>🧬 Generátor testů z BIOLOGIE - 3. ročník</h1>
+      
+      <div class="info-box" id="infoBox">
+        <p><strong>Jak to funguje:</strong><br>
+        1. Vyber třídu<br>
+        2. Klikni "Vygenerovat všechny testy"<br>
+        3. Stáhne se JEDEN soubor se VŠEMI testy (každý student jiné otázky)<br>
+        4. Vytiskni a rozdej studentům</p>
+      </div>
+
+      <div class="form-group">
+        <label>Třída:</label>
+        <select id="className">
+          <option value="">-- Vyber třídu --</option>
+          <option value="3.A">3.A</option>
+          <option value="3.B">3.B</option>
+          <option value="7SA">7SA</option>
+        </select>
+      </div>
+
+      <div class="input-row">
+        <div class="form-group">
+          <label>Počet studentů:</label>
+          <input type="number" id="studentCount" value="30" min="1" max="50">
+        </div>
+        
+        <div class="form-group">
+          <label>Datum testu:</label>
+          <input type="date" id="testDate">
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div class="form-group">
+          <label>Otázek na test:</label>
+          <input type="number" id="questionsPerTest" value="30" min="1" max="50">
+        </div>
+        
+        <div class="form-group">
+          <label>Bodů za otázku:</label>
+          <input type="number" id="pointsPerQuestion" value="1" min="1" max="10">
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="generateAllTests()">
+        Vygenerovat všechny testy najednou
+      </button>
+
+      <div id="warningSection" style="display: none;">
+        <div class="warning">
+          <p id="warningText">Vyplň všechny údaje</p>
+        </div>
+      </div>
+
+      <div id="successSection" style="display: none;">
+        <div class="success">
+          <p><strong>✅ Testy vygenerovány!</strong><br>
+          Soubor obsahuje <span id="testInfo"></span> testů připravených k tisku.</p>
+        </div>
+      </div>
+
+      <div class="instruction-box" style="margin-top: 24px;">
+        <p><strong>💡 Tip:</strong> Každý student dostane jiné otázky (náhodně vybrané z databáze). 
+        Testy jsou v jednom souboru, každý test na samostatném listu. Stačí vytisknout a rozdat studentům.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const questionsDatabase = {
+      "Opěrná soustava": [
+        { q: "Co je opěrná soustava?", a: "soubor kostí, chrupavek a vazů, které tvoří oporu těla a chrání orgány" },
+        { q: "Co je skelet?", a: "kostra -- soubor všech kostí lidského těla (cca 206)" },
+        { q: "Co je kloub?", a: "pohyblivé spojení dvou kostí" },
+        { q: "Co je kloubní chrupavka?", a: "hladký povrch kostí v kloubu, umožňuje hladký pohyb" },
+        { q: "Co jsou vazy?", a: "pásy vaziva spojující kosti mezi sebou, zpevňují kloub" },
+        { q: "Co jsou šlachy?", a: "spojují svaly s kostmi" },
+        { q: "Co je lebka?", a: "kostěná schránka chránící mozek a smyslové orgány" },
+        { q: "Co je páteř?", a: "osa těla složená z obratlů, umožňuje vzpřímené držení těla" },
+        { q: "Co je obratel?", a: "základní kostní jednotka páteře, skládá se z těla, oblouku a výběžků" },
+        { q: "Co je páteřní kanál?", a: "otvor v obratlech, jímž prochází mícha" },
+        { q: "Co jsou meziobrat lové ploténky?", a: "chrupavčité destičky mezi obratli, tlumí nárazy" },
+        { q: "Co je hrudník?", a: "kostěný rámec tvořený hrudní kostí, žebry a hrudní páteří" },
+        { q: "Co je kostní dřeň?", a: "tkáň uvnitř kostí -- červená (krvetvorba), žlutá (tuková)" },
+        { q: "Co je krvetvorba (hemopoeza)?", a: "proces tvorby krvinek v červené kostní dřeni" },
+        { q: "Z čeho se skládá horní končetina?", a: "pažní kost, loketní kost, vřetenní kost, zápěstní a záprstní kůstky, články prstů" },
+        { q: "Z čeho se skládá dolní končetina?", a: "stehenní kost, čéška, holenní kost, lýtková kost, zánártní a nártní kůstky, články prstů" }
+      ],
+      "Svalová soustava": [
+        { q: "Co je svalová tkáň?", a: "tkáň tvořená buňkami schopnými stahu, umožňuje pohyb těla a orgánů" },
+        { q: "Co je příčně pruhované svalstvo?", a: "svalstvo ovládané vůlí, tvoří kosterní svaly" },
+        { q: "Co je srdeční svalstvo?", a: "zvláštní typ příčně pruhovaného svalstva, tvoří srdce, není ovládáno vůlí" },
+        { q: "Co je hladké svalstvo?", a: "svalstvo vnitřních orgánů, není ovládáno vůlí" },
+        { q: "Co je sval?", a: "orgán schopný aktivního stahu, tvořený svalovou tkání" },
+        { q: "Co je svalové vlákno?", a: "základní stavební a funkční jednotka kosterního svalu" },
+        { q: "Co jsou myofibrily?", a: "vlákenka uvnitř svalového vlákna, tvořená aktinem a myosinem" },
+        { q: "Co je nervosvalová ploténka?", a: "místo kontaktu motorického nervu se svalovým vláknem, přenáší vzruch" },
+        { q: "Co je synergista?", a: "sval, který pomáhá hlavnímu svalu při pohybu" },
+        { q: "Co je antagonista?", a: "sval působící opačně než jiný sval" },
+        { q: "Co je flexor?", a: "ohýbač -- sval, který umožňuje ohyb kloubu" },
+        { q: "Co je extenzor?", a: "natahovač -- sval, který umožňuje natažení kloubu" },
+        { q: "Uveď příklady svalů horní končetiny.", a: "svaly předloktí, biceps, triceps, deltový" },
+        { q: "Uveď příklady svalů dolní končetiny.", a: "čtyřhlavý stehenní, svaly zadní strany stehna, trojhlavý lýtkový, svaly nohy" },
+        { q: "Uveď příklady svalů hlavy a trupu.", a: "trapézový sval, široký zádový, svaly mezilopatkové, čelní, žvýkací, spánkové, okcipitální, kruhový ústní svěrač" }
+      ],
+      "Krevní a lymfatická soustava": [
+        { q: "Co je homeostáza?", a: "schopnost těla udržovat stabilní vnitřní prostředí" },
+        { q: "Co je krev?", a: "tekutá pojivová tkáň přenášející kyslík, živiny a odpadní látky" },
+        { q: "Co je lymfa?", a: "tekutina cirkulující v lymfatické soustavě, podílí se na obraně organismu a transportu látek" },
+        { q: "Co je hematologie?", a: "vědní obor zabývající se studiem krve a krevotvorných orgánů" },
+        { q: "Co je glykemie?", a: "koncentrace glukózy v krvi" },
+        { q: "Co je krevní obraz?", a: "laboratorní vyšetření počtu a poměru krevních buněk" },
+        { q: "Co jsou erytrocyty?", a: "červené krvinky přenášející kyslík a část oxidu uhličitého" },
+        { q: "Co jsou leukocyty?", a: "bílé krvinky podílející se na imunitní obraně organismu" },
+        { q: "Co jsou trombocyty?", a: "krevní destičky podílející se na srážení krve" },
+        { q: "Co je hemoglobin?", a: "červené barvivo z hemu a globinu, váže a přenáší kyslík" },
+        { q: "Co je hematokryt?", a: "procentuální zastoupení červených krvinek v krvi" },
+        { q: "Co je sedimentace?", a: "usazování erytrocytů ve zkumavce, indikátor zánětu" },
+        { q: "Co je diapedéza?", a: "schopnost leukocytů prostupovat cévní stěnou do tkání" },
+        { q: "Co je hemostáze?", a: "soubor procesů zajišťujících zastavení krvácení" },
+        { q: "Co je embolie?", a: "ucpání cévy trombem nebo jinou látkou přenesenou krví" },
+        { q: "Co je anémie?", a: "snížený počet erytrocytů nebo hemoglobinu, způsobující únavu a slabost" },
+        { q: "Co je leukémie?", a: "zhoubné onemocnění krvetvorby charakterizované nadprodukcí leukocytů" }
+      ],
+      "Oběhová soustava": [
+        { q: "Co je srdce?", a: "dutý svalový orgán pumpující krev do těla" },
+        { q: "Co je myokard?", a: "svalovina srdeční stěny, umožňuje stahy srdce" },
+        { q: "Co jsou srdeční síně a komory?", a: "síně přijímají krev, komory ji vypuzují" },
+        { q: "Co jsou chlopně?", a: "zabraňují zpětnému toku krve (dvojcípá a trojcípá)" },
+        { q: "Co je aorta?", a: "hlavní tepna vedoucí krev ze srdce do těla" },
+        { q: "Co je plicnice?", a: "vede odkysličenou krev do plic" },
+        { q: "Co je systola?", a: "stah srdečních svalů" },
+        { q: "Co je diastola?", a: "uvolnění srdečních svalů" },
+        { q: "Co jsou koronární tepny?", a: "zásobují srdce krví" },
+        { q: "Co je malý oběh?", a: "krevní oběh mezi srdcem a plícemi" },
+        { q: "Co je velký oběh?", a: "krevní oběh mezi srdcem a tělem" },
+        { q: "Co jsou horní a dolní dutá žíla?", a: "přivádějí odkysličenou krev do pravé síně" },
+        { q: "Co je EKG?", a: "záznam elektrické aktivity srdce" }
+      ],
+      "Trávicí soustava": [
+        { q: "Co je trávicí soustava?", a: "soubor orgánů zajišťujících příjem, trávení a vstřebávání potravy" },
+        { q: "Co je trávicí trubice?", a: "dutý orgán od úst po konečník" },
+        { q: "Co je dutina ústní?", a: "místo příjmu a prvotního zpracování potravy" },
+        { q: "Co je jazyk?", a: "orgán pro manipulaci s potravou a chuť" },
+        { q: "Co je zub?", a: "orgán pro mechanické zpracování potravy" },
+        { q: "Jaká je stavba zubu?", a: "korunka, krček, kořen, zubovina, sklovina, dřeň, cement, zubní jamka" },
+        { q: "Jaké jsou typy zubů?", a: "řezáky, špičáky, třenové zuby, stoličky" },
+        { q: "Co je žaludek?", a: "vakovitý orgán mechanicky a chemicky zpracovávající potravu" },
+        { q: "Co je tenké střevo?", a: "hlavní místo trávení a vstřebávání živin" },
+        { q: "Co je tlusté střevo?", a: "vstřebává vodu a soli, tvoří stolici" },
+        { q: "Co jsou játra?", a: "největší žláza v lidském těle, hlavní centrum metabolických procesů a detoxikace" },
+        { q: "Jaké trávicí enzymy znáš?", a: "pepsin, trypsin, chymotrypsin, amylázy, lipázy -- štěpí bílkoviny, polysacharidy a tuky" },
+        { q: "Co jsou peristaltické pohyby?", a: "rytmické stahy posunující potravu" },
+        { q: "Co je vstřebávání (resorpce)?", a: "přechod živin z trávicí trubice do krve nebo lymfy" },
+        { q: "Co je dvanáctník?", a: "první úsek tenkého střeva" },
+        { q: "Co je slinivka břišní (pankreas)?", a: "produkuje trávicí enzymy a hormony" }
+      ],
+      "Vylučovací soustava": [
+        { q: "Co je vylučovací (močová) soustava?", a: "soustava orgánů tvořících a odvádějících moč" },
+        { q: "Co jsou ledviny?", a: "párový orgán filtrující krev a tvořící moč" },
+        { q: "Co je nefron?", a: "základní funkční jednotka ledviny (filtr + kanálky)" },
+        { q: "Co je antidiuretický hormon (ADH)?", a: "hormon z hypotalamu, zadržuje vodu v těle" },
+        { q: "Co je močovod?", a: "trubice vedoucí moč z ledvin do močového měchýře" },
+        { q: "Co je močový měchýř?", a: "dutý orgán dočasně skladující moč" },
+        { q: "Co je močová trubice?", a: "odvádí moč ven z těla" },
+        { q: "Co je erytropoetin?", a: "hormon ledvin podporující tvorbu červených krvinek" },
+        { q: "Co jsou ledvinové kameny (konkrementy)?", a: "ztvrdlé usazeniny solí v močových cestách" }
+      ],
+      "Smyslová soustava": [
+        { q: "Co je receptor?", a: "buněčná struktura reagující na podněty" },
+        { q: "Co je oko a jaká je jeho stavba?", a: "orgán zraku, převádí světlo na nervové impulsy, obsahuje bělimo, rohovku, cévnatku, duhovku, sítnici, čočku, komorovou vodu a sklivec" },
+        { q: "Co je sítnice?", a: "obsahuje fotoreceptory, místo vzniku zrakových vjemů: tyčinky a čípky" },
+        { q: "Co je zrakový nerv?", a: "přenáší vizuální informace do mozku" },
+        { q: "Co je binokulární vidění?", a: "vidění oběma očima, prostorové vnímání" },
+        { q: "Co jsou okohybné svaly?", a: "umožňují pohyb oka" },
+        { q: "Co je ucho a jaká je jeho stavba?", a: "orgán sluchu a rovnováhy, vnější, střední a vnitřní ucho" },
+        { q: "Co je perilymfa a endolymfa?", a: "tekutina uvnitř kostěného labyrintu, tekutina uvnitř blanitého labyrintu" },
+        { q: "Co je sluchový a rovnovážný nerv?", a: "přenáší signály z ucha do mozku" },
+        { q: "Co je statokinetické ústrojí?", a: "udržuje rovnováhu těla" },
+        { q: "Co je hlemýžď?", a: "převádí zvuk na nervové impulsy" },
+        { q: "Jaká je stavba kůže?", a: "Epidermis (pokožka), Dermis (škára), Podkoží" },
+        { q: "Co jsou chuťové pohárky?", a: "drobné struktury na jazyku obsahující chuťové buňky" }
+      ],
+      "Pohlavní rozmnožování a vývin": [
+        { q: "Co je pohlavní rozmnožování (pohlavní reprodukce)?", a: "rozmnožování zahrnující splynutí dvou pohlavních buněk (gamet)" },
+        { q: "Co je pohlavní buňka (gameta)?", a: "specializovaná buňka pro pohlavní rozmnožování (spermie nebo vajíčko)" },
+        { q: "Co je spermie?", a: "mužská pohlavní buňka schopná oplodnění" },
+        { q: "Co je vajíčko (oocyt)?", a: "ženská pohlavní buňka schopná oplodnění" },
+        { q: "Co je folikul?", a: "struktura ve vaječníku, kde dozrává vajíčko" },
+        { q: "Co je oplození (fertilizace)?", a: "splynutí spermie a vajíčka, vznik zygoty" },
+        { q: "Co je zygota?", a: "první buňka vzniklá splynutím gamet" },
+        { q: "Co je zárodek (embryo)?", a: "rané stadium vývoje organismu před plodem" },
+        { q: "Co je meióza?", a: "dělení pohlavních buněk s redukcí počtu chromozomů na polovinu" },
+        { q: "Co jsou pohlavní chromozomy (gonozomy)?", a: "určují pohlaví jedince (X a Y)" },
+        { q: "Co je pyj (penis)?", a: "mužský pohlavní orgán umožňující pohlavní styk a odvod moči" },
+        { q: "Co jsou vaječníky (ovaria)?", a: "ženské pohlavní orgány produkující vajíčka a hormony" },
+        { q: "Co je děloha?", a: "svalový orgán, kde se vyvíjí zárodek a plod" },
+        { q: "Co je ovulace?", a: "uvolnění zralého vajíčka z vaječníku" },
+        { q: "Co je menstruační cyklus (menze)?", a: "periodické hormonální a fyziologické změny u ženy" },
+        { q: "Co je placenta?", a: "orgán vyživující plod a umožňující výměnu látek mezi matkou a plodem" },
+        { q: "Co je pupečník?", a: "propojuje plod s placentou, umožňuje výměnu živin a kyslíku" }
+      ],
+      "Endokrinní soustava": [
+        { q: "Co je žláza s vnitřní sekrecí (endokrinní žláza)?", a: "vylučuje hormony přímo do krve" },
+        { q: "Co je endokrinní soustava?", a: "systém žláz řídící organismus pomocí hormonů" },
+        { q: "Co je hormon?", a: "chemická látka ovlivňující činnost buněk a orgánů" },
+        { q: "Co je hypotalamo-hypofyzární systém?", a: "propojení hypotalamu a hypofýzy, hlavní centrum řízení hormonů" },
+        { q: "Co je hypofýza (podvěsek mozkový)?", a: "hlavní žláza endokrinní soustavy" },
+        { q: "Co je přední lalok hypofýzy (adenohypofýza)?", a: "produkuje tropní a růstové hormony" },
+        { q: "Co je růstový hormon (somatotropin)?", a: "podporuje růst a vývoj" },
+        { q: "Co je folikuly stimulující hormon (folitropin)?", a: "podporuje zrání pohlavních buněk" },
+        { q: "Co je neurohypofýza?", a: "zadní lalok hypofýzy, uvolňuje vazopresin a oxytocin" },
+        { q: "Co je antidiuretický hormon (vazopresin)?", a: "snižuje vylučování vody v ledvinách" },
+        { q: "Co je oxytocin?", a: "podporuje stahy dělohy a vylučování mléka" },
+        { q: "Co je štítná žláza?", a: "žláza produkující hormony řídící metabolismus" },
+        { q: "Co je tyroxin (T4)?", a: "hormon štítné žlázy ovlivňující metabolismus" },
+        { q: "Co jsou nadledviny?", a: "žlázy na ledvinách, tvoří hormony kůry i dřeně" },
+        { q: "Co je slinivka břišní (pankreas) v roli endokrinní žlázy?", a: "žláza s vnitřní sekrecí, produkuje inzulin a glukagon" }
+      ],
+      "Nervová soustava": [
+        { q: "Co je nervová soustava?", a: "řídí a koordinuje činnost organismu pomocí nervových vzruchů" },
+        { q: "Co je centrální nervový systém (CNS)?", a: "mozek a mícha" },
+        { q: "Co je periferní (obvodový) nervový systém?", a: "nervy spojující CNS s tělem" },
+        { q: "Co je mozek?", a: "řídicí centrum těla, zpracovává informace" },
+        { q: "Co je mícha?", a: "vede vzruchy mezi mozkem a tělem, zajišťuje reflexy" },
+        { q: "Co je neuron (nervová buňka)?", a: "základní jednotka nervové soustavy" },
+        { q: "Co je dendrit?", a: "přijímá vzruchy od jiných buněk" },
+        { q: "Co je axon (neurit)?", a: "vede vzruch od těla neuronu dál" },
+        { q: "Co je synapse?", a: "místo spojení dvou neuronů" },
+        { q: "Co je neurotransmiter?", a: "chemická látka přenášející vzruch mezi neurony" },
+        { q: "Co je reflex?", a: "automatická reakce těla na podnět" },
+        { q: "Co je reflexní oblouk?", a: "dráha nervového vzruchu při reflexu" },
+        { q: "Co je autonomní (vegetativní) nervový systém?", a: "řídí činnost orgánů nezávisle na vůli" },
+        { q: "Co je sympatikus?", a: "aktivuje tělo při stresu (útok nebo útěk)" },
+        { q: "Co je parasympatikus?", a: "uklidňuje tělo, podporuje trávení a regeneraci" },
+        { q: "Co je akční potenciál?", a: "krátký elektrický impuls, který se šíří neuronem" }
+      ],
+      "Genetika": [
+        { q: "Co je genetika?", a: "věda zabývající se dědičností a proměnlivostí organismů" },
+        { q: "Co je gen?", a: "úsek DNA kódující jednu vlastnost" },
+        { q: "Co je alela?", a: "jedna z variant genu" },
+        { q: "Co je homozygot?", a: "jedinec s dvěma stejnými alelami" },
+        { q: "Co je heterozygot?", a: "jedinec s dvěma odlišnými alelami" },
+        { q: "Co je genotyp?", a: "soubor všech genů jedince" },
+        { q: "Co je fenotyp?", a: "soubor všech pozorovatelných znaků jedince" },
+        { q: "Co je chromozom?", a: "struktura z DNA a bílkovin, nese geny" },
+        { q: "Co je autosom?", a: "chromozom, který neurčuje pohlaví" },
+        { q: "Co jsou gonozomy (pohlavní chromozomy)?", a: "chromozomy určující pohlaví" },
+        { q: "Co je mitóza?", a: "dělení somatických buněk, vznikají dvě identické buňky" },
+        { q: "Co je meióza?", a: "dělení pohlavních buněk s redukcí chromozomů" },
+        { q: "Co je dědičnost?", a: "schopnost organismů předávat znaky potomstvu" },
+        { q: "Co je mutace?", a: "náhlá změna genetické informace v genu nebo chromozomu" },
+        { q: "Co je křížení?", a: "kombinace genotypů rodičů za účelem zjištění dědičnosti znaků" }
+      ],
+      "Ekologie": [
+        { q: "Co je ekologie?", a: "věda o vztazích mezi organismy navzájem a jejich prostředím" },
+        { q: "Co je ekosystém?", a: "soubor organismů a jejich neživého prostředí, které spolu vzájemně působí" },
+        { q: "Co je biotop?", a: "místo, kde organismus žije, prostředí poskytující podmínky pro život" },
+        { q: "Co je biocenóza?", a: "společenstvo všech organismů žijících v daném biotopu" },
+        { q: "Co je biosféra?", a: "část geosfér y, kde existuje život (povrch, voda, atmosféra)" },
+        { q: "Co je biom?", a: "rozsáhlá oblast s podobnými klimatickými podmínkami a typickými ekosystémy (např. tundra, prales)" },
+        { q: "Co je populace?", a: "soubor jedinců jednoho druhu žijících na určitém místě v daném čase" },
+        { q: "Co je druh?", a: "skupina organismů, které se mohou mezi sebou rozmnožovat a mít plodné potomstvo" },
+        { q: "Co je habitat?", a: "konkrétní místo/lokalita výskytu určitého organismu" },
+        { q: "Co je ekologická nika?", a: "životní role organismu v ekosystému, zahrnuje jeho potřeby a vztahy" },
+        { q: "Co jsou abiotické faktory?", a: "neživé složky prostředí (světlo, teplota, voda, půda)" },
+        { q: "Co jsou biotické faktory?", a: "vlivy ostatních organismů (predátoři, paraziti, konkurence)" },
+        { q: "Co je producent?", a: "organismus, který vytváří organické látky z anorganických (např. rostliny)" },
+        { q: "Co je konzument?", a: "organismus, který přijímá potravu z jiných organismů (živočichové)" },
+        { q: "Co je rozkladač (dekompozitor)?", a: "rozkládá odumřelou hmotu na jednodušší látky (např. houby, bakterie)" },
+        { q: "Co je potravní řetězec?", a: "sled potravních závislostí, v němž se energie přenáší mezi organismy prostřednictvím potravy" },
+        { q: "Co je ekologická pyramida?", a: "hierarchie vztahů mezi trofickými úrovněmi v ekosystému" },
+        { q: "Co je trofická úroveň?", a: "stupeň v potravním řetězci (producent, konzument, rozkladač)" },
+        { q: "Co je biomasa?", a: "celková hmota živých organismů v dané oblasti" },
+        { q: "Co je energetický tok?", a: "přenos energie z jednoho článku potravního řetězce na druhý" },
+        { q: "Co je koloběh látek?", a: "oběh prvků a sloučenin mezi organismy a prostředím" },
+        { q: "Co je fotosyntéza?", a: "proces, při němž rostliny přeměňují sluneční energii na chemickou v cukrech" },
+        { q: "Co je respirace (buněčné dýchání)?", a: "rozklad organických látek za účelem získání energie" },
+        { q: "Co je eutrofizace?", a: "přehnojení vod, vedoucí k přemnožení řas a úbytku kyslíku" },
+        { q: "Co je sukcese?", a: "postupná změna druhového složení ekosystému v čase" },
+        { q: "Co je klimax?", a: "konečné stabilní stadium sukcese" },
+        { q: "Co je ekologická stabilita?", a: "schopnost ekosystému odolávat změnám a narušení" },
+        { q: "Co je ekologická rovnováha?", a: "stav, kdy jsou vztahy mezi složkami ekosystému vyvážené" },
+        { q: "Co je disturbance?", a: "narušení ekosystému (např. požár, povodeň, těžba)" },
+        { q: "Co je fragmentace prostředí?", a: "rozdělení přírodního území na menší izolované části" },
+        { q: "Co je populační hustota?", a: "počet jedinců daného druhu na určité ploše" },
+        { q: "Co je natalita?", a: "porodnost, počet nových jedinců v populaci" },
+        { q: "Co je mortalita?", a: "úmrtnost, počet jedinců, kteří v populaci uhynou" },
+        { q: "Co je migrace?", a: "přesun organismů z jednoho místa na druhé" },
+        { q: "Co je nosná kapacita prostředí?", a: "maximální počet jedinců, které prostředí uživí" },
+        { q: "Co je limitační faktor?", a: "prvek prostředí, který nejvíce omezuje růst populace" },
+        { q: "Co je ekologická tolerance?", a: "rozpětí hodnot podmínek, ve kterém je organismus schopen žít" },
+        { q: "Co je bioindikátor?", a: "organismus citlivý na změny prostředí (např. lišejníky na znečištění)" },
+        { q: "Co je adaptace?", a: "přizpůsobení organismu podmínkám prostředí" },
+        { q: "Co je mutualismus?", a: "oboustranně výhodné soužití dvou druhů" },
+        { q: "Co je parazitismus?", a: "vztah, kdy jeden organismus (parazit) žije na úkor jiného (hostitele)" },
+        { q: "Co je komenzalismus?", a: "vztah, kdy jeden druh má užitek, druhý není ovlivněn" },
+        { q: "Co je predace?", a: "vztah mezi predátorem a kořistí, kdy jeden druh druhý požírá" },
+        { q: "Co je konkurence?", a: "soupeření organismů o zdroje (potravu, prostor, světlo)" },
+        { q: "Co je amensalismus?", a: "vztah, kdy jeden druh je potlačen, druhý není ovlivněn" },
+        { q: "Co je neutralismus?", a: "soužití druhů bez vzájemného ovlivnění" },
+        { q: "Co je invázní druh?", a: "nepůvodní druh, který se šíří a vytlačuje původní organismy" },
+        { q: "Co je trvale udržitelný rozvoj?", a: "rozvoj, který uspokojuje potřeby současnosti, aniž by ohrozil budoucí generace" },
+        { q: "Co je ochrana přírody?", a: "soubor opatření k udržení biologické rozmanitosti a ekosystémů" },
+        { q: "Co je biodiverzita?", a: "rozmanitost druhů, genů a ekosystémů na Zemi" }
+      ]
+    };
+
+    const totalQuestions = Object.values(questionsDatabase).reduce((sum, section) => sum + section.length, 0);
+    document.getElementById('testDate').value = new Date().toISOString().split('T')[0];
+    document.getElementById('infoBox').innerHTML = `<p><strong>Jak to funguje:</strong><br>
+      1. Vyber třídu<br>
+      2. Klikni "Vygenerovat všechny testy"<br>
+      3. Stáhne se JEDEN soubor se VŠEMI testy (každý student jiné otázky)<br>
+      4. Vytiskni a rozdej studentům<br><br>
+      <strong>✨ V databázi je ${totalQuestions} otázek z biologie pro 3. ročník</strong></p>`;
+
+    function generateOneTest(numberOfQuestions) {
+      const sections = Object.keys(questionsDatabase);
+      const totalSections = sections.length;
+      const questionsPerSection = Math.floor(numberOfQuestions / totalSections);
+      const remainder = numberOfQuestions % totalSections;
+      let selected = [];
+
+      sections.forEach((section, index) => {
+        const sectionQuestions = [...questionsDatabase[section]];
+        const count = questionsPerSection + (index < remainder ? 1 : 0);
+        for (let i = sectionQuestions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [sectionQuestions[i], sectionQuestions[j]] = [sectionQuestions[j], sectionQuestions[i]];
+        }
+        const selectedFromSection = sectionQuestions.slice(0, Math.min(count, sectionQuestions.length));
+        selectedFromSection.forEach(q => { selected.push({ ...q, section }); });
+      });
+
+      for (let i = selected.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [selected[i], selected[j]] = [selected[j], selected[i]];
+      }
+      return selected;
+    }
+
+    function generateAllTests() {
+      const className = document.getElementById('className').value;
+      const studentCount = parseInt(document.getElementById('studentCount').value) || 30;
+      const testDate = document.getElementById('testDate').value;
+      const questionsPerTest = parseInt(document.getElementById('questionsPerTest').value) || 30;
+      const pointsPerQuestion = parseInt(document.getElementById('pointsPerQuestion').value) || 1;
+
+      if (!className) {
+        document.getElementById('warningText').textContent = 'Vyber třídu';
+        document.getElementById('warningSection').style.display = 'block';
+        return;
+      }
+
+      document.getElementById('warningSection').style.display = 'none';
+      const maxPoints = questionsPerTest * pointsPerQuestion;
+
+      let content = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @media print {
+      .test-page { page-break-after: always; break-after: page; }
+      .test-page:last-child { page-break-after: auto; }
+    }
+    @media screen {
+      .test-page { border-bottom: 3px solid #999; margin-bottom: 30px; padding-bottom: 20px; }
+      .test-page:last-child { border-bottom: none; }
+    }
+    body { font-family: Arial; font-size: 9pt; line-height: 1.15; margin: 0.5cm; }
+    h1 { text-align: center; font-size: 14pt; margin: 4px 0; }
+    .header { border-top: 1.5px solid black; border-bottom: 1.5px solid black; padding: 3px 0; margin: 5px 0 8px 0; }
+    .header p { margin: 1.5px 0; font-size: 9pt; }
+    .question { border-bottom: 1px solid #ddd; padding: 1px 0; margin: 0; page-break-inside: avoid; break-inside: avoid; }
+    .question-text { font-weight: bold; margin: 0 0 1px 0; font-size: 9pt; }
+    .answer-field { min-height: 3.2em; border: none; padding: 2px 3px; background: transparent; margin: 0 0 1px 0; }
+    .points { text-align: right; font-weight: bold; color: #c00; font-size: 8pt; margin: 0; }
+    .summary { border: 1.5px solid black; padding: 8px; margin: 8px 0 8px 0; page-break-inside: avoid; break-inside: avoid; }
+    .summary h2 { font-size: 11pt; margin: 0 0 5px 0; }
+    .summary p { margin: 3px 0; font-size: 9pt; }
+  </style>
+</head>
+<body>`;
+
+      for (let studentNum = 1; studentNum <= studentCount; studentNum++) {
+        if (studentNum > 1) content += '<br clear=all style="page-break-before:always">';
+        const questions = generateOneTest(questionsPerTest);
+
+        content += `
+  <h1>TEST Z BIOLOGIE - 3. ROČNÍK</h1>
+  <div class="header">
+    <p><strong>Jméno a příjmení:</strong></p>
+    <p><strong>Třída:</strong> ${className}</p>
+    <p><strong>Datum:</strong> ${testDate}</p>
+    <p><strong>Varianta:</strong> ${studentNum}</p>
+  </div>`;
+
+        questions.forEach((item, index) => {
+          content += `
+  <table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
+    <tr>
+      <td>
+        <div class="question">
+          <p class="question-text">${index + 1}. ${item.q}</p>
+          <div class="answer-field">&nbsp;</div>
+          <p class="points">Bodů: _____</p>
+        </div>
+      </td>
+    </tr>
+  </table>`;
+        });
+
+        content += `
+  <div class="summary">
+    <h2>HODNOCENÍ</h2>
+    <p><strong>Celkem bodů:</strong> __________ / ${maxPoints}</p>
+    <p><strong>Známka:</strong> __________</p>
+    <p><strong>Komentář učitele:</strong></p>
+    <div style="border: 1px solid #ccc; min-height: 50px; margin-top: 6px; background: #fafafa;"></div>
+  </div>`;
+      }
+
+      content += `</body></html>`;
+
+      const blob = new Blob([content], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'testy_biologie_3rocnik_' + className.replace(/\s+/g, '_') + '_' + testDate + '.doc';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+
+      document.getElementById('testInfo').textContent = studentCount + ' (BIOLOGIE 3. ročník)';
+      document.getElementById('successSection').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
