@@ -278,7 +278,14 @@
       const buttonsContainer = document.getElementById('classButtons');
       
       // Třídy podle ročníku
-      const classes = [`${year}.A`, `${year}.B`, '5KA'];
+      let classes;
+      if (year === 1) {
+        classes = ['1.A', '1.B', '5KA'];
+      } else if (year === 2) {
+        classes = ['2.A', '2.B', '6SA'];
+      } else if (year === 3) {
+        classes = ['3.A', '3.B', '7SA'];
+      }
       
       // Vymazání předchozích tlačítek
       buttonsContainer.innerHTML = '';
