@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generátor testů - CHEMIE 1. ročník</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: Arial, sans-serif; 
+      background-color: #fce7f3;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ec4899' fill-opacity='0.4'%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3Ccircle cx='15' cy='15' r='4'/%3E%3Ccircle cx='65' cy='65' r='4'/%3E%3Ccircle cx='15' cy='65' r='3'/%3E%3Ccircle cx='65' cy='15' r='3'/%3E%3C/g%3E%3Cg stroke='%23ec4899' stroke-width='2.5' fill='none' stroke-opacity='0.35'%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Cpath d='M40 20 Q50 30 40 40 Q30 50 40 60'/%3E%3C/g%3E%3C/svg%3E"),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(236, 72, 153, 0.08) 40px, rgba(236, 72, 153, 0.08) 41px),
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(236, 72, 153, 0.08) 40px, rgba(236, 72, 153, 0.08) 41px),
+        linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .card { 
+      background-color: white;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f9a8d4' fill-opacity='0.15'%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Ccircle cx='25' cy='25' r='8'/%3E%3Ccircle cx='95' cy='95' r='8'/%3E%3Ccircle cx='25' cy='95' r='6'/%3E%3Ccircle cx='95' cy='25' r='6'/%3E%3C/g%3E%3Cg stroke='%23f9a8d4' stroke-width='2' fill='none' stroke-opacity='0.12'%3E%3Cpath d='M35 60 Q47 40 60 60 T85 60'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3C/g%3E%3C/svg%3E");
+      border-radius: 16px; 
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+      padding: 32px; 
+      margin-bottom: 24px; 
+    }
+    h1 { 
+      font-size: 28px; 
+      font-weight: bold; 
+      color: #1f2937; 
+      margin-bottom: 24px; 
+      text-align: center; 
+    }
+    .info-box { 
+      background: #fef3c7; 
+      border-radius: 8px; 
+      padding: 16px; 
+      margin-bottom: 24px; 
+    }
+    .info-box p { font-size: 14px; color: #374151; line-height: 1.6; }
+    .form-group { margin-bottom: 16px; }
+    label { 
+      display: block; 
+      font-size: 14px; 
+      font-weight: 500; 
+      color: #374151; 
+      margin-bottom: 8px; 
+    }
+    input[type="text"], input[type="date"], input[type="number"], select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #d1d5db;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+    }
+    select {
+      cursor: pointer;
+      background: white;
+    }
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .btn {
+      padding: 14px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      font-size: 16px;
+      width: 100%;
+      margin-top: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(to right, #ec4899, #f43f5e);
+      color: white;
+    }
+    .btn-secondary {
+      background: linear-gradient(to right, #6b7280, #4b5563);
+      color: white;
+      margin-top: 16px;
+    }
+    .btn:disabled {
+      background: #d1d5db;
+      cursor: not-allowed;
+    }
+    .warning {
+      background: #fef3c7;
+      border: 2px solid #fbbf24;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 16px;
+    }
+    .warning p { color: #92400e; font-size: 14px; text-align: center; }
+    .success {
+      background: #d1fae5;
+      border: 2px solid #10b981;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    .success p { color: #065f46; font-size: 14px; }
+    .instruction-box {
+      background: #fef3c7;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .instruction-box p {
+      font-size: 14px;
+      color: #92400e;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>🧪 Generátor testů z CHEMIE - 1. ročník</h1>
+      
+      <div class="info-box" id="infoBox">
+        <p><strong>Jak to funguje:</strong><br>
+        1. Vyber třídu<br>
+        2. Klikni "Vygenerovat všechny testy"<br>
+        3. Stáhne se JEDEN soubor se VŠEMI testy (každý student jiné otázky)<br>
+        4. Vytiskni a rozdej studentům</p>
+      </div>
+
+      <div class="form-group">
+        <label>Třída:</label>
+        <select id="className">
+          <option value="">-- Vyber třídu --</option>
+          <option value="1.A">1.A</option>
+          <option value="1.B">1.B</option>
+          <option value="5KA">5KA</option>
+        </select>
+      </div>
+
+      <div class="input-row">
+        <div class="form-group">
+          <label>Počet studentů:</label>
+          <input type="number" id="studentCount" value="30" min="1" max="50">
+        </div>
+        
+        <div class="form-group">
+          <label>Datum testu:</label>
+          <input type="date" id="testDate">
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div class="form-group">
+          <label>Otázek na test:</label>
+          <input type="number" id="questionsPerTest" value="30" min="1" max="50">
+        </div>
+        
+        <div class="form-group">
+          <label>Bodů za otázku:</label>
+          <input type="number" id="pointsPerQuestion" value="1" min="1" max="10">
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="generateAllTests()">
+        Vygenerovat všechny testy najednou
+      </button>
+
+      <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+        ← Zpět na rozcestník
+      </button>
+
+      <div id="warningSection" style="display: none;">
+        <div class="warning">
+          <p id="warningText">Vyplň všechny údaje</p>
+        </div>
+      </div>
+
+      <div id="successSection" style="display: none;">
+        <div class="success">
+          <p><strong>✅ Testy vygenerovány!</strong><br>
+          Soubor obsahuje <span id="testInfo"></span> testů připravených k tisku.</p>
+        </div>
+      </div>
+
+      <div class="instruction-box" style="margin-top: 24px;">
+        <p><strong>💡 Tip:</strong> Každý student dostane jiné otázky (náhodně vybrané z databáze). 
+        Testy jsou v jednom souboru, každý test na samostatném listu. Stačí vytisknout a rozdat studentům.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const questionsDatabase = {
+      "Základní pojmy": [
+        { q: "Co je chemický prvek?", a: "Látka složená z atomů se stejným protonovým číslem" },
+        { q: "Co je sloučenina?", a: "Látka složená z atomů dvou nebo více prvků v pevném poměru" },
+        { q: "Co je atom?", a: "Nejmenší částice prvku schopná samostatné existence" },
+        { q: "Co je protonové číslo (Z)?", a: "Počet protonů v jádře atomu; určuje prvek" },
+        { q: "Co je nukleonové číslo (A)?", a: "Součet protonů a neutronů v jádře atomu" },
+        { q: "Co je molekula?", a: "Skupina dvou nebo více atomů spojených chemickou vazbou" },
+        { q: "Co je ion?", a: "Elektricky nabitá částice vzniklá ztrátou nebo přijetím elektronů" },
+        { q: "Co je kation?", a: "Kladně nabitý ion (ztrácí elektrony)" },
+        { q: "Co je anion?", a: "Záporně nabitý ion (přijímá elektrony)" },
+        { q: "Co je chemicky čistá látka?", a: "Látka složená z částic stejného druhu" },
+        { q: "Co je homogenní směs?", a: "Směs, která má v celém objemu stejné složení (např. roztok)" },
+        { q: "Co je heterogenní směs?", a: "Směs, kde lze složky rozlišit (např. písek a voda)" }
+      ],
+      "Metody dělení směsí": [
+        { q: "Co je filtrace?", a: "Oddělování pevné látky od kapaliny pomocí filtru" },
+        { q: "Co je destilace?", a: "Oddělování kapalin podle rozdílných bodů varu" },
+        { q: "Co je krystalizace?", a: "Vylučování pevné látky z roztoku při ochlazování nebo odpařování" },
+        { q: "Co je sublimace?", a: "Přeměna pevné látky přímo na plyn" }
+      ],
+      "Kvantitativní chemie": [
+        { q: "Co je látkové množství (n)?", a: "Počet částic látky, jednotka mol" },
+        { q: "Co je Avogadrova konstanta (Nₐ)?", a: "Počet částic v 1 molu (6,022×10²³ mol⁻¹)" },
+        { q: "Co je molární hmotnost (M)?", a: "Hmotnost 1 molu látky (g/mol)" },
+        { q: "Co je molární objem (Vₘ)?", a: "Objem 1 molu plynu za normálních podmínek (22,4 dm³/mol)" },
+        { q: "Co je hmotnostní zlomek (w)?", a: "Poměr hmotnosti složky k celkové hmotnosti směsi" },
+        { q: "Co je objemový zlomek (φ)?", a: "Poměr objemu složky k celkovému objemu směsi" },
+        { q: "Co je molární koncentrace (c)?", a: "Počet molů látky rozpuštěných v 1 litru roztoku" }
+      ],
+      "Modely atomu a radioaktivita": [
+        { q: "Co je Thomsonův model atomu?", a: "Atom jako pudink - kladná koule s rozptýlenými elektrony" },
+        { q: "Co je Rutherfordův model atomu?", a: "Atom má malé kladné jádro, kolem něj obíhají elektrony" },
+        { q: "Co je Bohrův model atomu?", a: "Elektrony obíhají jádro po přesně daných drahách (energetických hladinách)" },
+        { q: "Co je nuklid?", a: "Atomy téhož prvku se stejným protonovým i nukleonovým číslem" },
+        { q: "Co je izotop?", a: "Atomy téhož prvku s různým počtem neutronů" },
+        { q: "Co je radioaktivita?", a: "Samovolný rozpad jader za uvolnění záření" },
+        { q: "Co je přirozená radioaktivita?", a: "Samovolný rozpad jader nestabilních nuklidů v přírodě" },
+        { q: "Co je umělá radioaktivita?", a: "Radioaktivita vyvolaná zásahem člověka (např. ozařováním stabilních jader)" },
+        { q: "Co je alfa záření?", a: "Tvořeno částicemi He²⁺ (2 protony + 2 neutrony); má malou pronikavost" },
+        { q: "Co je beta záření?", a: "Proud elektronů nebo pozitronů; střední pronikavost" },
+        { q: "Co je gama záření?", a: "Elektromagnetické záření s vysokou energií; velmi pronikavé" },
+        { q: "Co je štěpení jader?", a: "Rozpad těžkých jader na dvě menší, uvolňuje velké množství energie" }
+      ],
+      "Kvantová čísla a orbitaly": [
+        { q: "Co je atomový orbital?", a: "Prostor, kde je největší pravděpodobnost výskytu elektronu" },
+        { q: "Jaký je tvar orbitalu s?", a: "Kulový tvar, pojme max. 2 elektrony" },
+        { q: "Jaký je tvar orbitalu p?", a: "Tvar osmičky, pojme max. 6 elektronů (ve 3 orbitalech)" },
+        { q: "Co určuje hlavní kvantové číslo (n)?", a: "Určuje energetickou hladinu elektronu" },
+        { q: "Co určuje vedlejší kvantové číslo (l)?", a: "Určuje tvar orbitalu (0 = s, 1 = p, 2 = d, 3 = f)" },
+        { q: "Co určuje magnetické kvantové číslo (m)?", a: "Určuje orientaci orbitalu v prostoru" },
+        { q: "Co vyjadřuje spinové číslo (s)?", a: "Vyjadřuje směr rotace elektronu (+½ nebo −½)" },
+        { q: "Co říká Pauliho princip?", a: "V jednom orbitalu mohou být max. 2 elektrony s opačným spinem" },
+        { q: "Co říká Hundovo pravidlo?", a: "Elektrony zaplňují orbitaly tak, aby jich bylo co nejvíce nepárových" }
+      ],
+      "Chemické vazby": [
+        { q: "Co je chemická vazba?", a: "Síla držící atomy pohromadě v molekule" },
+        { q: "Co je délka vazby?", a: "Vzdálenost mezi jádry dvou vázaných atomů" },
+        { q: "Co je energie vazby?", a: "Energie potřebná k rozštěpení vazby" },
+        { q: "Co je jednoduchá vazba?", a: "Sdílí 1 elektronový pár (vazba sigma)" },
+        { q: "Co je dvojná vazba?", a: "Sdílí 2 elektronové páry (jedna vazba sigma, 1 vazba pí)" },
+        { q: "Co je trojná vazba?", a: "Sdílí 3 elektronové páry (jedna vazba sigma, 2 vazby pí)" },
+        { q: "Co je kovalentní vazba?", a: "Sdílení elektronů mezi nekovovými atomy" },
+        { q: "Co je kovová vazba?", a: "Sdílení elektronů mezi kovovými atomy, vzniká elektronový oblak" },
+        { q: "Co je vodíkový můstek?", a: "Slabá vazba mezi vodíkem a elektronegativním atomem (např. O, N, F)" },
+        { q: "Co jsou Van der Waalsovy síly?", a: "Slabé přitažlivé síly mezi molekulami" }
+      ],
+      "Chemické reakce": [
+        { q: "Co jsou reaktanty?", a: "Látky vstupující do chemické reakce" },
+        { q: "Co jsou produkty?", a: "Látky vznikající v chemické reakci" },
+        { q: "Co je chemická rovnice?", a: "Zápis chemické reakce pomocí značek a vzorců" },
+        { q: "Co je syntéza?", a: "Spojování jednodušších látek na složitější" },
+        { q: "Co je analýza?", a: "Rozklad složitější látky na jednodušší" },
+        { q: "Co je adice?", a: "Připojení atomu nebo skupiny na násobnou vazbu" },
+        { q: "Co je eliminace?", a: "Odštěpení atomu nebo skupiny a vznik násobné vazby" },
+        { q: "Co je substituce?", a: "Nahrazení atomu nebo skupiny jiným atomem nebo skupinou" }
+      ],
+      "Rychlost reakcí a rovnováha": [
+        { q: "Co říká srážková teorie?", a: "Reakce probíhá jen při dostatečně energické srážce částic" },
+        { q: "Co je aktivovaný komplex?", a: "Nestabilní přechodný stav během reakce" },
+        { q: "Co je rychlost reakce?", a: "Změna koncentrace látky za jednotku času" },
+        { q: "Co je katalyzátor?", a: "Látka, která urychluje reakci, ale sama se přitom nespotřebuje" },
+        { q: "Co je exotermická reakce?", a: "Reakce, při níž se uvolňuje teplo (ΔH < 0)" },
+        { q: "Co je endotermická reakce?", a: "Reakce, při níž se teplo spotřebovává (ΔH > 0)" },
+        { q: "Co je chemická rovnováha?", a: "Stav, kdy rychlost přímé a zpětné reakce je stejná" },
+        { q: "Co je rovnovážná konstanta (K)?", a: "Vyjadřuje poměr koncentrací produktů a reaktantů v rovnováze" }
+      ],
+      "Redoxní reakce": [
+        { q: "Co je oxidace?", a: "Ztráta elektronů, zvýšení oxidačního čísla" },
+        { q: "Co je redukce?", a: "Přijetí elektronů, snížení oxidačního čísla" },
+        { q: "Co je redox reakce?", a: "Současně probíhá oxidace a redukce" },
+        { q: "Co je Beketovova řada?", a: "Řazení kovů podle jejich schopnosti se oxidovat" }
+      ],
+      "Kyseliny a zásady": [
+        { q: "Co je kyselina podle Brønsteda?", a: "Látka, která odevzdává proton (H⁺)" },
+        { q: "Co je zásada podle Brønsteda?", a: "Látka, která proton přijímá" },
+        { q: "Co je konjugovaný pár?", a: "Kyselina a zásada lišící se o jeden proton" },
+        { q: "Co je pH?", a: "Míra kyselosti roztoku (−log[H⁺])" },
+        { q: "Jaké je pH silné kyseliny?", a: "pH < 3, úplná disociace" },
+        { q: "Jaké je pH silné zásady?", a: "pH > 11, úplná disociace" }
+      ],
+      "Periodická tabulka": [
+        { q: "Co říká periodický zákon?", a: "Vlastnosti prvků se periodicky opakují podle protonového čísla" },
+        { q: "Co je perioda?", a: "Řádek v periodické tabulce, počet elektronových vrstev" },
+        { q: "Co je skupina?", a: "Sloupec v tabulce, prvky se stejným počtem valenčních elektronů" }
+      ],
+      "Vodík a kyslík": [
+        { q: "Jaké jsou vlastnosti, využití a výskyt vodíku?", a: "Bezbarvý plyn, hořlavý, tvoří vodu; využití v chem. průmyslu, palivo" },
+        { q: "Jaké jsou sloučeniny vodíku?", a: "H₂O, NH₃, CH₄, HCl - časté hydridy nekovů" },
+        { q: "Jaké jsou vlastnosti, využití a výskyt kyslíku?", a: "Bezbarvý plyn, podporuje hoření; využití v medicíně a průmyslu; ve vzduchu a ve vodě" }
+      ],
+      "Alkalické kovy a kovy alkalických zemin": [
+        { q: "Jaké jsou vlastnosti, využití a výskyt alkalických kovů?", a: "Velmi reaktivní, měkké, tvoří zásadité oxidy; využití v chemii a bateriích" },
+        { q: "Jaké jsou sloučeniny Na a K?", a: "NaCl, NaOH, Na₂CO₃, KNO₃ - důležité soli a zásady" },
+        { q: "Jaké jsou vlastnosti, využití a výskyt kovů alkalických zemin?", a: "Reaktivní, tvoří zásadité oxidy; např. Ca, Mg, využití v průmyslu" },
+        { q: "Jaké jsou vlastnosti, využití a výskyt vápníku (Ca)?", a: "Stříbřitý kov, ve vápenci a křídě, nutný pro stavbu kostí; využití ve stavebnictví" }
+      ]
+    };
+
+    // Spočítat celkový počet otázek
+    const totalQuestions = Object.values(questionsDatabase).reduce((sum, section) => sum + section.length, 0);
+    
+    // Nastavit dnešní datum
+    document.getElementById('testDate').value = new Date().toISOString().split('T')[0];
+    
+    // Aktualizovat info box s počtem otázek
+    document.getElementById('infoBox').innerHTML = `<p><strong>Jak to funguje:</strong><br>
+      1. Vyber třídu<br>
+      2. Klikni "Vygenerovat všechny testy"<br>
+      3. Stáhne se JEDEN soubor se VŠEMI testy (každý student jiné otázky)<br>
+      4. Vytiskni a rozdej studentům<br><br>
+      <strong>✨ V databázi je ${totalQuestions} otázek z chemie pro 1. ročník</strong></p>`;
+
+    function generateOneTest(numberOfQuestions) {
+      const sections = Object.keys(questionsDatabase);
+      const totalSections = sections.length;
+      const questionsPerSection = Math.floor(numberOfQuestions / totalSections);
+      const remainder = numberOfQuestions % totalSections;
+
+      let selected = [];
+
+      sections.forEach((section, index) => {
+        const sectionQuestions = [...questionsDatabase[section]];
+        const count = questionsPerSection + (index < remainder ? 1 : 0);
+        
+        for (let i = sectionQuestions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [sectionQuestions[i], sectionQuestions[j]] = [sectionQuestions[j], sectionQuestions[i]];
+        }
+        
+        const selectedFromSection = sectionQuestions.slice(0, Math.min(count, sectionQuestions.length));
+        selectedFromSection.forEach(q => {
+          selected.push({ ...q, section });
+        });
+      });
+
+      for (let i = selected.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [selected[i], selected[j]] = [selected[j], selected[i]];
+      }
+
+      return selected;
+    }
+
+    function generateAllTests() {
+      const className = document.getElementById('className').value;
+      const studentCount = parseInt(document.getElementById('studentCount').value) || 30;
+      const testDate = document.getElementById('testDate').value;
+      const questionsPerTest = parseInt(document.getElementById('questionsPerTest').value) || 30;
+      const pointsPerQuestion = parseInt(document.getElementById('pointsPerQuestion').value) || 1;
+
+      if (!className) {
+        document.getElementById('warningText').textContent = 'Vyber třídu';
+        document.getElementById('warningSection').style.display = 'block';
+        return;
+      }
+
+      document.getElementById('warningSection').style.display = 'none';
+
+      const maxPoints = questionsPerTest * pointsPerQuestion;
+
+      let content = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @media print {
+      .test-page { page-break-after: always; break-after: page; }
+      .test-page:last-child { page-break-after: auto; }
+    }
+    @media screen {
+      .test-page { border-bottom: 3px solid #999; margin-bottom: 30px; padding-bottom: 20px; }
+      .test-page:last-child { border-bottom: none; }
+    }
+    body { font-family: Arial; font-size: 9pt; line-height: 1.15; margin: 0.5cm; }
+    h1 { text-align: center; font-size: 14pt; margin: 4px 0; }
+    .header { border-top: 1.5px solid black; border-bottom: 1.5px solid black; padding: 3px 0; margin: 5px 0 8px 0; }
+    .header p { margin: 1.5px 0; font-size: 9pt; }
+    .question { border-bottom: 1px solid #ddd; padding: 1px 0; margin: 0; page-break-inside: avoid; break-inside: avoid; }
+    .question-text { font-weight: bold; margin: 0 0 1px 0; font-size: 9pt; }
+    .answer-field { min-height: 3.2em; border: none; padding: 2px 3px; background: transparent; margin: 0 0 1px 0; }
+    .points { text-align: right; font-weight: bold; color: #c00; font-size: 8pt; margin: 0; }
+    .summary { border: 1.5px solid black; padding: 8px; margin: 8px 0 8px 0; page-break-inside: avoid; break-inside: avoid; }
+    .summary h2 { font-size: 11pt; margin: 0 0 5px 0; }
+    .summary p { margin: 3px 0; font-size: 9pt; }
+  </style>
+</head>
+<body>`;
+
+      for (let studentNum = 1; studentNum <= studentCount; studentNum++) {
+        if (studentNum > 1) {
+          content += '<br clear=all style="page-break-before:always">';
+        }
+
+        const questions = generateOneTest(questionsPerTest);
+
+        content += `
+  <h1>TEST Z CHEMIE - 1. ROČNÍK</h1>
+  <div class="header">
+    <p><strong>Jméno a příjmení:</strong></p>
+    <p><strong>Třída:</strong> ${className}</p>
+    <p><strong>Datum:</strong> ${testDate}</p>
+    <p><strong>Varianta:</strong> ${studentNum}</p>
+  </div>`;
+
+        questions.forEach((item, index) => {
+          content += `
+  <table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
+    <tr>
+      <td>
+        <div class="question">
+          <p class="question-text">${index + 1}. ${item.q}</p>
+          <div class="answer-field">&nbsp;</div>
+          <p class="points">Bodů: _____</p>
+        </div>
+      </td>
+    </tr>
+  </table>`;
+        });
+
+        content += `
+  <div class="summary">
+    <h2>HODNOCENÍ</h2>
+    <p><strong>Celkem bodů:</strong> __________ / ${maxPoints}</p>
+    <p><strong>Známka:</strong> __________</p>
+    <p><strong>Komentář učitele:</strong></p>
+    <div style="border: 1px solid #ccc; min-height: 50px; margin-top: 6px; background: #fafafa;"></div>
+  </div>`;
+      }
+
+      content += `
+</body>
+</html>`;
+
+      const blob = new Blob([content], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'testy_chemie_1rocnik_' + className.replace(/\s+/g, '_') + '_' + testDate + '.doc';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+
+      document.getElementById('testInfo').textContent = studentCount + ' (CHEMIE 1. ročník)';
+      document.getElementById('successSection').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
