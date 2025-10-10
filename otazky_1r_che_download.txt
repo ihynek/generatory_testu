@@ -1,0 +1,136 @@
+CHEMIE - 1. ROČNÍK
+Otázky pro přípravu na test
+=====================================
+
+=== ZÁKLADNÍ POJMY ===
+
+1. Co je chemický prvek?
+2. Co je sloučenina?
+3. Co je atom?
+4. Co je protonové číslo (Z)?
+5. Co je nukleonové číslo (A)?
+6. Co je molekula?
+7. Co je ion?
+8. Co je kation?
+9. Co je anion?
+10. Co je chemicky čistá látka?
+11. Co je homogenní směs?
+12. Co je heterogenní směs?
+
+=== METODY DĚLENÍ SMĚSÍ ===
+
+1. Co je filtrace?
+2. Co je destilace?
+3. Co je krystalizace?
+4. Co je sublimace?
+
+=== KVANTITATIVNÍ CHEMIE ===
+
+1. Co je látkové množství (n)?
+2. Co je Avogadrova konstanta (Nₐ)?
+3. Co je molární hmotnost (M)?
+4. Co je molární objem (Vₘ)?
+5. Co je hmotnostní zlomek (w)?
+6. Co je objemový zlomek (φ)?
+7. Co je molární koncentrace (c)?
+
+=== MODELY ATOMU A RADIOAKTIVITA ===
+
+1. Co je Thomsonův model atomu?
+2. Co je Rutherfordův model atomu?
+3. Co je Bohrův model atomu?
+4. Co je nuklid?
+5. Co je izotop?
+6. Co je radioaktivita?
+7. Co je přirozená radioaktivita?
+8. Co je umělá radioaktivita?
+9. Co je alfa záření?
+10. Co je beta záření?
+11. Co je gama záření?
+12. Co je štěpení jader?
+
+=== KVANTOVÁ ČÍSLA A ORBITALY ===
+
+1. Co je atomový orbital?
+2. Jaký je tvar orbitalu s?
+3. Jaký je tvar orbitalu p?
+4. Co určuje hlavní kvantové číslo (n)?
+5. Co určuje vedlejší kvantové číslo (l)?
+6. Co určuje magnetické kvantové číslo (m)?
+7. Co vyjadřuje spinové číslo (s)?
+8. Co říká Pauliho princip?
+9. Co říká Hundovo pravidlo?
+
+=== CHEMICKÉ VAZBY ===
+
+1. Co je chemická vazba?
+2. Co je délka vazby?
+3. Co je energie vazby?
+4. Co je jednoduchá vazba?
+5. Co je dvojná vazba?
+6. Co je trojná vazba?
+7. Co je kovalentní vazba?
+8. Co je kovová vazba?
+9. Co je vodíkový můstek?
+10. Co jsou Van der Waalsovy síly?
+
+=== CHEMICKÉ REAKCE ===
+
+1. Co jsou reaktanty?
+2. Co jsou produkty?
+3. Co je chemická rovnice?
+4. Co je syntéza?
+5. Co je analýza?
+6. Co je adice?
+7. Co je eliminace?
+8. Co je substituce?
+
+=== RYCHLOST REAKCÍ A ROVNOVÁHA ===
+
+1. Co říká srážková teorie?
+2. Co je aktivovaný komplex?
+3. Co je rychlost reakce?
+4. Co je katalyzátor?
+5. Co je exotermická reakce?
+6. Co je endotermická reakce?
+7. Co je chemická rovnováha?
+8. Co je rovnovážná konstanta (K)?
+
+=== REDOXNÍ REAKCE ===
+
+1. Co je oxidace?
+2. Co je redukce?
+3. Co je redox reakce?
+4. Co je Beketovova řada?
+
+=== KYSELINY A ZÁSADY ===
+
+1. Co je kyselina podle Brønsteda?
+2. Co je zásada podle Brønsteda?
+3. Co je konjugovaný pár?
+4. Co je pH?
+5. Jaké je pH silné kyseliny?
+6. Jaké je pH silné zásady?
+
+=== PERIODICKÁ TABULKA ===
+
+1. Co říká periodický zákon?
+2. Co je perioda?
+3. Co je skupina?
+
+=== VODÍK A KYSLÍK ===
+
+1. Jaké jsou vlastnosti, využití a výskyt vodíku?
+2. Jaké jsou sloučeniny vodíku?
+3. Jaké jsou vlastnosti, využití a výskyt kyslíku?
+
+=== ALKALICKÉ KOVY A KOVY ALKALICKÝCH ZEMIN ===
+
+1. Jaké jsou vlastnosti, využití a výskyt alkalických kovů?
+2. Jaké jsou sloučeniny Na a K?
+3. Jaké jsou vlastnosti, využití a výskyt kovů alkalických zemin?
+4. Jaké jsou vlastnosti, využití a výskyt vápníku (Ca)?
+
+=====================================
+CELKEM: 90 otázek
+=====================================

@@ -1,0 +1,134 @@
+CHEMIE - 2. ROČNÍK
+Otázky pro přípravu na test
+=====================================
+
+=== ANORGANIKA - BOR A HLINÍK ===
+
+1. Jaké jsou vlastnosti, využití a výskyt boru (B)?
+2. Jaké jsou vlastnosti, využití a výskyt hliníku (Al)?
+3. Jaké jsou sloučeniny hliníku?
+
+=== ANORGANIKA - UHLÍK A KŘEMÍK ===
+
+1. Jaké jsou vlastnosti, využití a výskyt uhlíku?
+2. Jaké jsou vlastnosti, využití a výskyt křemíku?
+3. Jaké jsou sloučeniny uhlíku a křemíku?
+
+=== ANORGANIKA - DUSÍK A FOSFOR ===
+
+1. Jaké jsou vlastnosti, využití a výskyt dusíku?
+2. Jaké jsou sloučeniny dusíku?
+3. Jaké jsou vlastnosti, využití a výskyt fosforu?
+4. Jaké jsou sloučeniny fosforu?
+
+=== ANORGANIKA - SÍRA ===
+
+1. Jaké jsou vlastnosti, využití a výskyt síry?
+2. Jaké jsou sloučeniny síry?
+
+=== ANORGANIKA - HALOGENY A VZÁCNÉ PLYNY ===
+
+1. Jaké jsou vlastnosti, využití a výskyt chloru?
+2. Jaké jsou vlastnosti, využití a výskyt fluoru?
+3. Jaké jsou sloučeniny halogenů?
+4. Jaké jsou vlastnosti, využití a výskyt vzácných plynů?
+
+=== ANORGANIKA - KOVY A KOORDINAČNÍ SLOUČENINY ===
+
+1. Jaké jsou vlastnosti, využití a výskyt železa?
+2. Jaké jsou vlastnosti, využití a výskyt mědi?
+3. Co jsou koordinační sloučeniny a jejich názvosloví?
+4. Jaké jsou vlastnosti, využití a výskyt lanthanoidů?
+5. Jaké jsou vlastnosti, využití a výskyt aktinoidů?
+
+=== UHLOVODÍKY - ZÁKLADNÍ POJMY ===
+
+1. Co jsou uhlovodíky?
+2. Co jsou alkany?
+3. Co jsou alkeny?
+4. Co jsou alkyny?
+5. Co jsou areny?
+6. Co je aromaticita?
+
+=== DERIVÁTY UHLOVODÍKŮ ===
+
+1. Co jsou deriváty uhlovodíků?
+2. Co jsou alkoholy?
+3. Co jsou fenoly?
+4. Co jsou ethery?
+5. Co jsou estery?
+6. Co jsou halogenalkany?
+7. Co je skupina hydroxylová?
+8. Co je nitroskupina?
+
+=== ZÁKLADNÍ REAKCE ===
+
+1. Co je adice?
+2. Co je substituce?
+3. Co je eliminace?
+4. Co je hydratace?
+5. Co je hydrogenace?
+6. Co je hydrolýza?
+7. Co je esterifikace?
+8. Co je polymerace?
+
+=== SPECIFICKÉ REAKCE ===
+
+1. Co je halogenace?
+2. Co je chlorace?
+3. Co je bromace?
+4. Co je nitrace?
+5. Co je sulfonace?
+6. Co je acylace?
+7. Co je alkylace?
+8. Co je dehydratace?
+9. Co je dehydrogenace?
+10. Co je dehalogenace?
+11. Co je dehydrohalogenace?
+
+=== IZOMERIE A STEREOCHEMIE ===
+
+1. Co jsou isomery?
+2. Co jsou isomery konstituční?
+3. Co jsou stereoisomery?
+4. Co jsou isomery konfigurační?
+5. Co jsou isomery konformační?
+6. Co je konformace cis/trans?
+7. Co je konformace židličková/vaničková?
+8. Co je konformace zákrytová/nezákrytová?
+9. Co je chiralita?
+10. Co je centrum chirality?
+11. Co jsou enantiomery?
+12. Co je racemát?
+13. Co je aktivita optická?
+14. Co jsou anomery?
+
+=== REAKCE PRAVIDLA A MECHANISMY ===
+
+1. Co je Markovnikovo pravidlo?
+2. Co je Zajcevovo pravidlo?
+3. Co je elektrofil?
+4. Co je nukleofil?
+5. Co je radikál?
+6. Co je přesmyk?
+7. Co je izomerace?
+8. Co je tautomerie?
+9. Co je enol?
+
+=== SKUPINY A VAZBY ===
+
+1. Co je alkyl?
+2. Co je aryl?
+3. Co je vazba jednoduchá?
+4. Co je vazba dvojná?
+5. Co je vazba trojná?
+6. Co je vazba vodíková?
+
+=== POLYMERY A PEPTIDY ===
+
+1. Co jsou polymery?
+2. Co jsou peptidy?
+
+=====================================
+CELKEM: 90 otázek
+=====================================

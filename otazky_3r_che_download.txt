@@ -1,0 +1,127 @@
+CHEMIE - 3. ROČNÍK
+Otázky pro přípravu na test
+=====================================
+
+=== KARBOXYLOVÉ KYSELINY A DERIVÁTY ===
+
+1. Co je acyl?
+2. Co jsou kyseliny karboxylové?
+3. Co je skupina karboxylová?
+4. Co jsou deriváty karboxylových kyselin funkční?
+5. Co jsou deriváty karboxylových kyselin substituční?
+6. Co jsou anhydridy karboxylových kyselin?
+7. Co jsou halogenidy karboxylových kyselin?
+8. Co jsou amidy?
+
+=== ALDEHYDY A KETONY ===
+
+1. Co jsou aldehydy?
+2. Co jsou ketony?
+3. Co je skupina karbonylová?
+4. Co je Fehlingovo činidlo?
+5. Co je Tollensovo činidlo?
+
+=== AMINY A ALKALOIDY ===
+
+1. Co je aminoskupina?
+2. Co jsou aminy?
+3. Co jsou alkaloidy?
+
+=== AMINOKYSELINY A PROTEINY ===
+
+1. Co jsou aminokyseliny?
+2. Co jsou esenciální aminokyseliny?
+3. Co jsou bílkoviny?
+4. Co jsou proteiny?
+5. Co jsou polypeptidy?
+6. Co je vazba peptidová?
+7. Co je struktura bílkovin primární?
+8. Co je struktura bílkovin sekundární?
+9. Co je struktura bílkovin terciální?
+10. Co je struktura bílkovin kvartérní?
+11. Co je helix?
+12. Co je denaturace?
+13. Co jsou glykoproteiny?
+14. Co je proteosyntéza?
+
+=== ENZYMY ===
+
+1. Co jsou enzymy?
+2. Co je aktivita enzymu?
+3. Co je substrát?
+4. Co je apoenzym?
+5. Co je holoenzym?
+6. Co jsou koenzymy?
+7. Co jsou kofaktory enzymů?
+8. Co je inhibice?
+9. Co je apoprotein?
+10. Co jsou skupiny prosthetické?
+
+=== SACHARIDY - ZÁKLADNÍ POJMY ===
+
+1. Co jsou cukry?
+2. Co jsou sacharidy?
+3. Co jsou disacharidy?
+4. Co jsou oligosacharidy?
+5. Co jsou polysacharidy?
+6. Co jsou deoxycukry?
+7. Co je vazba glykosidová?
+8. Co jsou Haworthovy vzorce?
+9. Co jsou Fischerovy vzorce?
+10. Co jsou Tollensovy vzorce?
+
+=== LIPIDY ===
+
+1. Co jsou lipidy?
+2. Co jsou kyseliny mastné?
+3. Co jsou tuky?
+4. Co jsou triacylglyceroly?
+5. Co jsou fosfolipidy?
+6. Co jsou steroidy?
+7. Co jsou terpeny?
+8. Co jsou isoprenoidy?
+
+=== NUKLEOVÉ KYSELINY ===
+
+1. Co jsou kyseliny nukleové?
+2. Co je DNA?
+3. Co je RNA?
+4. Co jsou báze nukleových kyselin?
+5. Co je komplementarita bází?
+6. Co je m-RNA?
+7. Co je r-RNA?
+8. Co je t-RNA?
+9. Co je transkripce?
+10. Co je translace?
+
+=== ENERGETICKÝ METABOLISMUS ===
+
+1. Co je ATP?
+2. Co je ADP?
+3. Co je Acetyl CoA?
+4. Co je glykolýza?
+5. Co je Krebsův cyklus?
+6. Co je dýchací řetězec?
+7. Co je β-oxidace mastných kyselin?
+8. Co je ornitinový cyklus?
+9. Co je fotosyntéza?
+
+=== METABOLISMUS - OBECNÉ POJMY ===
+
+1. Co je biochemie?
+2. Co je metabolismus?
+3. Co je katabolismus?
+4. Co je anabolismus?
+
+=== POLYMERY A DALŠÍ POJMY ===
+
+1. Co jsou biopolymery?
+2. Co jsou polymery?
+3. Co je polymerace?
+4. Co jsou heterocyklické sloučeniny?
+5. Co jsou hormony?
+6. Co jsou vitamíny?
+
+=====================================
+CELKEM: 87 otázek
+=====================================
