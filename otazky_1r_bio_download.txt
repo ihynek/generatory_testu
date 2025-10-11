@@ -28,7 +28,7 @@ Otázky pro přípravu na test
 22. Co je petrologie a jaký je její hlavní cíl?
 23. Na jaké tři hlavní skupiny se horniny dělí?
 24. Jak vznikají magmatické horniny?
-25. Jaký je rozdíl mezi žulou (granit) a čedičem (basalt)?
+25. Jaký je rozdíl mezi žulou (granit) a čedičem (bazalt)?
 26. Co znamená pojem 'metamorfóza' hornin?
 
 === BUNĚČNÉ DÝCHÁNÍ A FOTOSYNTÉZA ===
@@ -37,7 +37,7 @@ Otázky pro přípravu na test
 2. Jaký je obecný vzorec buněčného dýchání?
 3. Jaké fáze buněčného dýchání rozlišujeme?
 4. Jaký je rozdíl mezi aerobním a anaerobním dýcháním?
-5. Proč jsou mitochondrie nazývány 'elektrárny buňky'?
+5. Proč jsou mitochondrie nazývány 'elektrárnami buňky'?
 6. Co je fotosyntéza a proč je důležitá?
 7. Jaký je obecný vzorec fotosyntézy?
 8. Kde probíhá fotosyntéza?
@@ -69,7 +69,7 @@ Otázky pro přípravu na test
 
 1. Co je základní jednotkou rostlinného těla?
 2. Který organel umožňuje fotosyntézu?
-3. Co chrání buňku a dává jí pevnost?
+3. Co chrání rostlinnou buňku a dává jí pevnost?
 4. Kde je genetická informace?
 5. Kde se ukládá voda, živiny a odpadní látky?
 6. Co jsou rostlinná pletiva?
@@ -154,7 +154,7 @@ Otázky pro přípravu na test
 1. Co je květ a jaká je jeho hlavní funkce?
 2. Jaké části tvoří květ?
 3. Jak se květ podílí na rozmnožování rostlin?
-4. Jaké typy květů známe podle pohlaví?
+4. Jaké typy květů rozlišujeme podle pohlaví
 5. Jaký je význam květů pro rostliny a člověka?
 6. Co je opylení?
 7. Jaké hlavní způsoby opylení známe?
@@ -184,9 +184,9 @@ Otázky pro přípravu na test
 5. Co je potravní pyramida?
 6. Co je ekologická nika?
 7. Co je biodiverzita?
-8. Co je suchozemský a vodní ekosystém?
+8. Jak se liší suchozemské a vodní ekosystémy
 9. Co je ekologická sukcese?
-10. Jaký je význam ekologie pro člověka?
+10. Jaký má význam ekologie pro člověka?
 
 === VIRY ===
 
