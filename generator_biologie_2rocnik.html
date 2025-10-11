@@ -372,9 +372,10 @@
     document.getElementById('testDate').value = new Date().toISOString().split('T')[0];
     document.getElementById('infoBox').innerHTML = `<p><strong>Jak to funguje:</strong><br>
       1. Vyber třídu<br>
-      2. Klikni "Vygenerovat všechny testy"<br>
-      3. Stáhne se JEDEN soubor se VŠEMI testy (každý student jiné otázky)<br>
-      4. Vytiskni a rozdej studentům<br><br>
+      2. Zadej počet studentů a počet otázek<br>
+      3. Klikni "Vygenerovat všechny testy"<br>
+      4. Stáhne se JEDEN soubor se VŠEMI testy (každý student jiné otázky)<br>
+      5. Vytiskni a rozdej studentům<br><br>
       <strong>✨ V databázi je ${totalQuestions} otázek z biologie pro 2. ročník</strong></p>`;
 
     function generateOneTest(numberOfQuestions) {
