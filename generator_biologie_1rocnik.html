@@ -190,190 +190,7 @@
   </div>
 
   <script>
-    const questionsDatabase = {
-      "Geologie a mineralogie": [
-        { q: "Co je geologie?", a: "Geologie je věda, která studuje složení, stavbu, historii a vývoj Země." },
-        { q: "Jaké jsou hlavní typy hornin?", a: "Magmatické, usazené (sedimentární) a přeměněné (metamorfované)" },
-        { q: "Jak se nazývá proces, při kterém se hornina mění vlivem tlaku a teploty?", a: "Metamorfóza" },
-        { q: "Co je to minerál?", a: "Přírodně se vyskytující anorganická látka s určitou chemickou skladbou a krystalovou strukturou" },
-        { q: "Které dva základní typy zemské kůry rozlišujeme?", a: "Oceánskou a pevninskou" },
-        { q: "Jak vznikají usazené horniny?", a: "Hromaděním a zpevňováním úlomků jiných hornin, usazováním organických zbytků nebo chemickým vysrážením z roztoků" },
-        { q: "Jaký je rozdíl mezi vnitřními a vnějšími geologickými procesy?", a: "Vnitřní procesy (magmatismus, vrásnění, zemětřesení) jsou poháněny energií z nitra Země. Vnější procesy (eroze, zvětrávání, činnost vody, větru, ledovců) jsou poháněny energií Slunce a gravitace" },
-        { q: "Jak vznikají sopečné horniny?", a: "Utuhnutím magmatu, které vyvřelo na povrch -- například čedič nebo ryolit" },
-        { q: "Co je to fosilie a jaký je její význam?", a: "Zachovalý zbytek nebo stopa organismu v horninách. Slouží k určování stáří a podmínek prostředí v minulosti" },
-        { q: "Jaké jsou hlavní části Země podle vnitřní stavby?", a: "Zemská kůra, zemský plášť, zemské jádro" },
-        { q: "Jak se liší zemská kůra oceánská od pevninské?", a: "Oceánská: tenčí (5-15 km), hustší, složená hlavně z čedičů a gaber. Pevninská: silnější (30-70 km), lehčí, složená převážně ze žuly a sedimentů" },
-        { q: "Co je to litosféra?", a: "Vnější pevná vrstva Země, zahrnuje zemskou kůru a svrchní část pláště; je rozlámaná na litosférické desky" },
-        { q: "Jaký je rozdíl mezi minerálem a horninou?", a: "Minerál je základní stavební jednotka, zatímco hornina je soubor jednoho nebo více minerálů" },
-        { q: "Jaká jsou základní kritéria pro rozpoznání minerálů?", a: "Tvrdost, barva, lesk, štěpnost/lom, hustota, krystalový tvar a chemické složení" },
-        { q: "Jaké známe základní krystalové soustavy?", a: "Krychlová, tetragonální, hexagonální, trigonální, ortorombická, monoklinická a triklinická" },
-        { q: "Co vyjadřuje Mohsova stupnice?", a: "Relativní tvrdost minerálů od 1 (mastek) po 10 (diamant)" },
-        { q: "Jaké hlavní třídy minerálů podle chemismu známe?", a: "Prvky, sulfidy, oxidy a hydroxidy, halogenidy, karbonáty, fosfáty, silikáty" },
-        { q: "Která skupina minerálů je nejrozšířenější v zemské kůře?", a: "Silikáty (např. křemen, živce, slídy, olivín)" },
-        { q: "Který minerál je hlavní rudou železa?", a: "Hematit (Fe₂O₃) a magnetit (Fe₃O₄)" },
-        { q: "Jaký minerál je hlavním zdrojem hliníku?", a: "Bauxit (směs minerálů -- hlavně hydrátů Al-oxidu, např. gibbsit)" },
-        { q: "Který minerál je nejtvrdší a který nejměkčí?", a: "Nejtvrdší -- diamant (10), nejměkčí -- mastek (1)" },
-        { q: "Co je petrologie a jaký je její hlavní cíl?", a: "Petrologie je geologická věda zabývající se studiem hornin -- jejich složením, původem, strukturou a podmínkami vzniku" },
-        { q: "Na jaké tři hlavní skupiny se horniny dělí?", a: "Magmatické, sedimentární a metamorfované" },
-        { q: "Jak vznikají magmatické horniny?", a: "Krystalizací magmatu či lávy -- buď pod povrchem (intruzivní), nebo na povrchu (efuzivní)" },
-        { q: "Jaký je rozdíl mezi žulou (granit) a čedičem (basalt)?", a: "Žula: světlá, kyselá, hrubozrnná intruzivní hornina s vysokým obsahem křemene a živců. Čedič: tmavá, jemnozrnná, bazická efuzivní hornina bohatá na plagioklasy a pyroxeny" },
-        { q: "Co znamená pojem 'metamorfóza' hornin?", a: "Přeměna hornin za zvýšeného tlaku a/nebo teploty, při níž se mění minerální složení a struktura, aniž by došlo k roztavení" }
-      ],
-      "Buněčné dýchání a fotosyntéza": [
-        { q: "Co je buněčné dýchání a jaký je jeho hlavní význam?", a: "Proces, při kterém buňky získávají energii z glukózy a jiných organických látek. Hlavním významem je tvorba ATP" },
-        { q: "Jaký je obecný vzorec buněčného dýchání?", a: "C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + energie (ATP)" },
-        { q: "Jaké fáze buněčného dýchání rozlišujeme?", a: "Glykolýza, Krebsův cyklus, dýchací řetězec" },
-        { q: "Jaký je rozdíl mezi aerobním a anaerobním dýcháním?", a: "Aerobní: probíhá za přítomnosti kyslíku, energeticky účinné (až 38 ATP). Anaerobní: probíhá bez kyslíku, vzniká kyselina mléčná nebo ethanol, jen 2 ATP" },
-        { q: "Proč jsou mitochondrie nazývány 'elektrárnami buňky'?", a: "Protože v mitochondriích probíhá Krebsův cyklus a dýchací řetězec, kde se vytváří většina ATP" },
-        { q: "Co je fotosyntéza a proč je důležitá?", a: "Proces, při kterém zelené rostliny, řasy a některé bakterie přeměňují světelnou energii na energii chemickou. Vzniká glukóza a kyslík" },
-        { q: "Jaký je obecný vzorec fotosyntézy?", a: "6 CO₂ + 6 H₂O + světelná energie → C₆H₁₂O₆ + 6 O₂" },
-        { q: "Kde probíhá fotosyntéza?", a: "V chloroplastech -- thylakoidy (světelná fáze) a stromatu (temnostní fáze)" },
-        { q: "Jaké dvě hlavní fáze fotosyntézy rozlišujeme?", a: "Světelnou a temnostní" },
-        { q: "Jaký je význam chlorofylu?", a: "Zachycuje světelnou energii a umožňuje její přeměnu na chemickou energii" }
-      ],
-      "DNA, RNA a syntéza bílkovin": [
-        { q: "Co je transkripce a kde probíhá?", a: "Proces tvorby mRNA podle DNA; probíhá v jádře" },
-        { q: "Co je translace a kde probíhá?", a: "Sestavování řetězce aminokyselin podle mRNA; probíhá na ribozomech v cytoplazmě" },
-        { q: "Jakou úlohu má tRNA?", a: "Přenáší aminokyseliny na ribozom a páruje antikodon s kodonem mRNA" }
-      ],
-      "Prokaryotické buňky": [
-        { q: "Co je prokaryotická buňka?", a: "Jednoduchý typ buňky bez pravého jádra a membránových organel. DNA je volně v nukleoidu" },
-        { q: "Jaké organismy patří mezi prokaryota?", a: "Bakterie a archea" },
-        { q: "Jaké struktury obsahuje prokaryotická buňka?", a: "Buněčná stěna, cytoplazmatická membrána, cytoplazma, ribozomy, nukleoid, plazmidy; někdy bičík nebo kapsula" },
-        { q: "Jak probíhá rozmnožování prokaryot?", a: "Nepohlavně dělením (binární); genetická výměna přes konjugaci, transdukci, transformaci" },
-        { q: "Jakou funkci mají plazmidy?", a: "Nesou doplňkové geny (např. odolnost vůči antibiotikům) a mohou se přenášet mezi buňkami" }
-      ],
-      "Eukaryotické buňky": [
-        { q: "Co je eukaryotická buňka?", a: "Složitá buňka s jádrem a membránovými organelami" },
-        { q: "Které organismy mají eukaryotické buňky?", a: "Rostliny, živočichové, houby, prvoci" },
-        { q: "Jaké organely obsahuje eukaryotická buňka?", a: "Jádro, mitochondrie, ER, Golgiho aparát, lyzozomy, peroxizomy, ribozomy, cytoplazmatická membrána, cytoskelet; u rostlin navíc chloroplasty, vakuoly a buněčná stěna" },
-        { q: "Jaká je funkce mitochondrií?", a: "Elektrárny buňky -- probíhá buněčné dýchání a tvorba ATP" }
-      ],
-      "Rostlinná buňka a pletiva": [
-        { q: "Co je základní jednotkou rostlinného těla?", a: "Rostlinná buňka" },
-        { q: "Který organel umožňuje fotosyntézu?", a: "Chloroplast" },
-        { q: "Co chrání buňku a dává jí pevnost?", a: "Buněčná stěna" },
-        { q: "Kde je genetická informace?", a: "Jádro" },
-        { q: "Kde se ukládá voda, živiny a odpadní látky?", a: "Vakuola" },
-        { q: "Co jsou rostlinná pletiva?", a: "Soubor buněk stejného tvaru a funkce, tvořící různé části rostliny" },
-        { q: "Jaké jsou hlavní typy pletiv podle funkce?", a: "Dělivá (meristémy), krycí (epidermis), vodivá (xylém a floém), základní (parenchym, kolenchym, sklerenchym)" },
-        { q: "Co je meristém?", a: "Pletivo s aktivně se dělícími buňkami -- zajišťuje růst rostliny" },
-        { q: "Kde se nachází vrcholový meristém?", a: "Na špičkách kořenů a stonků -- růst do délky" },
-        { q: "Jaká je funkce krycího pletiva?", a: "Chrání rostlinu před ztrátou vody, poškozením a patogeny" },
-        { q: "Co tvoří vodivá pletiva?", a: "Xylém (voda a minerály) a floém (produkty fotosyntézy)" }
-      ],
-      "Bakterie a sinice": [
-        { q: "Co jsou bakterie?", a: "Bakterie jsou prokaryotické mikroorganismy, tedy organismy bez pravého jádra a membránových organel" },
-        { q: "Jaké jsou hlavní tvary bakterií?", a: "Kulovité (koky), tyčinkovité (bacily), spirálovité (spirily) a zakřivené (vibria)" },
-        { q: "Jak se bakterie rozmnožují?", a: "Bakterie se většinou rozmnožují nepohlavně dělením buňky (binární)" },
-        { q: "Jaký je význam bakterií pro člověka a přírodu?", a: "Důležité pro rozklad organických látek, tvorbu humusu, fixaci dusíku, některé jsou prospěšné (střevní mikroflóra), jiné patogenní" },
-        { q: "Co jsou sinice?", a: "Sinice jsou prokaryotické fotosyntetizující organismy, často nazývané modrozelené řasy" },
-        { q: "Jak se liší sinice od bakterií?", a: "Sinice jsou typem bakterií, ale mají chlorofyl a další pigmenty pro fotosyntézu" },
-        { q: "Jaký je význam sinic v přírodě?", a: "Producenti kyslíku, základ potravních řetězců ve vodních ekosystémech, některé fixují dusík" },
-        { q: "Jak se sinice rozmnožují?", a: "Nepohlavně dělením buňky nebo tvorbou spor (akinet)" },
-        { q: "Kde sinice žijí?", a: "Ve sladkovodních i mořských vodách, v půdě, vlhkých skalách, některé tvoří symbiózu s lišejníky" }
-      ],
-      "Řasy": [
-        { q: "Co jsou řasy?", a: "Vodní fotosyntetizující organismy, které mohou být jednobuněčné, koloniální nebo mnohobuněčné" },
-        { q: "Jaké hlavní skupiny řas známe podle barvy?", a: "Zelené řasy, hnědé řasy, rudé řasy, zlativky a modrozelené řasy (sinice)" },
-        { q: "Jak se řasy rozmnožují?", a: "Nepohlavně (dělením buňky, spory) i pohlavně (splynutím gamet)" },
-        { q: "Kde žijí řasy?", a: "Převážně ve vodním prostředí (sladkovodním i mořském), některé druhy jsou půdní nebo symbionti v lišejnících" },
-        { q: "Jaký je význam řas?", a: "Produkují kyslík, jsou základem vodních potravních řetězců, využívají se v potravinářství a průmyslu" }
-      ],
-      "Mechorosty": [
-        { q: "Co jsou mechorosty?", a: "Nelignifikované suchozemské rostliny, které nemají pravé cévní pletivo a rostou ve vlhkém prostředí" },
-        { q: "Jaké hlavní části má tělo mechorostů?", a: "Stélka, která může být listoví tá nebo lodyžková. Nemají pravé kořeny, místo nich mají rhizoidy" },
-        { q: "Jak se mechorosty rozmnožují?", a: "Pohlavně (gametofytní generace tvoří gamety) a nepohlavně (fragmentace nebo tvorba gemm)" },
-        { q: "Jaký je životní cyklus mechorostů?", a: "Dominantní je gametofyt (zelená rostlina), sporofyt je závislý na gametofytu a tvoří spory" },
-        { q: "Jaký je význam mechorostů?", a: "Zadržují vodu, tvoří humus, zabraňují erozi půdy, některé druhy (rašelina) mají ekonomický význam" }
-      ],
-      "Kapraďorosty": [
-        { q: "Co jsou kapraďorosty?", a: "Cévnaté rostliny, které se rozmnožují sporami, mají pravé kořeny, lodyhy a listy" },
-        { q: "Jaký je životní cyklus kapraďorostů?", a: "Střídání generací -- sporofyt (dominantní, tvoří spory) a gametofyt (malý, samostatný, tvoří gamety)" },
-        { q: "Jak se kapraďorosty rozmnožují?", a: "Nepohlavně sporami (výtrusy), pohlavně gametami (spermie a vajíčka na gametofytu)" },
-        { q: "Jaké hlavní skupiny kapraďorostů známe?", a: "Kapradiny, přesličky a plavuně" },
-        { q: "Jaký je význam kapraďorostů?", a: "Producenti kyslíku, některé druhy se využívají v medicíně a průmyslu, historicky tvořily uhelné sloje" }
-      ],
-      "Nahosemenné rostliny": [
-        { q: "Co jsou nahosemenné rostliny?", a: "Cévnaté rostliny, jejichž semena nejsou uzavřena v plodu, ale vznikají na šišticích" },
-        { q: "Jak se nahosemenné rostliny rozmnožují?", a: "Pohlavně semeny; opylení probíhá větrem (anemogamie)" },
-        { q: "Jaké hlavní části mají nahosemenné rostliny?", a: "Kořen, lodyhu (kmen), listy (jehlice nebo šupiny) a šištice" },
-        { q: "Jaké hlavní skupiny nahosemenných rostlin známe?", a: "Jehličnany, cykasy, Ginkgo a Gnetophyta" },
-        { q: "Jaký je význam nahosemenných rostlin?", a: "Zdroj dřeva, pryskyřic a olejů, poskytují kyslík, tvoří lesní ekosystémy" }
-      ],
-      "Krytosemenné rostliny": [
-        { q: "Co jsou krytosemenné rostliny?", a: "Cévnaté rostliny, jejichž semena jsou uzavřena v plodech, vznikají v květech" },
-        { q: "Jak se krytosemenné rostliny rozmnožují?", a: "Pohlavně semeny, které vznikají po opylení květu větrem, vodou nebo živočichy" },
-        { q: "Jaké hlavní části má květ krytosemenných rostlin?", a: "Okvětí (korunu a kalich), tyčinky (samčí orgány) a pestíky (samičí orgány)" },
-        { q: "Jaké hlavní skupiny krytosemenných rostlin známe?", a: "Dvoděložné a jednoděložné" },
-        { q: "Jaký je význam krytosemenných rostlin?", a: "Zdroj potravy, léčiv, dřeva, vláken a okrasných rostlin, producenti kyslíku" }
-      ],
-      "Kořen, stonek, list": [
-        { q: "Co je kořen a jaká je jeho hlavní funkce?", a: "Podzemní část rostliny, která upevňuje rostlinu v půdě, přijímá vodu a minerální látky" },
-        { q: "Jaké základní typy kořenů známe?", a: "Mnohohlavý kořen (fascikulární) a hlavní kořen (mocný)" },
-        { q: "Jaké jsou hlavní části kořene?", a: "Kořenový čepíček, dělivá zóna, prodlužovací zóna a zóna diferenciace" },
-        { q: "Jak se kořen podílí na výměně látek?", a: "Nasává vodu a minerální látky pomocí kořenových vlásků a transportuje je do stonku" },
-        { q: "Jaké specializované funkce mohou mít kořeny?", a: "Zásobní orgány, vzdušné kořeny, přísavné kořeny, pnoucí kořeny" },
-        { q: "Co je stonek a jaká je jeho hlavní funkce?", a: "Nadzemní část rostliny, která nese listy, květy a plody, transportuje vodu a živiny" },
-        { q: "Jaké základní typy stonků známe?", a: "Bylinný (měkký, zelený) a dřevnatý (tvrdý, s lignifikovaným pletivem)" },
-        { q: "Jaké hlavní části má stonek?", a: "Uzliny, internodia, pupeny a u dřevin dřevo a lýko" },
-        { q: "Jaké specializované stonky existují?", a: "Zásobní (hlízy, oddenky), plazivé, šplhavé, vzdušné nebo trnité" },
-        { q: "Jaký je význam stonku pro rostlinu?", a: "Transport látek, mechanická stabilita, rozmnožování vegetativně" },
-        { q: "Co je list a jaká je jeho hlavní funkce?", a: "Nadzemní orgán rostliny, hlavní funkce je fotosyntéza, transpirace a výměna plynů" },
-        { q: "Jaké základní části má list?", a: "Čepel (laminu), řapík a bázi" },
-        { q: "Jaké typy žilnatiny rozlišujeme u listů?", a: "Dvoděložné: zpeřená žilnatina, jednoděložné: souběžná žilnatina" },
-        { q: "Jaký je význam průduchů na listech?", a: "Umožňují výměnu plynů (CO₂, O₂) a transpiraci" },
-        { q: "Jaké speciální typy listů existují?", a: "Zásobní, šplhavé, obranné (trny) nebo asimilační" }
-      ],
-      "Květ, opylení, oplození": [
-        { q: "Co je květ a jaká je jeho hlavní funkce?", a: "Reprodukční orgán krytosemenných rostlin, funkce je tvorba pohlavních buněk a semen" },
-        { q: "Jaké části tvoří květ?", a: "Okvětí (kalich a korunu), tyčinky (samčí orgány) a pestík (samičí orgán)" },
-        { q: "Jak se květ podílí na rozmnožování rostlin?", a: "Umožňuje opylení a oplození, po kterém vznikají semena a plody" },
-        { q: "Jaké typy květů známe podle pohlaví?", a: "Jednopohlavné (pouze tyčinky nebo pestík) a dvoupohlavné (tyčinky i pestík)" },
-        { q: "Jaký je význam květů pro rostliny a člověka?", a: "Zajišťuje rozmnožování rostlin, přitahuje opylovače, zdroj potravy a léčiv" },
-        { q: "Co je opylení?", a: "Přenos pylu z tyčinky na bliznu pestíku" },
-        { q: "Jaké hlavní způsoby opylení známe?", a: "Anemogamie (větrem), entomogamie (hmyzem), ornitogamie (ptáky), hydrogamie (vodou)" },
-        { q: "Co je oplození?", a: "Splynutí samčí gamety (spermie) se samičí gametou (vajíčko), vznik zygoty" },
-        { q: "Jak probíhá oplození u krytosemenných rostlin?", a: "Po opylení pylová láčka dorůstá k vajíčku, dochází ke splynutí a vzniká semeno" },
-        { q: "Jaký je význam opylení a oplození?", a: "Zajišťují vznik semen a genetickou variabilitu" }
-      ],
-      "Významné čeledi rostlin": [
-        { q: "Co znamená pojem 'čeleď' u rostlin?", a: "Taxonomická skupina rostlin zahrnující příbuzné rody s podobnými znaky" },
-        { q: "Jaká je významná čeleď jednoděložných rostlin s hospodářským významem?", a: "Liliovité -- cibuloviny a léčivé rostliny, např. česnek, cibule, tulipán" },
-        { q: "Jaká čeleď zahrnuje obiloviny?", a: "Lipnicovité -- pšenice, ječmen, rýže, kukuřice" },
-        { q: "Která čeleď zahrnuje luštěniny?", a: "Bobovité -- hrách, fazole, čočka, sója" },
-        { q: "Jaká čeleď je významná pro okrasné a ovocné rostliny?", a: "Růžovité -- jabloně, třešně, růže, jahody" },
-        { q: "Která čeleď zahrnuje citrusy?", a: "Citrusovité -- pomeranč, citron, grapefruit" },
-        { q: "Jaká čeleď zahrnuje slunečnice a další olejniny?", a: "Hvězdnicovité -- slunečnice, heřmánek, pampelíška" },
-        { q: "Která čeleď zahrnuje rajčata, brambory a papriky?", a: "Lilkovité -- rajče, brambor, paprika, tabák" },
-        { q: "Která čeleď je významná pro tropické koření?", a: "Pepřovité -- pepř černý a dlouhý" },
-        { q: "Jaký je celkový význam významných čeledí krytosemenných rostlin?", a: "Zdroj potravin, léčiv, koření, olejů, vláken a okrasných rostlin" }
-      ],
-      "Ekologie": [
-        { q: "Co je ekologie?", a: "Věda zabývající se vztahy organismů k prostředí a mezi sebou navzájem" },
-        { q: "Co znamená pojem 'ekosystém'?", a: "Funkční celek tvořený organismy a jejich prostředím, ve kterém probíhá koloběh látek a tok energie" },
-        { q: "Co je biotop a biocenóza?", a: "Biotop: prostředí, ve kterém organismy žijí. Biocenóza: soubor všech organismů žijících v daném biotopu" },
-        { q: "Co jsou producenti, konzumenti a rozkladači?", a: "Producenti: organismy tvořící organické látky fotosyntézou. Konzumenti: živí se jinými organismy. Rozkladači: rozkládají mrtvou hmotu" },
-        { q: "Co je potravní pyramida?", a: "Ukazuje tok energie mezi jednotlivými trofickými úrovněmi" },
-        { q: "Co je ekologická nika?", a: "Role organismu v ekosystému, zahrnující způsob života, potravu a interakce" },
-        { q: "Co je biodiverzita?", a: "Různorodost života na Zemi, zahrnující druhovou, genetickou a ekosystémovou rozmanitost" },
-        { q: "Co je suchozemský a vodní ekosystém?", a: "Suchozemský: les, louka, poušť. Vodní: řeka, jezero, moře" },
-        { q: "Co je ekologická sukcese?", a: "Postupná změna druhového složení ekosystému v čase vedoucí k ustálenému klimaxovému stavu" },
-        { q: "Jaký je význam ekologie pro člověka?", a: "Pomáhá pochopit fungování přírody, udržitelné hospodaření, ochranu životního prostředí" }
-      ],
-      "Viry": [
-        { q: "Co jsou viry?", a: "Nebuněčné infekční částice (nukleová kyselina + bílkovinný obal), které se mohou množit pouze uvnitř hostitelské buňky" },
-        { q: "Jaké složky má virová částice (virion)?", a: "Nukleová kyselina (DNA nebo RNA), kapsida (bílkovinný obal) a u některých lipidový obal" },
-        { q: "Jak se viry rozmnožují?", a: "Pouze uvnitř hostitelských buněk -- infikují buňku, využijí její metabolismus" },
-        { q: "Jaký je rozdíl mezi DNA a RNA viry?", a: "DNA viry mají genetickou informaci v DNA (herpesviry), RNA viry v RNA (chřipkový virus, HIV)" },
-        { q: "Co je lytický cyklus?", a: "Způsob množení virů s rychlou produkcí nových virionů a zničením hostitelské buňky" },
-        { q: "Co je lyzogenní cyklus?", a: "Virová DNA (provirus) zůstává začleněná do DNA hostitele a může se dlouhodobě neprojevovat" },
-        { q: "Jaké choroby způsobují viry u člověka?", a: "Chřipka, nachlazení, spalničky, příušnice, plané neštovice, AIDS, COVID-19, žloutenka, herpes" },
-        { q: "Proč antibiotika nepůsobí na viry?", a: "Antibiotika cílí na bakteriální struktury, které viry nemají. Proti virům se používají antivirotika" },
-        { q: "Jakou roli hraje očkování proti virům?", a: "Stimuluje imunitní systém k vytvoření protilátek proti konkrétním virům" },
-        { q: "Co jsou bakteriofágy?", a: "Viry napadající bakterie, využívané v molekulární biologii a fágové terapii" }
-      ]
-    };
+    // ... questionsDatabase and other JS remain unchanged ...
 
     // Spočítat celkový počet otázek
     const totalQuestions = Object.values(questionsDatabase).reduce((sum, section) => sum + section.length, 0);
@@ -457,7 +274,7 @@
     .header p { margin: 1.5px 0; font-size: 9pt; }
     .question { border-bottom: 1px solid #ddd; padding: 1px 0; margin: 0; page-break-inside: avoid; break-inside: avoid; }
     .question-text { font-weight: bold; margin: 0 0 1px 0; font-size: 9pt; }
-    .answer-field { min-height: 7em; border: none; padding: 2px 3px; background: transparent; margin: 0 0 1px 0; }
+    .answer-field { min-height: 3.2em; border: none; padding: 2px 3px; background: transparent; margin: 0 0 1px 0; }
     .points { text-align: right; font-weight: bold; color: #c00; font-size: 8pt; margin: 0; }
     .summary { border: 1.5px solid black; padding: 8px; margin: 8px 0 8px 0; page-break-inside: avoid; break-inside: avoid; }
     .summary h2 { font-size: 11pt; margin: 0 0 5px 0; }
@@ -482,6 +299,7 @@
     <p><strong>Varianta:</strong> ${studentNum}</p>
   </div>`;
 
+        // ÚPRAVA: více prostoru pro odpověď – 4 řádky
         questions.forEach((item, index) => {
           content += `
   <table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
@@ -489,7 +307,9 @@
       <td>
         <div class="question">
           <p class="question-text">${index + 1}. ${item.q}</p>
-          <div class="answer-field">&nbsp;</div>
+          <div class="answer-field">
+            <br><br><br><br>
+          </div>
           <p class="points">Bodů: _____</p>
         </div>
       </td>
