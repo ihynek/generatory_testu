@@ -164,7 +164,7 @@
         Vygenerovat všechny testy najednou
       </button>
 
-      <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+      <button class="btn btn-secondary" onclick="window.location.href='dexin.html'">
         ← Zpět na rozcestník
       </button>
 
@@ -328,9 +328,9 @@
 
       let selected = [];
 
-      sections.forEach((section, index) => {
+      sections.forEach((section, dexin) => {
         const sectionQuestions = [...questionsDatabase[section]];
-        const count = questionsPerSection + (index < remainder ? 1 : 0);
+        const count = questionsPerSection + (dexin < remainder ? 1 : 0);
         
         for (let i = sectionQuestions.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -412,13 +412,13 @@
     <p><strong>Varianta:</strong> ${studentNum}</p>
   </div>`;
 
-        questions.forEach((item, index) => {
+        questions.forEach((item, dexin) => {
           content += `
   <table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
     <tr>
       <td>
         <div class="question">
-          <p class="question-text">${index + 1}. ${item.q}</p>
+          <p class="question-text">${dexin + 1}. ${item.q}</p>
           <div class="answer-field">&nbsp;</div>
           <p class="points">Bodů: _____</p>
         </div>
