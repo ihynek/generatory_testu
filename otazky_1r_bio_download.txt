@@ -34,12 +34,12 @@ Otázky pro přípravu na test
 === BUNĚČNÉ DÝCHÁNÍ A FOTOSYNTÉZA ===
 
 1. Co je buněčné dýchání a jaký je jeho hlavní význam?
-2. Jaký je obecný vzorec buněčného dýchání?
+2. Jaká je obecná rovnice buněčného dýchání?
 3. Jaké fáze buněčného dýchání rozlišujeme?
 4. Jaký je rozdíl mezi aerobním a anaerobním dýcháním?
 5. Proč jsou mitochondrie nazývány 'elektrárnami buňky'?
 6. Co je fotosyntéza a proč je důležitá?
-7. Jaký je obecný vzorec fotosyntézy?
+7. Jaká je obecná rovnice fotosyntézy?
 8. Kde probíhá fotosyntéza?
 9. Jaké dvě hlavní fáze fotosyntézy rozlišujeme?
 10. Jaký je význam chlorofylu?
