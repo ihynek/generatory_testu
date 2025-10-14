@@ -111,24 +111,12 @@
     color: #1e40af;
     line-height: 1.5;
   }
-
-  textarea.answer-field {
-    font-family: Arial;
-    font-size: 9pt;
-    line-height: 1.3;
-    padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: #fff;
-    box-sizing: border-box;
-  }
-
-  @media print {
-    textarea.answer-field {
-      border: none;
-      background: transparent;
-      resize: none;
-    }
+.answer-field {
+  height: 5em;
+  margin-bottom: 8px;
+  border-bottom: 1px dotted #999;
+}
+ 
 </style>
 
     }
@@ -520,7 +508,8 @@
       <td>
         <div class="question">
           <p class="question-text">${index + 1}. ${item.q}</p>
-          <textarea class="answer-field" rows="5" style="width: 100%; resize: none;"></textarea>
+         <div class="answer-field"></div>
+
           <p class="points">Bodů: _____</p>
         </div>
       </td>
