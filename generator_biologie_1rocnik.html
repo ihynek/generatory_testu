@@ -421,24 +421,24 @@
       return selected;
     }
 
-    function generateAllTests() {
-      const className = document.getElementById('className').value;
-      const studentCount = parseInt(document.getElementById('studentCount').value) || 30;
-      const testDate = document.getElementById('testDate').value;
-      const questionsPerTest = parseInt(document.getElementById('questionsPerTest').value) || 30;
-      const pointsPerQuestion = parseInt(document.getElementById('pointsPerQuestion').value) || 1;
+  function generateAllTests() {
+  const className = document.getElementById('className').value;
+  const studentCount = parseInt(document.getElementById('studentCount').value) || 30;
+  const testDate = document.getElementById('testDate').value;
+  const questionsPerTest = parseInt(document.getElementById('questionsPerTest').value) || 30;
+  const pointsPerQuestion = parseInt(document.getElementById('pointsPerQuestion').value) || 1;
 
-      if (!className) {
-        document.getElementById('warningText').textContent = 'Vyber třídu';
-        document.getElementById('warningSection').style.display = 'block';
-        return;
-      }
+  if (!className) {
+    document.getElementById('warningText').textContent = 'Vyber třídu';
+    document.getElementById('warningSection').style.display = 'block';
+    return;
+  }
 
-      document.getElementById('warningSection').style.display = 'none';
+  document.getElementById('warningSection').style.display = 'none';
 
-      const maxPoints = questionsPerTest * pointsPerQuestion;
+  const maxPoints = questionsPerTest * pointsPerQuestion;
 
-      let content = `<!DOCTYPE html>
+  let content = `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -456,9 +456,19 @@
     .header { border-top: 1.5px solid black; border-bottom: 1.5px solid black; padding: 3px 0; margin: 5px 0 8px 0; }
     .header p { margin: 1.5px 0; font-size: 9pt; }
     .question { border-bottom: 1px solid #ddd; padding: 1px 0; margin: 0; page-break-inside: avoid; break-inside: avoid; }
-    .question-text { font-weight: bold; margin: 0 0 1px 0; font-size: 9pt; }
-    .answer-field { min-height: 3.2em; border: none; padding: 2px 3px; background: transparent; margin: 0 0 1px 0; }
-    .points { text-align: right; font-weight: bold; color: #c00; font-size: 8pt; margin: 0; }
+    .question-text { font-weight: bold; margin: 0 0 4px 0; font-size: 9pt; }
+    .answer-field {
+      width: 100%;
+      min-height: 4em;
+      resize: none;
+      border: 1px solid #ccc;
+      padding: 4px;
+      font-family: Arial;
+      font-size: 9pt;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+    .points { text-align: right; font-weight: bold; color: #c00; font-size: 8pt; margin: 2px 0; }
     .summary { border: 1.5px solid black; padding: 8px; margin: 8px 0 8px 0; page-break-inside: avoid; break-inside: avoid; }
     .summary h2 { font-size: 11pt; margin: 0 0 5px 0; }
     .summary p { margin: 3px 0; font-size: 9pt; }
@@ -466,64 +476,61 @@
 </head>
 <body>`;
 
-      for (let studentNum = 1; studentNum <= studentCount; studentNum++) {
-        if (studentNum > 1) {
-          content += '<br clear=all style="page-break-before:always">';
-        }
+  for (let studentNum = 1; studentNum <= studentCount; studentNum++) {
+    if (studentNum > 1) {
+      content += '<br clear=all style="page-break-before:always">';
+    }
 
-        const questions = generateOneTest(questionsPerTest);
+    const questions = generateOneTest(questionsPerTest);
 
-        content += `
-  <h1>TEST Z BIOLOGIE - 1. ROČNÍK</h1>
-  <div class="header">
-    <p><strong>Jméno a příjmení:</strong></p>
-    <p><strong>Třída:</strong> ${className}</p>
-    <p><strong>Datum:</strong> ${testDate}</p>
-    <p><strong>Varianta:</strong> ${studentNum}</p>
-  </div>`;
+    content += `
+<h1>TEST Z BIOLOGIE - 1. ROČNÍK</h1>
+<div class="header">
+  <p><strong>Jméno a příjmení:</strong></p>
+  <p><strong>Třída:</strong> ${className}</p>
+  <p><strong>Datum:</strong> ${testDate}</p>
+  <p><strong>Varianta:</strong> ${studentNum}</p>
+</div>`;
 
-        questions.forEach((item, index) => {
-          content += `
-  <table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
-    <tr>
-      <td>
-        <div class="question">
-          <p class="question-text">${index + 1}. ${item.q}</p>
-          <div class="answer-field">&nbsp;</div>
-          <p class="points">Bodů: _____</p>
-        </div>
-      </td>
-    </tr>
-  </table>`;
-        });
-
-        content += `
-  <div class="summary">
-    <h2>HODNOCENÍ</h2>
-    <p><strong>Celkem bodů:</strong> __________ / ${maxPoints}</p>
-    <p><strong>Známka:</strong> __________</p>
-    <p><strong>Komentář učitele:</strong></p>
-    <div style="border: 1px solid #ccc; min-height: 50px; margin-top: 6px; background: #fafafa;"></div>
-  </div>`;
-      }
-
+    questions.forEach((item, index) => {
       content += `
+<table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
+  <tr>
+    <td>
+      <div class="question">
+        <p class="question-text">${index + 1}. ${item.q}</p>
+        <textarea class="answer-field" rows="5"></textarea>
+        <p class="points">Bodů: _____</p>
+      </div>
+    </td>
+  </tr>
+</table>`;
+    });
+
+    content += `
+<div class="summary">
+  <h2>HODNOCENÍ</h2>
+  <p><strong>Celkem bodů:</strong> __________ / ${maxPoints}</p>
+  <p><strong>Známka:</strong> __________</p>
+  <p><strong>Komentář učitele:</strong></p>
+  <div style="border: 1px solid #ccc; min-height: 50px; margin-top: 6px; background: #fafafa;"></div>
+</div>`;
+  }
+
+  content += `
 </body>
 </html>`;
 
-      const blob = new Blob([content], { type: 'application/msword' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'testy_biologie_1rocnik_' + className.replace(/\s+/g, '_') + '_' + testDate + '.doc';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+  const blob = new Blob([content], { type: 'application/msword' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'testy_biologie_1rocnik_' + className.replace(/\s+/g, '_') + '_' + testDate + '.doc';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
 
-      document.getElementById('testInfo').textContent = studentCount + ' (BIOLOGIE 1. ročník)';
-      document.getElementById('successSection').style.display = 'block';
-    }
-  </script>
-</body>
-</html>
+  document.getElementById('testInfo').textContent = studentCount + ' (BIOLOGIE 1. ročník)';
+  document.getElementById('successSection').style.display = 'block';
+}
