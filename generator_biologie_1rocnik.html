@@ -106,10 +106,31 @@
       padding: 16px;
       margin-bottom: 16px;
     }
-    .instruction-box p {
-      font-size: 14px;
-      color: #1e40af;
-      line-height: 1.5;
+      .instruction-box p {
+    font-size: 14px;
+    color: #1e40af;
+    line-height: 1.5;
+  }
+
+  textarea.answer-field {
+    font-family: Arial;
+    font-size: 9pt;
+    line-height: 1.3;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  @media print {
+    textarea.answer-field {
+      border: none;
+      background: transparent;
+      resize: none;
+    }
+</style>
+
     }
   </style>
 </head>
@@ -492,20 +513,21 @@
     <p><strong>Varianta:</strong> ${studentNum}</p>
   </div>`;
 
-        questions.forEach((item, dexin) => {
-          content += `
+       questions.forEach((item, index) => {
+  content += `
   <table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
     <tr>
       <td>
         <div class="question">
-          <p class="question-text">${dexin + 1}. ${item.q}</p>
-         <textarea class="answer-field" rows="5" style="width: 100%; resize: none;"></textarea>
+          <p class="question-text">${index + 1}. ${item.q}</p>
+          <textarea class="answer-field" rows="5" style="width: 100%; resize: none;"></textarea>
           <p class="points">Bodů: _____</p>
         </div>
       </td>
     </tr>
   </table>`;
-        });
+});
+
 
         content += `
   <div class="summary">
