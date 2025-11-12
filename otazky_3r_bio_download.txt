@@ -4,198 +4,192 @@ Otázky pro přípravu na test
 
 === OPĚRNÁ SOUSTAVA ===
 
-1. Co je opěrná soustava?
-2. Co je skelet?
-3. Co je kloub?
-4. Co je kloubní chrupavka?
-5. Co jsou vazy?
-6. Co jsou šlachy?
-7. Co je lebka?
-8. Co je páteř?
-9. Co je obratel?
-10. Co je páteřní kanál?
-11. Co jsou meziobratlové ploténky?
-12. Co je hrudník?
-13. Co je kostní dřeň?
-14. Co je krvetvorba (hemopoeza)?
-15. Z čeho se skládá horní končetina?
-16. Z čeho se skládá dolní končetina?
+1.  Jaké jsou hlavní funkce opěrné soustavy?
+2.	Popiš kostru člověka.
+3.	Jaké jsou hlavní typy kloubů a jak fungují?
+4.	Jakou funkci má kloubní chrupavka?
+5.	Jaký je rozdíl mezi vazy a šlachami?
+6.	Z jakých částí se skládá lebka?
+7.	Kolik obratlů má lidská páteř a jak se dělí?
+8.	Z jakých částí se skládá obratel?
+9.	Co obsahuje páteřní kanál?
+10.	Jakou funkci mají meziobratlové ploténky?
+11.	Z čeho se skládá hrudník?
+12.	Kde se nachází kostní dřeň a jaké má funkce?
+13.	Kde probíhá krvetvorba (hematopoéza)?
+14.	Které kosti tvoří horní končetinu?
+15.	Které kosti tvoří dolní končetinu?
 
 === SVALOVÁ SOUSTAVA ===
 
-1. Co je svalová tkáň?
-2. Co je příčně pruhované svalstvo?
-3. Co je srdeční svalstvo?
-4. Co je hladké svalstvo?
-5. Co je sval?
-6. Co je svalové vlákno?
-7. Co jsou myofibrily?
-8. Co je nervosvalová ploténka?
-9. Co je synergista?
-10. Co je antagonista?
-11. Co je flexor?
-12. Co je extenzor?
-13. Uveď příklady svalů horní končetiny.
-14. Uveď příklady svalů dolní končetiny.
-15. Uveď příklady svalů hlavy a trupu.
+1.	Jaké jsou tři typy svalové tkáně a jak se liší?
+2.	Kde se nachází příčně pruhované svalstvo a jaké má vlastnosti?
+3.	Čím se liší srdeční svalstvo od kosterního?
+4.	Kde se nachází hladké svalstvo?
+5.	Jaká je stavba kosterního svalu?
+6.	Co jsou myofibrily a jaké obsahují proteiny?
+7.	Jak funguje nervosvalová ploténka?
+8.	Co znamená, že svaly pracují jako synergisté?
+9.	Co znamená, že svaly pracují jako antagonisté?
+10.	Jaký je rozdíl mezi flexorem a extenzorem?
+11.	Jmenuj svaly horní končetiny.
+12.	Jmenuj svaly dolní končetiny.
+13.	Jmenuj svaly hlavy a trupu.
 
 === KREVNÍ A LYMFATICKÁ SOUSTAVA ===
 
-1. Co je homeostáza?
-2. Co je krev?
-3. Co je lymfa?
-4. Co je hematologie?
-5. Co je glykemie?
-6. Co je krevní obraz?
-7. Co jsou erytrocyty?
-8. Co jsou leukocyty?
-9. Co jsou trombocyty?
-10. Co je hemoglobin?
-11. Co je hematokryt?
-12. Co je sedimentace?
-13. Co je diapedéza?
-14. Co je hemostáze?
-15. Co je embolie?
-16. Co je anémie?
-17. Co je leukémie?
+1.	Co znamená homeostáza?
+2.	Jaké jsou hlavní funkce krve?
+3.	Jak vzniká lymfa a jakou má funkci?
+4.	Čím se zabývá hematologie?
+5.	Co je glykemie a jaké jsou její normální hodnoty?
+6.	Co zjistíme z krevního obrazu?
+7.	Jaká je hlavní funkce erytrocytů?
+8.	Jaké jsou typy leukocytů a jakou mají funkci?
+9.	Jakou funkci mají trombocyty?
+10.	Co je hemoglobin a kde se nachází?
+11.	Co nám říká hodnota hematokritu?
+12.	Co je sedimentace erytrocytů a k čemu slouží?
+13.	Co je diapedéza ?
+14.	Jak probíhá srážení krve?
+15.	Co je embolie a čím je nebezpečná?
+16.	Co je anémie a jaké má příznaky?
+17.	Co je leukémie?
+
 
 === OBĚHOVÁ SOUSTAVA ===
 
-1. Co je srdce?
-2. Co je myokard?
-3. Co jsou srdeční síně a komory?
-4. Co jsou chlopně?
-5. Co je aorta?
-6. Co je plicnice?
-7. Co je systola?
-8. Co je diastola?
-9. Co jsou koronární tepny?
-10. Co je malý oběh?
-11. Co je velký oběh?
-12. Co jsou horní a dolní dutá žíla?
-13. Co je EKG?
+1.	Kde se nachází srdce a jakou má velikost?
+2.	Z jaké tkáně je tvořen myokard?
+3.	Kolik částí má srdce?
+4.	Jaké srdeční chlopně znáš a kde se nacházejí?
+5.	Kam vede aorta (srdečnice)?
+6.	Kam vede plicnice?
+7.	Co se děje během systoly?
+8.	Co se děje během diastoly?
+9.	Jakou funkci mají koronární tepny?
+10.	Kterými orgány prochází malý (plicní) oběh?
+11.	Kterými orgány prochází velký (tělní) oběh?
+12.	Odkud přivádějí krev horní a dolní dutá žíla?
+13.	Co zaznamenává EKG?
 
 === TRÁVICÍ SOUSTAVA ===
 
-1. Co je trávicí soustava?
-2. Co je trávicí trubice?
-3. Co je dutina ústní?
-4. Co je jazyk?
-5. Co je zub?
-6. Jaká je stavba zubu?
-7. Jaké jsou typy zubů?
-8. Co je žaludek?
-9. Co je tenké střevo?
-10. Co je tlusté střevo?
-11. Co jsou játra?
-12. Jaké trávicí enzymy znáš?
-13. Co jsou peristaltické pohyby?
-14. Co je vstřebávání (resorpce)?
-15. Co je dvanáctník?
-16. Co je slinivka břišní (pankreas)?
+1.	Jaké jsou hlavní funkce trávicí soustavy?
+2.	Které orgány tvoří trávicí trubici?
+3.	Co se nachází v dutině ústní?
+4.	Jaké funkce má jazyk?
+5.	Kolik zubů má dospělý člověk?
+6.	Jaká je stavba zubu (korunka, krček, kořen)?
+7.	Jaké typy zubů máme a jakou mají funkci?
+8.	Jakou funkci má žaludek a co obsahuje žaludeční šťáva?
+9.	Jaké jsou části tenkého střeva a co se v něm děje?
+10.	Jaké jsou části tlustého střeva a jakou má funkci?
+11.	Jaké jsou hlavní funkce jater?
+12.	Jmenuj alespoň 5 trávicích enzymů a kde působí.
+13.	Co způsobují peristaltické pohyby?
+14.	Kde probíhá vstřebávání (resorpce) živin?
+15.	Proč je dvanáctník důležitý pro trávení?
+16.	Jaké trávicí enzymy produkuje slinivka břišní?
 
 === VYLUČOVACÍ SOUSTAVA ===
 
-1. Co je vylučovací (močová) soustava?
-2. Co jsou ledviny?
-3. Co je nefron?
-4. Co je antidiuretický hormon (ADH)?
-5. Co je močovod?
-6. Co je močový měchýř?
-7. Co je močová trubice?
-8. Co je erytropoetin?
-9. Co jsou ledvinové kameny (konkrementy)?
+1.	Jaké jsou hlavní funkce vylučovací soustavy?
+2.	Kde se nacházejí ledviny a jaké mají funkce?
+3.	Jak funguje nefron při tvorbě moči?
+4.	Jak působí antidiuretický hormon (ADH)?
+5.	Kam ústí močovody?
+6.	Kde se nachází močový měchýř a jakou má kapacitu?
+7.	Jak se liší močová trubice u mužů a žen?
+8.	Jakou funkci má erytropoetin produkovaný ledvinami?
+9.	Jak vznikají ledvinové kameny?
 
 === SMYSLOVÁ SOUSTAVA ===
 
-1. Co je receptor?
-2. Co je oko a jaká je jeho stavba?
-3. Co je sítnice?
-4. Co je zrakový nerv?
-5. Co je binokulární vidění?
-6. Co jsou okohybné svaly?
-7. Co je ucho a jaká je jeho stavba?
-8. Co je perilymfa a endolymfa?
-9. Co je sluchový a rovnovážný nerv?
-10. Co je statokinetické ústrojí?
-11. Co je hlemýžď?
-12. Jaká je stavba kůže?
-13. Co jsou chuťové pohárky?
+1.	Co jsou receptory a jak se dělí podle druhu podnětu?
+2.	Jaké jsou hlavní části oka a jejich funkce?
+3.	Z jakých buněk se skládá sítnice?
+4.	Kam vede zrakový nerv?
+5.	Co umožňuje binokulární vidění?
+6.	Kolik okohybných svalů má každé oko?
+7.	Jaké jsou  ásti ucha?
+8.	Kde se nachází perilymfa a endolymfa?
+9.	Jakou funkci má sluchový a rovnovážný nerv?
+10.	Kde se nachází statokinetické ústrojí?
+11.	Jak funguje hlemýžď při vnímání zvuku?
+12.	Jaké jsou vrstvy kůže?
+13.	Kde se nacházejí chuťové pohárky?
 
 === POHLAVNÍ ROZMNOŽOVÁNÍ A VÝVIN ===
 
-1. Co je pohlavní rozmnožování (pohlavní reprodukce)?
-2. Co je pohlavní buňka (gameta)?
-3. Co je spermie?
-4. Co je vajíčko (oocyt)?
-5. Co je folikul?
-6. Co je oplození (fertilizace)?
-7. Co je zygota?
-8. Co je zárodek (embryo)?
-9. Co je meióza?
-10. Co jsou pohlavní chromozomy (gonozomy)?
-11. Co je pyj (penis)?
-12. Co jsou vaječníky (ovaria)?
-13. Co je děloha?
-14. Co je ovulace?
-15. Co je menstruační cyklus (menze)?
-16. Co je placenta?
-17. Co je pupečník?
+1.	Jaký je rozdíl mezi pohlavním a nepohlavním rozmnožováním?
+2.	Kolik chromozomů obsahuje pohlavní buňka člověka?
+3.	Kde dochází k oplození u člověka?
+4.	Kolik chromozomů má zygota?
+5.	Kdy mluvíme o zárodku a kdy o plodu?
+6.	Jak probíhá meióza a k čemu slouží?
+7.	Jaké jsou pohlavní chromozomy u muže a u ženy?
+8.	Jaká je stavba pohlavni soustavy muže včetně spermie?
+9.	Jaká je stavba pohlavní soustavy ženy?
+10.	Jaká je funkce dělohy?
+11.	Kdy dochází k ovulaci?
+12.	Jak dlouhý je menstruační cyklus a jaké má fáze?
+13.	Jaké jsou funkce placenty?
+14.	Co prochází pupeční šňůrou?
 
 === ENDOKRINNÍ SOUSTAVA ===
 
-1. Co je žláza s vnitřní sekrecí (endokrinní žláza)?
-2. Co je endokrinní soustava?
-3. Co je hormon?
-4. Co je hypotalamo-hypofyzární systém?
-5. Co je hypofýza (podvěsek mozkový)?
-6. Co je přední lalok hypofýzy (adenohypofýza)?
-7. Co je růstový hormon (somatotropin)?
-8. Co je folikuly stimulující hormon (folitropin)?
-9. Co je neurohypofýza?
-10. Co je antidiuretický hormon (vazopresin)?
-11. Co je oxytocin?
-12. Co je štítná žláza?
-13. Co je tyroxin (T4)?
-14. Co jsou nadledviny?
-15. Co je slinivka břišní (pankreas) v roli endokrinní žlázy?
+1.	Jaký je rozdíl mezi žlázou s vnitřní a vnější sekrecí?
+2.	Jaké orgány tvoří endokrinní soustavu?
+3.	Jak fungují hormony?
+4.	Jak spolu komunikují hypotalamus a hypofýza?
+5.	Kde se nachází hypofýza?
+6.	Jaké hormony produkuje přední lalok hypofýzy?
+7.	Jaké účinky má růstový hormon?
+8.	Jakou funkci má FSH u mužů a u žen?
+9.	Jaké hormony uvolňuje zadní lalok hypofýzy?
+10.	Jaké účinky má ADH (vazopresin)?
+11.	Jakou funkci má oxytocin?
+12.	Kde se nachází štítná žláza a jaké hormony produkuje?
+13.	Kde se nacházejí nadledviny a jaké hormony produkují?
+14.	Jaké hormony produkuje slinivka břišní (inzulin, glukagon)?
 
 === NERVOVÁ SOUSTAVA ===
 
-1. Co je nervová soustava?
-2. Co je centrální nervový systém (CNS)?
-3. Co je periferní (obvodový) nervový systém?
-4. Co je mozek?
-5. Co je mícha?
-6. Co je neuron (nervová buňka)?
-7. Co je dendrit?
-8. Co je axon (neurit)?
-9. Co je synapse?
-10. Co je neurotransmiter?
-11. Co je reflex?
-12. Co je reflexní oblouk?
-13. Co je autonomní (vegetativní) nervový systém?
-14. Co je sympatikus?
-15. Co je parasympatikus?
-16. Co je akční potenciál?
+1.	Jak se dělí nervová soustava?
+2.	Co tvoří centrální nervový systém?
+3.	Co tvoří periferní nervový systém?
+4.	Jaké jsou hlavní části mozku?
+5.	Jaká je stavba míchy a jakou má funkci?
+6.	Jaká je stavba neuronu?
+7.	Jakou funkci mají dendrity?
+8.	Jakou funkci má axon?
+9.	Jak funguje přenos signálu přes synapsi?
+10.	Co je reflex a jaké jsou jeho typy?
+11.	Jaké části obsahuje reflexní oblouk?
+12.	Jak se dělí autonomní nervový systém?
+13.	Jaké účinky má sympatikus na orgány?
+14.	Jaké účinky má parasympatikus na orgány?
+15.	Jak vzniká a šíří se akční potenciál?
 
 === GENETIKA ===
 
-1. Co je genetika?
-2. Co je gen?
-3. Co je alela?
-4. Co je homozygot?
-5. Co je heterozygot?
-6. Co je genotyp?
-7. Co je fenotyp?
-8. Co je chromozom?
-9. Co je autosom?
-10. Co jsou gonozomy (pohlavní chromozomy)?
-11. Co je mitóza?
-12. Co je meióza?
-13. Co je dědičnost?
-14. Co je mutace?
-15. Co je křížení?
+1.	Čím se zabývá genetika?
+2.	Co je gen a kde se nachází?
+3.	Co jsou alely a jak se označují?
+4.	Jak označujeme homozygota (AA, aa)?
+5.	Jak označujeme heterozygota (Aa)?
+6.	Co vyjadřuje genotyp?
+7.	Co vyjadřuje fenotyp?
+8.	Co je chromozom a kolik jich má člověk?
+9.	Co jsou autosomy?
+10.	Jaké jsou pohlavní chromozomy u muže a ženy?
+11.	K čemu slouží mitóza?
+12.	K čemu slouží meióza?
+13.	Co je dominantní a recesivní dědičnost?
+14.	Jaké jsou typy mutací?
+15.	Co je monohybridní a dihybridní křížení?
+16.	Jak zní Mendlovy zákony?
 
 === EKOLOGIE ===
 
@@ -251,5 +245,5 @@ Otázky pro přípravu na test
 50. Co je biodiverzita?
 
 =====================================
-CELKEM: 212 otázek
+CELKEM: 205 otázek
 =====================================
