@@ -2,6 +2,34 @@ BIOLOGIE - 2. ROČNÍK
 Otázky pro přípravu na test
 =====================================
 
+=== PROTISTA ===
+
+1. Jak se vymezují protista?
+2. Jsou protista prokaryotní, nebo eukaryotní organismy?
+3. Proč „protista“ není taxon, ale jen pracovní označení?
+4. Podle čeho se dnes sestavuje systém eukaryot?
+5. Z jakého organismu vznikla mitochondrie?
+6. Jakou funkci má pulzující vakuola?
+7. Co je stigma krásnoočka?
+8. Jakou funkci má makronukleus a mikronukleus u nálevníků?
+9. Jakými pohybovými útvary se pohybuje trepka?
+10. Jakým pohybovým útvarem se pohybuje krásnoočko?
+11. Čím se pohybuje měňavka a jak se tento pohyb nazývá?
+12. Co je mixotrofie? Uveď příklad.
+13. Co je konjugace a zvyšuje se při ní počet jedinců?
+14. Co je cysta?
+15. Z jaké látky je schránka rozsivek?
+16. Které tři skupiny patří do Alveolata?
+17. Který organismus způsobuje malárii?
+18. Kdo přenáší malárii?
+19. Kdo je u malárie definitivní hostitel a kdo mezihostitel?
+20. Čím se liší schránka dírkonošců a kostra mřížovců?
+21. Jakou nemoc způsobuje měňavka úplavičná?
+22. Co je plazmodium hlenky?
+23. Kdo způsobuje spavou nemoc a co ji přenáší?
+24. Jak se člověk nakazí lamblií střevní?
+25. Z jaké skupiny řas vznikly suchozemské rostliny?
+
 === HOUBY ===
 
 1. Jaká látka tvoří buněčnou stěnu hub?
@@ -29,19 +57,18 @@ Otázky pro přípravu na test
 23. Jaký má význam mykorhiza pro rostliny?
 24. Jaká je hlavní funkce plodnice u hub?
 25. Kde se tvoří výtrusy u stopkovýtrusných hub?
-26. Jaký pigment dává některým houbám schopnost fotosyntézy v symbióze s řasami?
-27. Jak se nazývá způsob rozmnožování kvasinek?
-28. Které houby způsobují onemocnění rostlin jako padlí nebo rez?
-29. Z čeho se skládá lišejník?
-30. Jaká je funkce spor u hub?
-31. Kde rostou saprofytické houby?
-32. Jaký je rozdíl mezi edální a epifytickou formou lišejníků?
-33. Které houby se používají k výrobě antibiotik?
-34. Co jsou to hyfy septované a neseptované?
-35. Jak se rozmnožují lišejníky?
-36. Jaké barvy může mít plodnice hub?
-37. Co je to mykorhiza ektotrofní a endotrofní?
-38. Jaký význam mají houby v přírodě?
+26. Jak se nazývá způsob rozmnožování kvasinek?
+27. Které houby způsobují onemocnění rostlin jako padlí nebo rez?
+28. Z čeho se skládá lišejník?
+29. Jaká je funkce spor u hub?
+30. Kde rostou saprofytické houby?
+31. Jaký je rozdíl mezi edální a epifytickou formou lišejníků?
+32. Které houby se používají k výrobě antibiotik?
+33. Co jsou to hyfy septované a neseptované?
+34. Jak se rozmnožují lišejníky?
+35. Jaké barvy může mít plodnice hub?
+36. Co je to mykorhiza ektotrofní a endotrofní?
+37. Jaký význam mají houby v přírodě?
 
 === BUŇKA A PRIMITIVNÍ MNOHOBUNĚNÍ ===
 
@@ -49,10 +76,10 @@ Otázky pro přípravu na test
 2. Jaké jsou čtyři základní typy živočišných tkání?
 3. Který zárodečný list chybí u diblastik?
 4. Kolik zárodečných listů mají triblastika?
-5. Jak se nazývá skupina triblastik, u nichž prvoústa u zárodku dávají vznik ústnímu otvoru u dospělce?
-6. Jak se nazývá skupina triblastik, u nichž prvoústa u zárodku dávají vznik řitnímu otvoru u dospělce?
-7. Který nejjednodušší mnohobunění živočich ještě nemá pravé tkáně?
-8. Jak se nazývají buňky, které zajišťují proudění vody u hubovců (porifer)?
+5. Jak se nazývá skupina triblastik, u nichž prvoústa dávají vznik ústnímu otvoru u dospělce?
+6. Jak se nazývá skupina triblastik, u nichž prvoústa dávají vznik řitnímu otvoru u dospělce?
+7. Který nejjednodušší mnohobuněčný živočich ještě nemá pravé tkáně?
+8. Jak se nazývají buňky zajišťující proudění vody u hubovců?
 9. Jak se nazývají žahavé buňky žahavců?
 10. Které stádium žahavců je přisedlé?
 11. Které stádium žahavců je volně plovoucí?
@@ -62,7 +89,7 @@ Otázky pro přípravu na test
 15. Z jakého zárodečného listu vzniká nervová soustava?
 16. Jak se nazývá centrální dutina u žahavců?
 17. Jaký typ symetrie mají žahavci?
-18. Co znamená pojem 'cefalizace'?
+18. Co znamená pojem cefalizace?
 19. Jaké jsou hlavní funkce pojivové tkáně?
 20. Jaký typ tkáně tvoří kůži a sliznice?
 
@@ -85,42 +112,42 @@ Otázky pro přípravu na test
 15. Jak se nazývá vývoj hmyzu bez kukly?
 16. Kolik párů končetin mají pavoukovci?
 17. Jaký korýš žije ve sladkých vodách ČR a má krunýř?
-18. Jak se nazývá soustava, kterou ostnokoži pohybují panožkami?
-19. Který ostnokožec má schopnost regenerace a paprscitou souměrnost?
+18. Jak se nazývá soustava, kterou ostnokožci pohybují panožkami?
+19. Který ostnokožec má schopnost regenerace a paprsčitou souměrnost?
 20. Jaký ostnokožec má kulovité tělo s ostny?
 21. Jaký druh trávicí soustavy mají ploštěnci?
 22. Mají hlístice pravou tělní dutinu?
 23. Jak se dostávají tasemnice do lidského těla?
-24. Jaký je mezihotel motolic?
+24. Jaký je mezihostitelem motolic?
 25. Čím se živí volně žijící ploštěnci?
 26. Jaký typ oběhové soustavy mají kroužkovci?
 27. Čím dýchají žížaly?
 28. Co je to opasek (clitellum) u žížal?
 29. Z čeho se skládá tělo měkkýšů?
 30. Co vylučuje plášť měkkýšů?
-31. Jakou funkcí má radula u měkkýšů?
+31. Jakou funkci má radula u měkkýšů?
 32. Mají mlži hlavu?
 33. Co je to metamorfóza u hmyzu?
 34. Jaká je funkce trachejí u hmyzu?
 35. Co jsou to fasetové oči?
 36. Jak se nazývá vnější kostra členovců?
 37. Co je to svlékání (ecdyse) u členovců?
-38. Mají ostnokoži pravou bilaterální symetrii?
+38. Mají ostnokožci pravou bilaterální symetrii?
 39. Z čeho je tvořen skelet ostnokoží?
-40. Jak se ostnokoži pohybují?
+40. Jak se ostnokožci pohybují?
 
 === STRUNATCI ===
 
-1. Jaký mořský živočich má chordu jen v larvální stadium a dospělec je vakovitý?
+1. Jaký mořský živočich má chordu jen v larválním stadiu a dospělec je vakovitý?
 2. Jaký drobný mořský strunatec je považován za blízkého příbuzného obratlovců?
 3. Jak se nazývá bezčelistnatý parazitický obratlovec sající krev ryb?
 4. Jak dýchá většina ryb?
-5. Jaký orgán ryb umožňuje rybám plout v různých hloubkách?
+5. Jaký orgán ryb umožňuje plout v různých hloubkách?
 6. Čím je tvořena kostra, typická pro žraloky a rejnoky?
 7. K čemu slouží postranní čára u ryb?
 8. Jak se nazývá larva obojživelníků?
 9. Který obojživelník má na břiše varovné zbarvení?
-10. Např. který obojživelník má ocas i v dospělosti?
+10. Který obojživelník má ocas i v dospělosti?
 11. Jaký typ vajec kladou plazi?
 12. Která skupina plazů je bez končetin?
 13. Která skupina plazů má dobře vyvinuté končetiny a ocasy?
@@ -130,7 +157,7 @@ Otázky pro přípravu na test
 17. Jak se nazývají žlázy, kterými samice savců krmí mláďata?
 18. Která skupina savců rodí nedovinutá mláďata do vaku?
 19. Jak se nazývají savci s trvale rostoucími řezáky?
-20. Která skupina savců má špičáky a trhá ky přizpůsobené k lovu?
+20. Která skupina savců má špičáky a trhavky přizpůsobené k lovu?
 21. Jaká skupina savců má prsty ukončené kopytem?
 22. Jaký řád savců má pohyblivé prsty a vysoce vyvinutý mozek?
 23. Jaký je základní znak člověka ve stavbě kostry?
@@ -164,9 +191,9 @@ Otázky pro přípravu na test
 12. Jak se nazývá proces učení mláďat rozpoznat rodiče?
 13. Co je to migrace u živočichů?
 14. Jaký je rozdíl mezi predací a parazitismem?
-15. Co znamená pojem 'sociální hmyz'?
+15. Co znamená pojem sociální hmyz?
 16. Jak se nazývá zimní spánek u živočichů?
 
 =====================================
-CELKEM: 150 otázek
+CELKEM: 174 otázek
 =====================================

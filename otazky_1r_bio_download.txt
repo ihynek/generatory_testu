@@ -28,7 +28,7 @@ Otázky pro přípravu na test
 22. Co je petrologie a jaký je její hlavní cíl?
 23. Na jaké tři hlavní skupiny se horniny dělí?
 24. Jak vznikají magmatické horniny?
-25. Jaký je rozdíl mezi žulou (granit) a čedičem (bazalt)?
+25. Jaký je rozdíl mezi žulou (granit) a čedičem (basalt)?
 26. Co znamená pojem 'metamorfóza' hornin?
 
 === BUNĚČNÉ DÝCHÁNÍ A FOTOSYNTÉZA ===
@@ -70,8 +70,8 @@ Otázky pro přípravu na test
 1. Co je základní jednotkou rostlinného těla?
 2. Který organel umožňuje fotosyntézu?
 3. Co chrání rostlinnou buňku a dává jí pevnost?
-4. Kde je genetická informace?
-5. Kde se ukládá voda, živiny a odpadní látky?
+4. Kde je uložena genetická informace v rostlinné buňce?
+5. Kde se ukládá voda, živiny a odpadní látky v rostlinné buňce?
 6. Co jsou rostlinná pletiva?
 7. Jaké jsou hlavní typy pletiv podle funkce?
 8. Co je meristém?
@@ -86,7 +86,7 @@ Otázky pro přípravu na test
 3. Jak se bakterie rozmnožují?
 4. Jaký je význam bakterií pro člověka a přírodu?
 5. Co jsou sinice?
-6. Jak se liší sinice od bakterií?
+6. Jak se liší sinice od ostatních bakterií?
 7. Jaký je význam sinic v přírodě?
 8. Jak se sinice rozmnožují?
 9. Kde sinice žijí?
@@ -136,7 +136,7 @@ Otázky pro přípravu na test
 1. Co je kořen a jaká je jeho hlavní funkce?
 2. Jaké základní typy kořenů známe?
 3. Jaké jsou hlavní části kořene?
-4. Jak se kořen podílí na výměně látek?
+4. Jak se kořen podílí na příjmu vody a živin?
 5. Jaké specializované funkce mohou mít kořeny?
 6. Co je stonek a jaká je jeho hlavní funkce?
 7. Jaké základní typy stonků známe?
@@ -154,39 +154,39 @@ Otázky pro přípravu na test
 1. Co je květ a jaká je jeho hlavní funkce?
 2. Jaké části tvoří květ?
 3. Jak se květ podílí na rozmnožování rostlin?
-4. Jaké typy květů rozlišujeme podle pohlaví
+4. Jaké typy květů rozlišujeme podle pohlaví?
 5. Jaký je význam květů pro rostliny a člověka?
 6. Co je opylení?
 7. Jaké hlavní způsoby opylení známe?
 8. Co je oplození?
 9. Jak probíhá oplození u krytosemenných rostlin?
-10. Jaký je význam opylení a oplození?
+10. Jaký je výsledek opylení a oplození?
 
 === VÝZNAMNÉ ČELEDI ROSTLIN ===
 
-1. Co znamená pojem 'čeleď' u rostlin?
-2. Jaká je významná čeleď jednoděložných rostlin s hospodářským významem?
-3. Jaká čeleď zahrnuje obiloviny?
-4. Která čeleď zahrnuje luštěniny?
-5. Jaká čeleď je významná pro okrasné a ovocné rostliny?
-6. Která čeleď zahrnuje citrusy?
-7. Jaká čeleď zahrnuje slunečnice a další olejniny?
-8. Která čeleď zahrnuje rajčata, brambory a papriky?
-9. Která čeleď je významná pro tropické koření?
-10. Jaký je celkový význam významných čeledí krytosemenných rostlin?
+1. Co znamená pojem 'čeleď' v botanice?
+2. Jaká čeleď zahrnuje obiloviny?
+3. Která čeleď zahrnuje luštěniny?
+4. Jaká čeleď zahrnuje okrasné a ovocné keře a stromy?
+5. Která čeleď zahrnuje rajčata, brambory a papriky?
+6. Jaká čeleď zahrnuje slunečnice a kopretiny?
+7. Která čeleď zahrnuje řepu, špenát a merlík?
+8. Jaká čeleď zahrnuje brokolici, řepku a hořčici?
+9. Která čeleď zahrnuje mrkev, petržel a kopr?
+10. Jaký je hospodářský a ekologický význam krytosemenných čeledí?
 
 === EKOLOGIE ===
 
 1. Co je ekologie?
-2. Co znamená pojem 'ekosystém'?
+2. Co je ekosystém?
 3. Co je biotop a biocenóza?
 4. Co jsou producenti, konzumenti a rozkladači?
-5. Co je potravní pyramida?
+5. Co je potravní řetězec a potravní pyramida?
 6. Co je ekologická nika?
 7. Co je biodiverzita?
-8. Jak se liší suchozemské a vodní ekosystémy
+8. Jak se liší suchozemské a vodní ekosystémy?
 9. Co je ekologická sukcese?
-10. Jaký má význam ekologie pro člověka?
+10. Jaký má ekologie význam pro člověka?
 
 === VIRY ===
 
@@ -194,13 +194,13 @@ Otázky pro přípravu na test
 2. Jaké složky má virová částice (virion)?
 3. Jak se viry rozmnožují?
 4. Jaký je rozdíl mezi DNA a RNA viry?
-5. Co je lytický cyklus?
-6. Co je lyzogenní cyklus?
+5. Co je lytický cyklus viru?
+6. Co je lyzogenní cyklus viru?
 7. Jaké choroby způsobují viry u člověka?
 8. Proč antibiotika nepůsobí na viry?
-9. Jakou roli hraje očkování proti virům?
+9. Jakou roli hraje očkování v boji proti virům?
 10. Co jsou bakteriofágy?
 
 =====================================
-CELKEM: 152 otázek
+CELKEM: 148 otázek
 =====================================

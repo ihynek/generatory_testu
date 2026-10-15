@@ -2,6 +2,32 @@ BIOLOGIE - 3. ROČNÍK
 Otázky pro přípravu na test
 =====================================
 
+=== EVOLUCE ČLOVĚKA ===
+
+1. Kdo je nejbližším žijícím příbuzným člověka?
+2. Co je bipedie?
+3. Uveď dva kosterní znaky, které svědčí o bipedii.
+4. Jak se jmenuje známá kostra australopitéka afarského?
+5. Jak se nazývá nejstarší zástupce rodu Homo, který vyráběl jednoduché kamenné nástroje?
+6. Který druh člověka jako první opustil Afriku a uměl rozdělávat oheň?
+7. Se kterými příbuznými lidmi se Homo sapiens při šíření křížil?
+8. Čemu je přizpůsobená tmavá pokožka?
+9. Proč se dnes upouští od dělení lidstva na rasy?
+10. Co tvrdí teorie „Out of Africa“?
+
+=== TKÁNĚ ===
+
+1. Co je tkáň?
+2. Jaké jsou čtyři základní typy tkání?
+3. Jak se vyživuje epitel, když nemá cévy?
+4. Jaký epitel tvoří pokožku?
+5. Jaký je rozdíl mezi exokrinní a endokrinní žlázou?
+6. Co spojují šlachy a co vazy?
+7. Proč chrupavka špatně regeneruje?
+8. Co dodává kosti tvrdost a co pružnost?
+9. Který typ svalové tkáně je ovládán vůlí?
+10. Jakým směrem vedou vzruch dendrity a jakým axon?
+
 === OPĚRNÁ SOUSTAVA ===
 
 1. Co je opěrná soustava?
@@ -51,7 +77,7 @@ Otázky pro přípravu na test
 8. Co jsou leukocyty?
 9. Co jsou trombocyty?
 10. Co je hemoglobin?
-11. Co je hematokryt?
+11. Co je hematokrit?
 12. Co je sedimentace?
 13. Co je diapedéza?
 14. Co je hemostáze?
@@ -124,7 +150,7 @@ Otázky pro přípravu na test
 
 === POHLAVNÍ ROZMNOŽOVÁNÍ A VÝVIN ===
 
-1. Co je pohlavní rozmnožování (pohlavní reprodukce)?
+1. Co je pohlavní rozmnožování?
 2. Co je pohlavní buňka (gameta)?
 3. Co je spermie?
 4. Co je vajíčko (oocyt)?
@@ -138,7 +164,7 @@ Otázky pro přípravu na test
 12. Co jsou vaječníky (ovaria)?
 13. Co je děloha?
 14. Co je ovulace?
-15. Co je menstruační cyklus (menze)?
+15. Co je menstruační cyklus?
 16. Co je placenta?
 17. Co je pupečník?
 
@@ -158,13 +184,13 @@ Otázky pro přípravu na test
 12. Co je štítná žláza?
 13. Co je tyroxin (T4)?
 14. Co jsou nadledviny?
-15. Co je slinivka břišní (pankreas) v roli endokrinní žlázy?
+15. Co je slinivka břišní v roli endokrinní žlázy?
 
 === NERVOVÁ SOUSTAVA ===
 
 1. Co je nervová soustava?
 2. Co je centrální nervový systém (CNS)?
-3. Co je periferní (obvodový) nervový systém?
+3. Co je periferní nervový systém?
 4. Co je mozek?
 5. Co je mícha?
 6. Co je neuron (nervová buňka)?
@@ -245,11 +271,11 @@ Otázky pro přípravu na test
 44. Co je konkurence?
 45. Co je amensalismus?
 46. Co je neutralismus?
-47. Co je invázní druh?
+47. Co je invazní druh?
 48. Co je trvale udržitelný rozvoj?
 49. Co je ochrana přírody?
 50. Co je biodiverzita?
 
 =====================================
-CELKEM: 212 otázek
+CELKEM: 232 otázek
 =====================================

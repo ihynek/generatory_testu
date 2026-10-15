@@ -130,5 +130,5 @@ Otázky pro přípravu na test
 2. Co jsou peptidy?
 
 =====================================
-CELKEM: 90 otázek
+CELKEM: 85 otázek
 =====================================

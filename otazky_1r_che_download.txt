@@ -58,7 +58,7 @@ Otázky pro přípravu na test
 5. Co určuje vedlejší kvantové číslo (l)?
 6. Co určuje magnetické kvantové číslo (m)?
 7. Co vyjadřuje spinové číslo (s)?
-8. Co říká Pauliho princip?
+8. Co říká Pauliho vylučovací princip?
 9. Co říká Hundovo pravidlo?
 
 === CHEMICKÉ VAZBY ===
@@ -66,7 +66,7 @@ Otázky pro přípravu na test
 1. Co je chemická vazba?
 2. Co je délka vazby?
 3. Co je energie vazby?
-4. Co je jednoduchá vazba?
+4. Co je jednoduchá vazba (σ)?
 5. Co je dvojná vazba?
 6. Co je trojná vazba?
 7. Co je kovalentní vazba?
@@ -79,8 +79,8 @@ Otázky pro přípravu na test
 1. Co jsou reaktanty?
 2. Co jsou produkty?
 3. Co je chemická rovnice?
-4. Co je syntéza?
-5. Co je analýza?
+4. Co je syntéza (slučovací reakce)?
+5. Co je analýza (rozkladná reakce)?
 6. Co je adice?
 7. Co je eliminace?
 8. Co je substituce?
@@ -88,8 +88,8 @@ Otázky pro přípravu na test
 === RYCHLOST REAKCÍ A ROVNOVÁHA ===
 
 1. Co říká srážková teorie?
-2. Co je aktivovaný komplex?
-3. Co je rychlost reakce?
+2. Co je aktivovaný komplex (přechodný stav)?
+3. Co je rychlost chemické reakce?
 4. Co je katalyzátor?
 5. Co je exotermická reakce?
 6. Co je endotermická reakce?
@@ -100,14 +100,14 @@ Otázky pro přípravu na test
 
 1. Co je oxidace?
 2. Co je redukce?
-3. Co je redox reakce?
-4. Co je Beketovova řada?
+3. Co je redoxní reakce (oxidačně-redukční)?
+4. Co je Beketovova (aktivitní) řada kovů?
 
 === KYSELINY A ZÁSADY ===
 
 1. Co je kyselina podle Brønsteda?
 2. Co je zásada podle Brønsteda?
-3. Co je konjugovaný pár?
+3. Co je konjugovaný pár kyselina-zásada?
 4. Co je pH?
 5. Jaké je pH silné kyseliny?
 6. Jaké je pH silné zásady?
@@ -115,8 +115,8 @@ Otázky pro přípravu na test
 === PERIODICKÁ TABULKA ===
 
 1. Co říká periodický zákon?
-2. Co je perioda?
-3. Co je skupina?
+2. Co je perioda v periodické tabulce?
+3. Co je skupina v periodické tabulce?
 
 === VODÍK A KYSLÍK ===
 
