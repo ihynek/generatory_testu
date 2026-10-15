@@ -191,8 +191,8 @@
     <div class="header">
       <h1>📥 Stažení kontrolních otázek z biologie a chemie</h1>
       <p>Vyberte předmět a ročník pro stažení databáze otázek</p>
-      <p style="margin-top: 15px; font-size: 1.1em;"><strong>Databáze obsahuje celkem 554 otázek z biologie</strong></p>
-      <p style="margin-top: 5px; font-size: 1.1em;"><strong>Databáze obsahuje celkem 262 otázek z chemie</strong></p>
+      <p style="margin-top: 15px; font-size: 1.1em;"><strong>Databáze obsahuje celkem <span id="totBio">554</span> otázek z biologie</strong></p>
+      <p style="margin-top: 5px; font-size: 1.1em;"><strong>Databáze obsahuje celkem <span id="totChe">262</span> otázek z chemie</strong></p>
     </div>
 
     <div class="subjects-grid">
@@ -286,22 +286,69 @@
       selector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    function downloadFile(subject, year, extension) {
-      // Zkratka pro předmět (bio nebo che)
-      const subjectShort = subject === 'biologie' ? 'bio' : 'che';
-      
-      // Vytvoření URL pro stažení souboru (relativní cesta)
-      const filename = `otazky_${year}r_${subjectShort}_download.${extension}`;
-      const url = filename;  // Soubory jsou přímo v kořenové složce
-      
-      // Stažení souboru
+    // Otázky se berou přímo z aktuálních generátorů (new_generators),
+    // takže jsou vždy stejné jako v testech. Při chybě se stáhne uložený TXT.
+    const GEN_BASE = '../new_generators/';
+
+    async function loadDatabase(subject, year) {
+      const resp = await fetch(`${GEN_BASE}${subject}_${year}r.html`, { cache: 'no-cache' });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const html = await resp.text();
+      const m = html.match(/const questionsDatabase = (\{.*\});/);
+      if (!m) throw new Error('databáze nenalezena');
+      return JSON.parse(m[1]);
+    }
+
+    function buildText(subject, year, db) {
+      const out = [`${subject.toUpperCase()} - ${year}. ROČNÍK`, 'Otázky pro přípravu na test', '=====================================', ''];
+      let n = 0;
+      for (const [sec, qs] of Object.entries(db)) {
+        out.push(`=== ${sec.toLocaleUpperCase('cs')} ===`, '');
+        qs.forEach((q, i) => out.push(`${i + 1}. ${q.q}`));
+        out.push('');
+        n += qs.length;
+      }
+      out.push('=====================================', `CELKEM: ${n} otázek`, '=====================================');
+      return out.join('\r\n');
+    }
+
+    function saveLink(href, filename) {
       const link = document.createElement('a');
-      link.href = url;
+      link.href = href;
       link.download = filename;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     }
+
+    async function downloadFile(subject, year, extension) {
+      const subjectShort = subject === 'biologie' ? 'bio' : 'che';
+      const filename = `otazky_${year}r_${subjectShort}_download.${extension}`;
+      try {
+        const db = await loadDatabase(subject, year);
+        const blob = new Blob(['\ufeff' + buildText(subject, year, db)], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        saveLink(url, filename);
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
+      } catch (e) {
+        console.warn('Generátor nedostupný, stahuji uložený soubor:', e);
+        saveLink(filename, filename);
+      }
+    }
+
+    // Aktuální počty otázek v záhlaví
+    (async () => {
+      for (const [subject, id] of [['biologie', 'totBio'], ['chemie', 'totChe']]) {
+        try {
+          let tot = 0;
+          for (const y of [1, 2, 3]) {
+            const db = await loadDatabase(subject, y);
+            tot += Object.values(db).reduce((s, qs) => s + qs.length, 0);
+          }
+          document.getElementById(id).textContent = tot;
+        } catch (e) { /* ponechá se uložené číslo */ }
+      }
+    })();
   </script>
 </body>
 </html>
